@@ -304,7 +304,7 @@
       ],
       "relevance_to_pilot": "The benchmark for 'augment, don't replace': measurable hours returned to existing staff. The model answer to 'are you firing workers?' Also the template for sequencing — internal capacity before citizen-facing autonomy.",
       "confidence": "verified",
-      "caveats": "Pair metrics come from a continuously-updating live dashboard (cite with access date). '150,000 public servants' is a rounded reference to the ~158,000 Public Service. 'Mandatory AI literacy course since Oct 2024' could NOT be verified — drop or re-source. Agentic-strategy details (S$1bn, Jan 2026 framework, National AI Council) are report-only.",
+      "caveats": "Pair metrics come from a continuously-updating live dashboard (cite with access date). '150,000 public servants' is a rounded reference to the ~158,000 Public Service. The IMDA Agentic AI Governance Framework (Jan 22, 2026) is now sourced directly. S$1bn commitment and National AI Council remain report-only (not independently re-sourced this cycle).",
       "sources": [
         {
           "title": "Pair — public metrics dashboard",
@@ -323,6 +323,12 @@
           "publisher": "UNDP",
           "date": "2025",
           "url": "https://www.undp.org/policy-centre/singapore/blog/pairing-ai-public-sector-impact-singapore"
+        },
+        {
+          "title": "Singapore launches world's first governance framework for agentic AI (MGF)",
+          "publisher": "IMDA Singapore",
+          "date": "2026-01-22",
+          "url": "https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/press-releases/2026/new-model-ai-governance-framework-for-agentic-ai"
         }
       ],
       "bet": {
@@ -873,20 +879,26 @@
       "program": "U-Ask + 'agentic government' pledge",
       "category": "sovereign-vision",
       "horizon": "long",
-      "date": "2026-04",
+      "date": "2026-05",
       "coordinates": {
         "lat": 25.2048,
         "lng": 55.2708
       },
       "location_label": "Dubai / Abu Dhabi",
       "headline": "The most aggressive AI-native government vision on Earth.",
-      "summary": "The UAE (which appointed the world's first AI minister in 2017) runs U-Ask, a unified generative-AI chatbot for federal services. In April 2026 the Cabinet pledged that half of government services would be delivered via AI agents within two years, redesigning policies around autonomous systems, backed by a US-UAE Abu Dhabi AI campus with 5GW of data-center capacity.",
+      "summary": "The UAE (which appointed the world's first AI minister in 2017) runs U-Ask, a unified generative-AI chatbot for federal services. In April 2026 the Cabinet pledged that half of government services would be delivered via AI agents within two years. On 18 May 2026 the Cabinet approved the Agentic AI Project federal framework — Phase One covers services for citizens, residents, businesses and investors — and launched the country's largest-ever training initiative: 80,000 federal employees to be trained in agentic AI, with ministerial career evaluations tied to adoption speed. Backed by a US-UAE Abu Dhabi AI campus with 5GW of data-center capacity.",
       "key_metrics": [
         {
           "label": "Pledge",
           "value": "50% of services via AI agents",
           "is_projection": true,
           "note": "within two years (Apr 2026)"
+        },
+        {
+          "label": "Workers to be trained",
+          "value": "80,000",
+          "is_projection": true,
+          "note": "largest government training programme in UAE history (May 2026)"
         },
         {
           "label": "Compute",
@@ -901,13 +913,25 @@
       ],
       "relevance_to_pilot": "The far end of the horizon spectrum — the 'AI-native state' vision. High-variance, unproven, but the directional anchor for what 'delivery state' could ultimately mean.",
       "confidence": "verified",
-      "caveats": "The 50%-of-services pledge is a projection/commitment, not a realized result.",
+      "caveats": "The 50%-of-services pledge and 80,000-workers target are projections/commitments, not yet realized results.",
       "sources": [
         {
-          "title": "Mohammed bin Rashid chairs UAE Cabinet meeting",
+          "title": "Mohammed bin Rashid chairs UAE Cabinet meeting — agentic government pledge",
           "publisher": "UAE Government Media Office",
           "date": "2026-04-23",
           "url": "https://www.mediaoffice.ae/en/news/2026/april/23-04/mohammed-bin-rashid-chairs-uae-cabinet-meeting"
+        },
+        {
+          "title": "UAE Cabinet approves Agentic AI Project framework; 80,000 workers to train",
+          "publisher": "UAE Government Media Office",
+          "date": "2026-05-18",
+          "url": "https://www.mediaoffice.ae/en/news/2026/may/18-05/mohammed-bin-rashid-chairs-uae-cabinet-meeting"
+        },
+        {
+          "title": "UAE to train 80,000 government workers in Agentic AI under high-tech drive",
+          "publisher": "The National",
+          "date": "2026-05-18",
+          "url": "https://www.thenationalnews.com/news/uae/2026/05/18/uae-to-train-80000-government-workers-in-agentic-ai-under-high-tech-drive/"
         },
         {
           "title": "G42 to lead a consortium with US partners to build 5GW UAE-US AI Campus",
@@ -1110,10 +1134,16 @@
           "url": "https://www.arabnews.com/node/2589699/business-economy"
         },
         {
-          "title": "Saudi Arabia Tops MENA in 2025 Government AI Readiness Index by Oxford Insights",
-          "publisher": "Complete AI Training",
-          "date": "2025-12-22",
-          "url": "https://completeaitraining.com/news/saudi-arabia-tops-mena-in-2025-government-ai-readiness/"
+          "title": "Saudi Arabia tops MENA in Government AI Readiness Index 2025",
+          "publisher": "Saudi Press Agency (SPA)",
+          "date": "2025-12",
+          "url": "https://www.spa.gov.sa/en/N2472986"
+        },
+        {
+          "title": "Government AI Readiness Index 2025",
+          "publisher": "Oxford Insights",
+          "date": "2025",
+          "url": "https://oxfordinsights.com/ai-readiness/government-ai-readiness-index-2025/"
         }
       ]
     },
@@ -1599,6 +1629,298 @@
           "publisher": "Inter-American Development Bank",
           "date": "2024",
           "url": "https://www.iadb.org/en/project/RG-T4463"
+        }
+      ]
+    },
+    {
+      "id": "japan-genai",
+      "country": "Japan",
+      "country_code": "JP",
+      "flag": "🇯🇵",
+      "entity": "Digital Agency of Japan",
+      "program": "GENAI / Gennai (Government Generative AI)",
+      "category": "internal-productivity",
+      "horizon": "short",
+      "date": "2026-05-29",
+      "coordinates": {
+        "lat": 35.6762,
+        "lng": 139.6503
+      },
+      "location_label": "Tokyo",
+      "headline": "Asia's largest government gen-AI rollout — 180,000 civil servants, government-built and open-sourced.",
+      "summary": "Japan's Digital Agency launched GENAI (pronounced 'Gennai') on 29 May 2026 — the platform opened to approximately 100,000 government employees across participating ministries, with a target of 180,000 across 39 agencies by end of the pilot (March 2027). The platform covers 30+ AI applications: document drafting, meeting transcription, translation, summarization, parliamentary Q&A search, and legal research. GENAI was open-sourced in April 2026 to prevent redundant development across agencies and reduce costs. Motivated by Japan's civil-servant overwork crisis (>360 hours of overtime per year on average), and grounded in Japan's AI Act (effective May 2025) which requires each ministry to appoint a Chief AI Officer.",
+      "key_metrics": [
+        {
+          "label": "Launch day (May 29, 2026)",
+          "value": "≈100,000 employees",
+          "note": "initial phase across participating agencies"
+        },
+        {
+          "label": "Pilot target",
+          "value": "≈180,000",
+          "is_projection": true,
+          "note": "all 39 agencies; pilot runs to March 2027"
+        },
+        {
+          "label": "Applications",
+          "value": "30+",
+          "note": "drafting, transcription, translation, parliamentary Q&A, legal research"
+        }
+      ],
+      "relevance_to_pilot": "Largest Asian public-sector AI rollout by user count — government-built, open-sourced, and scaled faster than any comparable Western programme. Comparable to Singapore's Pair but at 2× the target scale.",
+      "confidence": "verified",
+      "caveats": "Pilot target of 180,000 is a projection; full-scale implementation targeted from FY2027 onward. FY2026 AI budget figure (¥502.7bn) covers all AI-related government spending, not GENAI alone.",
+      "sources": [
+        {
+          "title": "Launch of Large-Scale Pilot Project for 'Government AI GENAI' Targeting 180,000 Employees",
+          "publisher": "Digital Agency of Japan",
+          "date": "2026-05",
+          "url": "https://www.digital.go.jp/en/news/fc155eba-e83d-4ecf-9c6a-a3c855e2e7b3"
+        },
+        {
+          "title": "Government AI 'GENAI' — program page",
+          "publisher": "Digital Agency of Japan",
+          "date": "2026",
+          "url": "https://www.digital.go.jp/en/policies/genai"
+        },
+        {
+          "title": "Government to launch AI pilot program to boost efficiency and encourage tech's adoption",
+          "publisher": "The Japan Times",
+          "date": "2026-05-06",
+          "url": "https://www.japantimes.co.jp/news/2026/05/06/japan/japan-government-agencies-ai/"
+        }
+      ]
+    },
+    {
+      "id": "uk-hmrc-quantexa",
+      "country": "United Kingdom",
+      "country_code": "GB",
+      "flag": "🇬🇧",
+      "entity": "HMRC (HM Revenue & Customs)",
+      "program": "Entity Resolution Service — Quantexa Decision Intelligence",
+      "category": "fraud-tax-customs",
+      "horizon": "short",
+      "date": "2026-03-31",
+      "coordinates": {
+        "lat": 51.499,
+        "lng": -0.1198
+      },
+      "location_label": "London",
+      "headline": "£175m sovereign AI contract to close the £46.8bn annual UK tax gap — British company, HMRC data stays in HMRC.",
+      "summary": "HMRC awarded a £175 million, 8-year contract (effective 31 March 2026, announced 14 May 2026) to London-based Quantexa for an Entity Resolution Service: AI that links siloed taxpayer records across databases to surface fraud rings, fix return errors, and detect VAT and payroll evasion. Quantexa's platform uses entity resolution, graph analytics and machine learning. All HMRC data stays within HMRC's own environment; automated decisions require human approval. Described as a deliberate sovereignty signal — a British AI company, not US vendors — after >£900m in prior public-sector contracts went to Palantir.",
+      "key_metrics": [
+        {
+          "label": "Contract value",
+          "value": "£175 million",
+          "note": "8 years (to 2034), extendable to 10"
+        },
+        {
+          "label": "Target",
+          "value": "£46.8bn UK tax gap",
+          "note": "annual misclassification + fraud estimate"
+        },
+        {
+          "label": "Data governance",
+          "value": "Zero external data transfer",
+          "note": "HMRC remains data controller; human sign-off on automated decisions"
+        }
+      ],
+      "relevance_to_pilot": "The clearest recent proof that fraud/tax AI delivers sovereign ROI — closed-loop, auditable, with human oversight built in. Largest UK public-sector AI contract of 2026.",
+      "confidence": "verified",
+      "caveats": "Results against the £46.8bn tax-gap target will take years to measure; the figure is the stated problem scope, not a guaranteed recovery. Contract start: 31 March 2026; public announcement: 14 May 2026.",
+      "sources": [
+        {
+          "title": "HMRC awards £175 million AI contract to British firm Quantexa to close £46.8 billion tax gap",
+          "publisher": "The Next Web",
+          "date": "2026-05-14",
+          "url": "https://thenextweb.com/news/quantexa-hmrc-ai-tax-fraud-sovereignty"
+        },
+        {
+          "title": "HMRC Gives Quantexa £175 Million for Tax System, AI Upgrades",
+          "publisher": "Bloomberg Tax",
+          "date": "2026-05",
+          "url": "https://news.bloombergtax.com/daily-tax-report-international/hmrc-hands-quantexa-175-million-contract-for-tax-system-upgrade"
+        },
+        {
+          "title": "HMRC inks £175m deal to boost data, analytics and AI firepower",
+          "publisher": "Global Government Finance",
+          "date": "2026-05",
+          "url": "https://www.globalgovernmentfinance.com/hmrc-quantexa-entity-resolution-service-data-analytics-ai/"
+        }
+      ]
+    },
+    {
+      "id": "netherlands-gpt-nl",
+      "country": "Netherlands",
+      "country_code": "NL",
+      "flag": "🇳🇱",
+      "entity": "TNO / SURF / NFI + Ministry of Economic Affairs",
+      "program": "GPT-NL — sovereign Dutch large language model",
+      "category": "sovereign-vision",
+      "horizon": "medium",
+      "date": "2026-02",
+      "coordinates": {
+        "lat": 52.0705,
+        "lng": 4.3007
+      },
+      "location_label": "The Hague",
+      "headline": "Europe's first sovereign LLM in live government-service pilots — €13.5m Dutch-funded, GDPR-native.",
+      "summary": "GPT-NL is an open large language model trained specifically for the Dutch language and public-sector context, built by TNO, SURF and the Netherlands Forensic Institute (NFI) with €13.5 million from the Dutch Ministry of Economic Affairs. In February 2026 the model moved from laboratory to live government feasibility pilots — five organisations in the first wave, growing to ten by spring 2026. The most concrete citizen-facing deployment is through ICTU's 'Gem' virtual assistant, already used by ~2.8 million residents in Utrecht, Rotterdam and Eindhoven, which is being tested with GPT-NL to stay within Dutch/EU data-residency frameworks. Separately, SSC-ICT's Vlam-chat (eight ministries, ~26,500 civil servants) uses European language models hosted inside a Dutch government data centre — a parallel sovereign productivity track.",
+      "key_metrics": [
+        {
+          "label": "Funding",
+          "value": "€13.5 million",
+          "note": "Dutch Ministry of Economic Affairs"
+        },
+        {
+          "label": "Pilots (Feb 2026)",
+          "value": "5 → 10 organisations",
+          "note": "scaling through spring 2026"
+        },
+        {
+          "label": "Citizen reach (Gem)",
+          "value": "≈2.8 million residents",
+          "note": "Utrecht, Rotterdam, Eindhoven"
+        }
+      ],
+      "relevance_to_pilot": "Europe's template for a government-built, GDPR-compliant LLM deployed at citizen-service scale without US cloud dependence. A proof-of-concept that a mid-sized country can afford its own sovereign model.",
+      "confidence": "verified",
+      "caveats": "Pilot scale is still limited in the first wave (5 organisations). Broader commercial roll-out via professional licensing is planned for H2 2026. Vlam-chat and Gem are distinct projects; GPT-NL may or may not become the underlying model for both.",
+      "sources": [
+        {
+          "title": "Netherlands moves GPT-NL from lab to live: first pilots under way",
+          "publisher": "Computer Weekly",
+          "date": "2026-02",
+          "url": "https://www.computerweekly.com/news/366642524/Netherlands-moves-GPT-NL-from-lab-to-live-first-pilots-under-way"
+        },
+        {
+          "title": "Dutch government agencies to pilot homegrown AI model GPT-NL",
+          "publisher": "NL Times",
+          "date": "2026-02-26",
+          "url": "https://nltimes.nl/2026/02/26/dutch-government-agencies-pilot-homegrown-ai-model-gpt-nl"
+        },
+        {
+          "title": "GPT-NL — sovereign language model for the Netherlands",
+          "publisher": "TNO",
+          "date": "2026",
+          "url": "https://www.tno.nl/en/digital/data-sharing/generative-ai/gpt-nl-boosts-dutch-ai-autonomy/"
+        }
+      ]
+    },
+    {
+      "id": "australia-govai-chat",
+      "country": "Australia",
+      "country_code": "AU",
+      "flag": "🇦🇺",
+      "entity": "Australian Department of Finance",
+      "program": "GovAI Chat (APS-wide secure AI assistant)",
+      "category": "internal-productivity",
+      "horizon": "short",
+      "date": "2026-04",
+      "coordinates": {
+        "lat": -35.2809,
+        "lng": 149.13
+      },
+      "location_label": "Canberra",
+      "headline": "Australia's national civil service gets a secure multi-model AI assistant — alpha April 2026, all 170,000 APS employees targeted.",
+      "summary": "Australia's Department of Finance is delivering GovAI Chat, a government-managed secure AI assistant for all Australian Public Service employees. Alpha launched April 2026; beta follows July 2026. GovAI Chat brings leading commercial AI models (including ChatGPT and Claude) into one trusted government environment designed with security and privacy front of mind — prompts and documents are not used to train external models. Every APS worker from participating agencies can join without prior AI experience. By July 2026, every agency must appoint an SES-level Chief AI Officer. The initiative sits under the APS AI Plan announced November 2025.",
+      "key_metrics": [
+        {
+          "label": "Alpha launch",
+          "value": "April 2026",
+          "note": "Beta July 2026"
+        },
+        {
+          "label": "Target coverage",
+          "value": "≈170,000 APS employees",
+          "is_projection": true,
+          "note": "all participating agencies"
+        },
+        {
+          "label": "Models available",
+          "value": "Multi-model (ChatGPT, Claude, others)",
+          "note": "in one sovereign government wrapper"
+        }
+      ],
+      "relevance_to_pilot": "Multi-model sovereign wrapper pattern — how a government can offer staff access to frontier AI without data leaving its control. Chief AI Officer mandate is a governance model directly applicable to a ministry deploying AI at a consular post.",
+      "confidence": "verified",
+      "caveats": "170,000-employee figure is the APS workforce target; alpha participation is voluntary. Full coverage by agency timeline has not been publicly committed.",
+      "sources": [
+        {
+          "title": "GovAI Chat alpha trial now open — sign up now",
+          "publisher": "Australian Department of Finance",
+          "date": "2026-04",
+          "url": "https://www.finance.gov.au/about-us/news/2026/govai-chat-alpha-trial-now-open-sign-now"
+        },
+        {
+          "title": "GovAI Chat — program page",
+          "publisher": "GovAI (Australian Government)",
+          "date": "2026",
+          "url": "https://www.govai.gov.au/govai-chat"
+        },
+        {
+          "title": "APS AI Plan 2025 — what we plan to achieve",
+          "publisher": "Australian Government / digital.gov.au",
+          "date": "2025",
+          "url": "https://www.digital.gov.au/policy/ai/australian-public-service-ai-plan-2025/what-we-plan-achieve"
+        }
+      ]
+    },
+    {
+      "id": "india-gujarat-sugam",
+      "country": "India",
+      "country_code": "IN",
+      "flag": "🇮🇳",
+      "entity": "Government of Gujarat",
+      "program": "Sugam Digital Gujarat — WhatsApp AI Governance",
+      "category": "citizen-rag",
+      "horizon": "short",
+      "date": "2026-05-25",
+      "coordinates": {
+        "lat": 23.2156,
+        "lng": 72.6369
+      },
+      "location_label": "Gandhinagar (Gujarat)",
+      "headline": "20 government services via WhatsApp AI — zero new app installs, Gujarati and English, 70 million potential users.",
+      "summary": "On 25 May 2026 the Government of Gujarat signed an MOU with Meta to launch 'Sugam Digital Gujarat': a WhatsApp chatbot that delivers approximately 20 citizen-centric government services from five departments — grievance redressal, income and caste certificates, ration card updates, revenue records and affidavits. The chatbot is available in Gujarati and English with voice capability. No new app download required: citizens use WhatsApp, already India's dominant messaging platform. A pilot of Ray-Ban Meta smart glasses to assist visually impaired citizens is also included in the collaboration.",
+      "key_metrics": [
+        {
+          "label": "Services covered",
+          "value": "≈20",
+          "note": "across 5 departments"
+        },
+        {
+          "label": "Languages",
+          "value": "Gujarati + English",
+          "note": "voice-capable"
+        },
+        {
+          "label": "Channel",
+          "value": "WhatsApp (zero new installs)",
+          "note": "MOU signed May 25, 2026"
+        }
+      ],
+      "relevance_to_pilot": "The WhatsApp-channel citizen-AI model applied at state scale in India — direct parallel to Bogotá's Chatico but through Meta's infrastructure rather than a government-built platform. Zero friction for citizens already on WhatsApp.",
+      "confidence": "verified",
+      "caveats": "As of the MOU date (May 25, 2026) the service was announced; operational launch timeline was not specified. Gujarat has ~70 million people but not all are WhatsApp users.",
+      "sources": [
+        {
+          "title": "Gujarat Govt. signs MoU with Meta to deliver 20 government services via WhatsApp",
+          "publisher": "India Shipping News",
+          "date": "2026-05-25",
+          "url": "https://indiashippingnews.com/gujarat-govt-signs-mou-with-meta-to-deliver-20-government-services-via-whatsapp/"
+        },
+        {
+          "title": "Gujarat Rolls Out WhatsApp Governance With Meta To Deliver 20 Citizen Services Digitally",
+          "publisher": "Free Press Journal",
+          "date": "2026-05-25",
+          "url": "https://www.freepressjournal.in/india/gujarat-rolls-out-whatsapp-governance-with-meta-to-deliver-20-citizen-services-digitally"
+        },
+        {
+          "title": "Gujarat taps Meta for AI-led governance push — digital citizen services on WhatsApp",
+          "publisher": "Business Today",
+          "date": "2026-05-26",
+          "url": "https://www.businesstoday.in/technology/news/story/gujarat-govt-taps-meta-for-ai-led-governance-push-digital-citizen-services-on-whatsapp-533293-2026-05-26"
         }
       ]
     }
