@@ -188,10 +188,21 @@ def validate_schema(d: dict) -> tuple[int, int]:
     return errors, warnings
 
 
-def _probe(url: str, cache: dict[str, tuple[bool, str]]) -> tuple[bool, str]:
-    """GET a URL (following redirects), read a few bytes, return (ok, detail)."""
+def _probe(url: str, cache: dict[str, tuple[str, str]]) -> tuple[str, str]:
+    """GET a URL (following redirects), read a few bytes. Return (state, detail).
+
+    state is one of:
+      "ok"   — 2xx/3xx, the page served.
+      "note" — exists-but-unverifiable-by-an-automated-client: bot-block codes
+               (401/403/406/429), a timeout, a 5xx, or any other ambiguous network
+               error. Real gov/multilateral sites (iadb.org, *.gov.au, pib.gov.in,
+               oecd.org…) routinely refuse or time-out bots while serving humans
+               fine, so these are NOT treated as dead. Surfaced, never auto-fixed.
+      "dead" — high-confidence gone: HTTP 404/410, DNS failure, connection refused.
+    """
     if url in cache:
         return cache[url]
+    import socket
     import urllib.request
     import urllib.error
 
@@ -200,23 +211,39 @@ def _probe(url: str, cache: dict[str, tuple[bool, str]]) -> tuple[bool, str]:
         method="GET",
         headers={"User-Agent": LINKCHECK_UA, "Accept": "text/html,application/xhtml+xml,*/*"},
     )
-    # Codes that mean "the page exists but the server refuses an automated client."
-    # Government/multilateral sites (e.g. iadb.org, pib.gov.in) commonly return
-    # these to bots while serving humans fine — so they are NOT dead links.
     bot_block = {401, 403, 406, 429}
     try:
         # urlopen follows 3xx redirects by default.
         with urllib.request.urlopen(req, timeout=12) as resp:
             status = getattr(resp, "status", 200) or 200
             resp.read(2048)  # ensure the body is actually served, not just headers
-            result = (status < 400, f"HTTP {status}")
+            if status < 400:
+                result = ("ok", f"HTTP {status}")
+            elif status in (404, 410):
+                result = ("dead", f"HTTP {status}")
+            else:
+                result = ("note", f"HTTP {status} (verify manually)")
     except urllib.error.HTTPError as e:
-        if e.code in bot_block:
-            result = (True, f"HTTP {e.code} (bot-blocked; verify manually)")
+        if e.code in (404, 410):
+            result = ("dead", f"HTTP {e.code}")
+        elif e.code in bot_block:
+            result = ("note", f"HTTP {e.code} (bot-blocked; verify manually)")
         else:
-            result = (False, f"HTTP {e.code}")
-    except Exception as e:  # noqa: BLE001 - any network failure is a dead-link signal
-        result = (False, type(e).__name__)
+            result = ("note", f"HTTP {e.code} (verify manually)")
+    except urllib.error.URLError as e:
+        reason = getattr(e, "reason", e)
+        if isinstance(reason, (TimeoutError, socket.timeout)):
+            result = ("note", "no response (timeout — slow or blocks bots; verify manually)")
+        elif isinstance(reason, socket.gaierror):
+            result = ("dead", "DNS resolution failed")
+        elif isinstance(reason, ConnectionRefusedError):
+            result = ("dead", "connection refused")
+        else:
+            result = ("note", f"network error: {type(reason).__name__} (verify manually)")
+    except (TimeoutError, socket.timeout):
+        result = ("note", "no response (timeout — slow or blocks bots; verify manually)")
+    except Exception as e:  # noqa: BLE001 - unknown error: surface, don't call it dead
+        result = ("note", f"{type(e).__name__} (verify manually)")
     cache[url] = result
     return result
 
@@ -224,31 +251,32 @@ def _probe(url: str, cache: dict[str, tuple[bool, str]]) -> tuple[bool, str]:
 def check_urls(d: dict, strict: bool = False) -> tuple[int, int]:
     """GET-check every source URL. Returns (errors, warnings).
 
-    A single dead link among several is a warning. A reference whose *only*
-    source(s) are all unreachable is the serious case: the card is currently
-    unverifiable. That escalates to an ERROR under --strict, else a loud warning.
+    "dead" (404/410/DNS/refused) is a warning. "note" (bot-block, timeout, 5xx,
+    other ambiguous failures) is surfaced but not counted — these are real pages
+    an automated client cannot verify, not dead links, so the weekly routine must
+    NOT churn them. A reference is escalated only if EVERY one of its sources is
+    confirmed dead — only then is the card genuinely unverifiable.
     """
     errors = 0
     warnings = 0
-    cache: dict[str, tuple[bool, str]] = {}
+    cache: dict[str, tuple[str, str]] = {}
 
     for r in d.get("references", []):
         rid = r.get("id", "<unknown>")
         urls = [(s or {}).get("url", "") for s in r.get("sources", []) if (s or {}).get("url", "")]
-        reachable = 0
+        not_dead = 0  # "ok" + "note": anything not confirmed dead
         for url in urls:
-            ok, detail = _probe(url, cache)
-            if ok and "bot-blocked" in detail:
-                # exists for humans; surface as an informational NOTE, not a warning
+            state, detail = _probe(url, cache)
+            if state == "ok":
+                not_dead += 1
+            elif state == "note":
                 print(f"NOTE:  {detail}: {url}  [{rid}]")
-                reachable += 1
-            elif ok:
-                reachable += 1
-            else:
-                warn(f"URL unreachable ({detail}): {url}  [{rid}]")
+                not_dead += 1
+            else:  # "dead"
+                warn(f"URL dead ({detail}): {url}  [{rid}]")
                 warnings += 1
-        if urls and reachable == 0:
-            msg = f"references[{rid}] has NO reachable source — card is currently unverifiable"
+        if urls and not_dead == 0:
+            msg = f"references[{rid}] has NO reachable source — every source link is dead"
             if strict:
                 fail(msg)
                 errors += 1
