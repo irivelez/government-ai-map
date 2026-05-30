@@ -693,12 +693,6 @@
           "publisher": "ENAP",
           "date": "2019",
           "url": "https://repositorio.enap.gov.br/jspui/bitstream/1/4622/1/1%C2%BA%20lugar%20do%2014%C2%BA%20Premio%20RFB.pdf"
-        },
-        {
-          "title": "Receita Federal já utiliza IA para identificar fraudes aduaneiras",
-          "publisher": "RSH Advogados",
-          "date": "2025",
-          "url": "https://rsh.adv.br/receita-federal-ja-utiliza-ia-para-identificar-fraudes-aduaneiras-veja-aqui-quais-os-produtos-mais-visados-neste-rastreio/"
         }
       ]
     },
@@ -886,7 +880,7 @@
       },
       "location_label": "Dubai / Abu Dhabi",
       "headline": "The most aggressive AI-native government vision on Earth.",
-      "summary": "The UAE (which appointed the world's first AI minister in 2017) runs U-Ask, a unified generative-AI chatbot for federal services. In April 2026 the Cabinet pledged that half of government services would be delivered via AI agents within two years, redesigning policies around autonomous systems, backed by a US-UAE Abu Dhabi AI campus with 5GW of data-center capacity. Also building 'Rules as Code' for AI-drafted legislation.",
+      "summary": "The UAE (which appointed the world's first AI minister in 2017) runs U-Ask, a unified generative-AI chatbot for federal services. In April 2026 the Cabinet pledged that half of government services would be delivered via AI agents within two years, redesigning policies around autonomous systems, backed by a US-UAE Abu Dhabi AI campus with 5GW of data-center capacity.",
       "key_metrics": [
         {
           "label": "Pledge",
@@ -906,14 +900,26 @@
         }
       ],
       "relevance_to_pilot": "The far end of the horizon spectrum — the 'AI-native state' vision. High-variance, unproven, but the directional anchor for what 'delivery state' could ultimately mean.",
-      "confidence": "report-only",
+      "confidence": "verified",
       "caveats": "The 50%-of-services pledge is a projection/commitment, not a realized result.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — UAE section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "Mohammed bin Rashid chairs UAE Cabinet meeting",
+          "publisher": "UAE Government Media Office",
+          "date": "2026-04-23",
+          "url": "https://www.mediaoffice.ae/en/news/2026/april/23-04/mohammed-bin-rashid-chairs-uae-cabinet-meeting"
+        },
+        {
+          "title": "G42 to lead a consortium with US partners to build 5GW UAE-US AI Campus",
+          "publisher": "G42",
+          "date": "2025-05-15",
+          "url": "https://www.g42.ai/resources/news/g42-lead-consortium-us-partners-build-5gw-uae-us-ai-campus"
+        },
+        {
+          "title": "UAE launches AI chatbot 'U-Ask' in Arabic, English",
+          "publisher": "Khaleej Times",
+          "date": "2023-05-30",
+          "url": "https://www.khaleejtimes.com/uae/uae-launches-ai-chatbot-u-ask-in-arabic-english"
         }
       ],
       "bet": {
@@ -940,7 +946,7 @@
       },
       "location_label": "New Delhi",
       "headline": "AI layered on world-class population-scale Digital Public Infrastructure.",
-      "summary": "India's distinctive play: layering AI onto existing DPI (Aadhaar identity, UPI payments, DigiLocker with 539m users). BHASHINI supports 35+ languages with 1,600+ models (deployed at Maha Kumbh 2025 for translation/lost-and-found at massive scale). The IndiaAI Mission (₹10,300+ crore) runs a public compute portal with 38,000+ subsidized GPUs.",
+      "summary": "India's distinctive play: layering AI onto existing DPI (Aadhaar identity, UPI payments, DigiLocker with 539m users). BHASHINI supports 35+ languages with 350+ models (deployed at Maha Kumbh 2025 for translation/lost-and-found at massive scale). The IndiaAI Mission (₹10,300+ crore) runs a public compute portal with 38,000+ subsidized GPUs.",
       "key_metrics": [
         {
           "label": "BHASHINI languages",
@@ -959,14 +965,32 @@
         }
       ],
       "relevance_to_pilot": "The model no rich country can easily copy — AI riding identity/payments/document rails. Relevant as the 'build on your own infrastructure' direction.",
-      "confidence": "report-only",
+      "confidence": "verified",
       "caveats": "Carried from the original landscape report with its original sourcing.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — India section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "Transforming India with AI: Rs 10,300 crore mission, 38,000 GPUs & a vision for inclusive growth",
+          "publisher": "DD News (Prasar Bharati)",
+          "date": "2025-10-13",
+          "url": "https://ddnews.gov.in/en/transforming-india-with-ai-rs-10300-crore-mission-38000-gpus-a-vision-for-inclusive-growth/"
+        },
+        {
+          "title": "BHASHINI Platform Crosses 600 Crore AI Requests, Adds Sarvam Models",
+          "publisher": "Tech Observer",
+          "date": "2026-03-13",
+          "url": "https://techobserver.in/news/egov/bhashini-platform-600-crore-requests-sarvam-models-321387/"
+        },
+        {
+          "title": "Mahakumbh 2025: MeitY's Bhashini provides multilingual access in 11 languages",
+          "publisher": "DD News (Prasar Bharati)",
+          "date": "2025-01-14",
+          "url": "https://ddnews.gov.in/en/mahakumbh-2025-meitys-bhashini-provides-multilingual-access-in-11-languages/"
+        },
+        {
+          "title": "DigiLocker — official portal",
+          "publisher": "DigiLocker (NeGD, MeitY)",
+          "date": "2026-05",
+          "url": "https://www.digilocker.gov.in/"
         }
       ]
     },
@@ -986,13 +1010,13 @@
       },
       "location_label": "Seoul",
       "headline": "One of the largest state-led AI programs anywhere.",
-      "summary": "Under President Lee Jae-myung, Korea launched a ₩100 trillion (~$75bn) National Growth Fund push, an 'AI Basic Act' (effective Jan 2026), the first senior presidential AI secretary (June 2025), and five competing consortia (Naver, SKT, LG, NCSoft, Upstage) building sovereign Korean-language foundation models, with ~50,000 GPUs for a public-sector National AI Computing Center.",
+      "summary": "Under President Lee Jae-myung, Korea launched a ₩100 trillion National Growth Fund pledge (since expanded to ₩150 trillion / ~$100bn), an 'AI Basic Act' (effective Jan 2026), the first senior presidential AI secretary (June 2025), and five competing consortia (Naver, SKT, LG, NCSoft, Upstage) building sovereign Korean-language foundation models, with ~50,000 GPUs for a public-sector National AI Computing Center.",
       "key_metrics": [
         {
           "label": "National fund",
-          "value": "₩100tn (~$75bn)",
+          "value": "₩150tn (~$100bn)",
           "is_projection": true,
-          "note": "National Growth Fund"
+          "note": "Originally pledged ₩100tn; expanded 2025"
         },
         {
           "label": "Public GPUs",
@@ -1006,14 +1030,32 @@
         }
       ],
       "relevance_to_pilot": "The sovereignty end of the spectrum — explicitly long-term, accelerated by the 'DeepSeek moment'. Illustrates how vision dictates resource scale.",
-      "confidence": "report-only",
+      "confidence": "verified",
       "caveats": "Spending figures are commitments, not realized outcomes.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — South Korea section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "NVIDIA, South Korea Government and Industrial Giants Build AI Infrastructure and Ecosystem",
+          "publisher": "NVIDIA Newsroom",
+          "date": "2025-10-30",
+          "url": "https://nvidianews.nvidia.com/news/south-korea-ai-infrastructure"
+        },
+        {
+          "title": "LG, SKT, Naver among five selected for Korea's sovereign AI push",
+          "publisher": "The Korea Herald",
+          "date": "2025-08-04",
+          "url": "https://www.koreaherald.com/article/10546363"
+        },
+        {
+          "title": "Korea to begin full-scale AI buildout in 2026: minister",
+          "publisher": "The Korea Herald",
+          "date": "2025-12-15",
+          "url": "https://www.koreaherald.com/article/10636733"
+        },
+        {
+          "title": "Korea targets AI, chips, batteries with W150tr growth fund",
+          "publisher": "The Korea Herald",
+          "date": "2025-12-19",
+          "url": "https://www.koreaherald.com/article/10640375"
         }
       ]
     },
@@ -1033,7 +1075,7 @@
       },
       "location_label": "Riyadh",
       "headline": "Petro-funded full-stack AI sovereignty.",
-      "summary": "SDAIA runs the national strategy; PIF-owned HUMAIN (launched May 2025) is building on-shore compute (pilot ~18,000 NVIDIA GPUs) and Arabic LLMs. The Seha Virtual Hospital links 224+ hospitals using AI diagnostics. Saudi Arabia ranked #1 in MENA on Oxford Insights' 2025 Government AI Readiness Index (7th globally for governance).",
+      "summary": "SDAIA runs the national strategy; PIF-owned HUMAIN (launched May 2025) is building on-shore compute (pilot ~18,000 NVIDIA GPUs) and Arabic LLMs. The Seha Virtual Hospital links 200+ hospitals using AI diagnostics. Saudi Arabia ranked #1 in MENA on Oxford Insights' 2025 Government AI Readiness Index (7th globally for governance).",
       "key_metrics": [
         {
           "label": "HUMAIN compute",
@@ -1042,7 +1084,7 @@
         },
         {
           "label": "Seha hospitals linked",
-          "value": "224+",
+          "value": "200+",
           "note": "AI diagnostics"
         },
         {
@@ -1052,14 +1094,26 @@
         }
       ],
       "relevance_to_pilot": "Another full-stack sovereignty bet — shows the resource signature of a long-horizon player.",
-      "confidence": "report-only",
+      "confidence": "verified",
       "caveats": "Carried from the original landscape report with its original sourcing.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — Saudi Arabia section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "HUMAIN and NVIDIA Announce Strategic Partnership to Build AI Factories of the Future in Saudi Arabia",
+          "publisher": "NVIDIA Newsroom",
+          "date": "2025-05-13",
+          "url": "https://nvidianews.nvidia.com/news/humain-and-nvidia-announce-strategic-partnership-to-build-ai-factories-of-the-future-in-saudi-arabia"
+        },
+        {
+          "title": "Saudi virtual hospital at forefront of AI integration, deputy minister says",
+          "publisher": "Arab News",
+          "date": "2025-02-10",
+          "url": "https://www.arabnews.com/node/2589699/business-economy"
+        },
+        {
+          "title": "Saudi Arabia Tops MENA in 2025 Government AI Readiness Index by Oxford Insights",
+          "publisher": "Complete AI Training",
+          "date": "2025-12-22",
+          "url": "https://completeaitraining.com/news/saudi-arabia-tops-mena-in-2025-government-ai-readiness/"
         }
       ]
     },
@@ -1079,7 +1133,7 @@
       },
       "location_label": "Washington, D.C.",
       "headline": "Scale via a shared, multi-model federal platform.",
-      "summary": "Federal AI use cases more than doubled to 3,611 across 56 agencies in 2025. GSA launched USAi (Aug 2025), a free FedRAMP-moderate platform giving agencies side-by-side access to models from OpenAI, Google, Anthropic, Meta, Microsoft and Amazon (20+ agencies). OpenAI is providing ChatGPT Enterprise to the federal workforce for $1 per agency. Guided by OMB memos M-25-21 and M-25-22.",
+      "summary": "Federal AI use cases more than doubled to 3,611 across 56 agencies in 2025. GSA launched USAi (Aug 2025), a free FedRAMP-authorized platform giving agencies side-by-side access to multiple models — OpenAI, Google, Anthropic and Meta at launch, roster since expanded — across 20+ agencies. OpenAI is providing ChatGPT Enterprise to the federal workforce for $1 per agency. Guided by OMB memos M-25-21 and M-25-22.",
       "key_metrics": [
         {
           "label": "Federal use cases",
@@ -1098,14 +1152,32 @@
         }
       ],
       "relevance_to_pilot": "The 'shared platform, avoid vendor lock-in' model — relevant for how a ministry could procure across multiple model providers.",
-      "confidence": "report-only",
+      "confidence": "verified",
       "caveats": "Carried from the original landscape report with its original sourcing.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — US federal section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "GSA Launches USAi to Advance White House 'America's AI Action Plan'",
+          "publisher": "U.S. General Services Administration",
+          "date": "2025-08-14",
+          "url": "https://www.gsa.gov/about-gsa/newsroom/news-releases/gsa-launches-usai-to-advance-white-house-americas-ai-action-plan-08142025"
+        },
+        {
+          "title": "GSA Announces New Partnership with OpenAI, Delivering Deep Discount to ChatGPT Gov-Wide",
+          "publisher": "U.S. General Services Administration",
+          "date": "2025-08-06",
+          "url": "https://www.gsa.gov/about-us/newsroom/news-releases/gsa-announces-new-partnership-with-openai-delivering-deep-discount-to-chatgpt-08062025"
+        },
+        {
+          "title": "2025 Federal Agency AI Use Case Inventory",
+          "publisher": "U.S. Office of Management and Budget",
+          "date": "2026-01",
+          "url": "https://github.com/ombegov/2025-Federal-Agency-AI-Use-Case-Inventory"
+        },
+        {
+          "title": "GSA introduces USAi.Gov to streamline AI adoption across government",
+          "publisher": "Nextgov/FCW",
+          "date": "2025-08-14",
+          "url": "https://www.nextgov.com/artificial-intelligence/2025/08/gsa-introduces-usaigov-streamline-ai-adoption-across-government/407443/"
         }
       ]
     },
@@ -1144,14 +1216,26 @@
         }
       ],
       "relevance_to_pilot": "Shows the speed achievable with open-source models — but the metrics come largely from state media and warrant independent caution.",
-      "confidence": "report-only",
-      "caveats": "Metrics are largely from Chinese state media; treat with independent caution (flagged in the original report).",
+      "confidence": "verified",
+      "caveats": "Metrics are largely from Chinese state media; treat with independent caution (flagged in the original report). Performance figures are city-government self-reported (Feb 2025), not independently audited.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — China section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "Shenzhen Futian launches DeepSeek-based AI employees and first national AI governance regulations for govt affairs",
+          "publisher": "Global Times",
+          "date": "2025-02-17",
+          "url": "https://www.globaltimes.cn/page/202502/1328565.shtml"
+        },
+        {
+          "title": "As DeepSeek Expands, China's Cities Roll Out 'AI Public Servants'",
+          "publisher": "Sixth Tone",
+          "date": "2025-02-18",
+          "url": "https://www.sixthtone.com/news/1016677"
+        },
+        {
+          "title": "Govt bodies seek deep integration with AI tech",
+          "publisher": "Baiyun District Government, Guangzhou",
+          "date": "2025-02-18",
+          "url": "https://en.by.gov.cn/2025-02/18/c_1071181.htm"
         }
       ]
     },
@@ -1185,14 +1269,20 @@
         }
       ],
       "relevance_to_pilot": "European example of building rather than buying — supports the locally-controlled, sovereign-tooling thesis.",
-      "confidence": "report-only",
+      "confidence": "verified",
       "caveats": "Carried from the original landscape report with its original sourcing.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — France/Europe section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "Albert API, la plateforme d'IA générative de l'État",
+          "publisher": "DINUM (numerique.gouv.fr)",
+          "date": "2025",
+          "url": "https://www.numerique.gouv.fr/offre-accompagnement/expertise-albert-ia-etat/"
+        },
+        {
+          "title": "IA : connaissez-vous Albert ?",
+          "publisher": "info.gouv.fr",
+          "date": "2024",
+          "url": "https://www.info.gouv.fr/actualite/ia-connaissez-vous-albert"
         }
       ],
       "bet": {
@@ -1219,7 +1309,7 @@
       },
       "location_label": "Lisbon",
       "headline": "A multilingual citizen assistant across thousands of services.",
-      "summary": "Portugal's gov.pt assistant is a ChatGPT-powered citizen-facing service covering 2,300+ services in 12 languages — a grounded-RAG-plus-human-oversight model.",
+      "summary": "Portugal's gov.pt assistant is a ChatGPT-powered citizen-facing service covering 2,300+ services in 12 languages — grounded in an official public-services knowledge base.",
       "key_metrics": [
         {
           "label": "Services",
@@ -1233,14 +1323,20 @@
         }
       ],
       "relevance_to_pilot": "Multilingual citizen-assistant pattern — relevant to serving a diverse diaspora.",
-      "confidence": "report-only",
+      "confidence": "verified",
       "caveats": "Carried from the original landscape report with its original sourcing.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — Portugal section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "You can now talk to the gov.pt portal's new virtual assistant",
+          "publisher": "Government of Portugal (gov.pt / AMA)",
+          "date": "2024",
+          "url": "https://www2.gov.pt/en/noticias/ja-pode-falar-com-a-nova-assistente-virtual-do-portal-gov.pt"
+        },
+        {
+          "title": "Virtual Assistant with Artificial Intelligence will support citizens in ePortugal",
+          "publisher": "Government of Portugal (gov.pt / AMA)",
+          "date": "2023-05-26",
+          "url": "https://www2.gov.pt/en/noticias/assistente-virtual-com-inteligencia-artificial-vai-apoiar-os-cidadaos-no-eportugal"
         }
       ]
     },
@@ -1275,14 +1371,20 @@
         }
       ],
       "relevance_to_pilot": "Both a productivity-ambition benchmark and a reminder of the opaque-algorithm failure mode the pilot is designed against.",
-      "confidence": "report-only",
+      "confidence": "verified",
       "caveats": "50m-hours is a target. Welfare-algorithm concerns are documented risk, not the productivity program itself.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — Denmark/Nordics section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "Artificial Intelligence 2026 — Denmark",
+          "publisher": "Chambers and Partners",
+          "date": "2026",
+          "url": "https://practiceguides.chambers.com/practice-guides/artificial-intelligence-2026/denmark"
+        },
+        {
+          "title": "Denmark: AI-powered welfare system fuels mass surveillance and risks discriminating against marginalized groups",
+          "publisher": "Amnesty International",
+          "date": "2024-11-13",
+          "url": "https://www.amnesty.org/en/latest/news/2024/11/denmark-ai-powered-welfare-system-fuels-mass-surveillance-and-risks-discriminating-against-marginalized-groups-report/"
         }
       ]
     },
@@ -1316,14 +1418,20 @@
         }
       ],
       "relevance_to_pilot": "Another live Colombian AI deployment — useful for the 'we've already started' narrative.",
-      "confidence": "report-only",
+      "confidence": "verified",
       "caveats": "PretorIA's own measured throughput is not published; reported daily figures vary by year and it has been described as still in pilot/testing.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — Colombia/PretorIA section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "Pretoria: nueva herramienta para mejorar selección de tutelas en Corte Constitucional",
+          "publisher": "El Tiempo",
+          "date": "2020-08",
+          "url": "https://www.eltiempo.com/justicia/cortes/pretoria-nueva-herramienta-para-mejorar-seleccion-de-tutelas-en-corte-constitucional-522688"
+        },
+        {
+          "title": "Conoce nuestra investigación sobre PretorIA, la IA en la Corte Constitucional",
+          "publisher": "Dejusticia",
+          "date": "2020",
+          "url": "https://www.dejusticia.org/conoce-nuestra-investigacion-sobre-pretoria-la-tecnologia-que-incorpora-la-inteligencia-artificial-a-la-corte-constitucional/"
         }
       ]
     },
@@ -1357,14 +1465,26 @@
         }
       ],
       "relevance_to_pilot": "The regional sovereign-model option Deltanova can integrate where data-sovereignty or cost rules out US frontier APIs.",
-      "confidence": "report-only",
+      "confidence": "verified",
       "caveats": "Carried from the original landscape report with its original sourcing.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — Latam-GPT section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "What is Latam-GPT: Latin America's Spanish and Portuguese AI model?",
+          "publisher": "Euronews",
+          "date": "2026-02-12",
+          "url": "https://www.euronews.com/next/2026/02/12/what-is-latam-gpt-latin-americas-spanish-and-portuguese-ai-model"
+        },
+        {
+          "title": "Chile Launches Latam GPT to Build a Less Biased AI for Latin America",
+          "publisher": "The Tico Times",
+          "date": "2026-02-10",
+          "url": "https://ticotimes.net/2026/02/10/chile-launches-latam-gpt-to-build-a-less-biased-ai-for-latin-america"
+        },
+        {
+          "title": "Latam-GPT and the search for AI sovereignty",
+          "publisher": "Brookings",
+          "date": "2026",
+          "url": "https://www.brookings.edu/articles/latam-gpt-and-the-search-for-ai-sovereignty/"
         }
       ]
     },
@@ -1384,33 +1504,36 @@
       },
       "location_label": "Washington, D.C.",
       "headline": "The central node that funds, benchmarks and de-risks government AI.",
-      "summary": "The World Bank's GovTech program has funded 30+ initiatives since 2019, launched a Working Group on AI in the Public Sector (Oct 2024), runs the GovTech Maturity Index, launched a global repository of public-sector AI deployments (2025), and runs the GovTech Innovation Challenge. Its Digital Progress and Trends Report 2025 maps the global AI divide.",
+      "summary": "The World Bank's GovTech program launched a Working Group on AI in the Public Sector (co-chaired by Estonia and Nigeria, Oct 2024), runs the GovTech Maturity Index, launched a global repository of public-sector AI deployments (May 2025), and runs the GovTech Innovation Challenge (136 proposals from 33 countries in its 2025 edition).",
       "key_metrics": [
         {
-          "label": "Initiatives funded",
-          "value": "30+",
-          "note": "since 2019"
+          "label": "AI Working Group",
+          "value": "Oct 2024"
         },
         {
-          "label": "AI working group",
-          "value": "Oct 2024",
-          "note": "public-sector AI"
+          "label": "Global AI repository",
+          "value": "May 2025"
         },
         {
-          "label": "Engagement",
-          "value": "Ecuador Gob.ec scaling",
-          "note": "LATAM-relevant"
+          "label": "Innovation Challenge",
+          "value": "136 proposals / 33 countries"
         }
       ],
       "relevance_to_pilot": "A funding source and legitimacy channel — register interest with the GovTech Global Partnership; submit case studies to its AI repository.",
-      "confidence": "report-only",
+      "confidence": "verified",
       "caveats": "Carried from the original landscape report with its original sourcing.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — World Bank section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "GovTech: Putting people first (Global Program on GovTech & Public Sector Innovation)",
+          "publisher": "World Bank",
+          "date": "2025-12",
+          "url": "https://www.worldbank.org/en/programs/govtech"
+        },
+        {
+          "title": "GovTech — Artificial Intelligence in the Public Sector (Working Group)",
+          "publisher": "World Bank",
+          "date": "2025",
+          "url": "https://www.worldbank.org/en/programs/govtech/artificial-intelligence"
         }
       ]
     },
@@ -1430,7 +1553,7 @@
       },
       "location_label": "Washington, D.C.",
       "headline": "The most important institution for the LATAM market — funder and client pipeline.",
-      "summary": "The IDB promotes responsible regional AI (fAIr LAC+), rewards public-sector AI/digital-ID innovation (Gobernarte 2025), and funds AI pilots and official training across LAC (RG-T4439, RAI 4 Growth). Its '¡IA Presente!' call surfaced 193 AI initiatives across 22 countries; INTAL estimates AI could lift regional GDP growth by ~1 point (Colombia 3.7% → 4.5%).",
+      "summary": "The IDB promotes responsible regional AI (fAIr LAC+), rewards public-sector AI/digital-ID innovation (Gobernarte 2025), and funds AI pilots and official training across LAC (RG-T4463, 'RAI 4 Growth'). Its '¡IA Presente!' call (AI in education) surfaced 193 initiatives across 22 countries; a 2019 INTAL study estimated AI could lift regional GDP growth by ~1 point (Colombia 3.7% → 4.5%).",
       "key_metrics": [
         {
           "label": "Initiatives surfaced",
@@ -1441,7 +1564,7 @@
           "label": "GDP-growth estimate",
           "value": "Colombia 3.7% → 4.5%",
           "is_projection": true,
-          "note": "IDB/INTAL"
+          "note": "Per a 2019 INTAL study"
         },
         {
           "label": "Funding vehicles",
@@ -1454,10 +1577,28 @@
       "caveats": "GDP-growth figure is an estimate. Carried from the original landscape report with its original sourcing.",
       "sources": [
         {
-          "title": "Strategic landscape report (original research) — IDB/BID section",
-          "publisher": "Deltanova internal research",
-          "date": "2026-05-30",
-          "url": ""
+          "title": "How AI is transforming education in Latin America and the Caribbean: lessons from 193 solutions",
+          "publisher": "Inter-American Development Bank",
+          "date": "2025",
+          "url": "https://www.iadb.org/en/blog/education/how-ai-transforming-education-latin-america-and-caribbean-lessons-193-solutions"
+        },
+        {
+          "title": "AI and Digital Identification Initiatives from Four Countries Win 2025 Gobernarte Award",
+          "publisher": "Inter-American Development Bank",
+          "date": "2025-07",
+          "url": "https://www.iadb.org/en/news/artificial-intelligence-and-digital-identification-initiatives-four-countries-win-2025-gobernarte"
+        },
+        {
+          "title": "Artificial Intelligence to Boost Latin American and Caribbean Economies, IDB Study",
+          "publisher": "Inter-American Development Bank / INTAL",
+          "date": "2019-05",
+          "url": "https://www.iadb.org/en/news/artificial-intelligence-boost-latin-american-and-caribbean-economies-idb-study"
+        },
+        {
+          "title": "Responsible Artificial Intelligence for Growth in LAC – RAI 4 Growth (RG-T4463)",
+          "publisher": "Inter-American Development Bank",
+          "date": "2024",
+          "url": "https://www.iadb.org/en/project/RG-T4463"
         }
       ]
     }

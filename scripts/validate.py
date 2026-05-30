@@ -2,14 +2,26 @@
 """
 Validate government-ai-map-data.json before deploy.
 
+GROUNDING INVARIANT (hard gate)
+  Every reference MUST cite at least one source, and every listed source MUST
+  carry a real http(s) URL. A card the public cannot click through to verify is
+  a schema ERROR, not a warning — it blocks the deploy. This is what guarantees
+  the map's promise: every fact shown has a real link behind it.
+
+  Structural presence of a URL is enforced here (deterministic, runs in CI).
+  URL *liveness* is intentionally NOT a hard CI gate — a transient outage on a
+  government site should not block an unrelated content update. Liveness is
+  checked with --check-urls and kept healthy by the weekly link-health routine.
+
 Exit codes:
   0 = clean
-  1 = schema violation (BLOCK deploy)
+  1 = schema violation / ungrounded reference (BLOCK deploy)
   2 = soft warning (non-blocking, prints WARN lines)
 
 Run:
-  python3 scripts/validate.py
-  python3 scripts/validate.py --check-urls   # also pings every source URL (slow)
+  python3 scripts/validate.py                       # schema + grounding gate (fast, deterministic)
+  python3 scripts/validate.py --check-urls          # also GET every source URL (liveness; slow, network)
+  python3 scripts/validate.py --check-urls --strict # a ref with NO reachable source becomes an ERROR
 """
 from __future__ import annotations
 
@@ -24,6 +36,13 @@ REQUIRED_REF_FIELDS = ["id", "country", "category", "coordinates", "program"]
 REQUIRED_COORD_FIELDS = ["lat", "lng"]
 ALLOWED_HORIZONS = {"short", "medium", "long"}
 ALLOWED_CONFIDENCE = {"verified", "report-only"}
+
+# Browser-like UA: many government sites 403 unknown bots, which would otherwise
+# produce false "dead link" warnings. We only ever read a few bytes.
+LINKCHECK_UA = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/124.0 Safari/537.36 gov-ai-map-linkcheck/2.0"
+)
 
 
 def fail(msg: str) -> None:
@@ -121,20 +140,35 @@ def validate_schema(d: dict) -> tuple[int, int]:
             fail(f"references[{rid}].confidence must be one of {ALLOWED_CONFIDENCE}")
             errors += 1
 
-        # source URL warnings (non-fatal, but visible)
+        # --- GROUNDING INVARIANT (hard gate) ---
+        # Every card must be verifiable: >=1 source, and every source has a real
+        # http(s) URL. No unlinked sources — they render as dead text on the card.
         sources = r.get("sources", [])
-        if not sources:
-            warn(f"references[{rid}] has no sources")
-            warnings += 1
-        for j, s in enumerate(sources):
-            url = (s or {}).get("url", "")
-            if not url:
-                warn(f"references[{rid}].sources[{j}] has empty url")
-                warnings += 1
-                continue
-            parsed = urlparse(url)
-            if parsed.scheme not in ("http", "https"):
-                fail(f"references[{rid}].sources[{j}].url must be http(s): {url}")
+        if not isinstance(sources, list) or len(sources) == 0:
+            fail(f"references[{rid}] has no sources[] — every card must cite at least one verifiable source")
+            errors += 1
+        else:
+            valid_urls = 0
+            for j, s in enumerate(sources):
+                url = (s or {}).get("url", "")
+                if not url:
+                    fail(
+                        f"references[{rid}].sources[{j}] has empty url — every listed source "
+                        f"must link to a verifiable page (no unlinked sources allowed)"
+                    )
+                    errors += 1
+                    continue
+                parsed = urlparse(url)
+                if parsed.scheme not in ("http", "https") or not parsed.netloc:
+                    fail(f"references[{rid}].sources[{j}].url must be a valid http(s) URL: {url}")
+                    errors += 1
+                    continue
+                valid_urls += 1
+            if valid_urls == 0:
+                fail(
+                    f"references[{rid}] has no source with a valid http(s) URL — "
+                    f"the card would not be verifiable by the public"
+                )
                 errors += 1
 
     # bets_framing cross-references
@@ -154,34 +188,74 @@ def validate_schema(d: dict) -> tuple[int, int]:
     return errors, warnings
 
 
-def check_urls(d: dict) -> int:
-    """Optional: HEAD-check every source URL. Returns warning count."""
-    try:
-        import urllib.request
-    except ImportError:
-        warn("urllib.request not available, skipping URL check")
-        return 0
+def _probe(url: str, cache: dict[str, tuple[bool, str]]) -> tuple[bool, str]:
+    """GET a URL (following redirects), read a few bytes, return (ok, detail)."""
+    if url in cache:
+        return cache[url]
+    import urllib.request
+    import urllib.error
 
+    req = urllib.request.Request(
+        url,
+        method="GET",
+        headers={"User-Agent": LINKCHECK_UA, "Accept": "text/html,application/xhtml+xml,*/*"},
+    )
+    # Codes that mean "the page exists but the server refuses an automated client."
+    # Government/multilateral sites (e.g. iadb.org, pib.gov.in) commonly return
+    # these to bots while serving humans fine — so they are NOT dead links.
+    bot_block = {401, 403, 406, 429}
+    try:
+        # urlopen follows 3xx redirects by default.
+        with urllib.request.urlopen(req, timeout=12) as resp:
+            status = getattr(resp, "status", 200) or 200
+            resp.read(2048)  # ensure the body is actually served, not just headers
+            result = (status < 400, f"HTTP {status}")
+    except urllib.error.HTTPError as e:
+        if e.code in bot_block:
+            result = (True, f"HTTP {e.code} (bot-blocked; verify manually)")
+        else:
+            result = (False, f"HTTP {e.code}")
+    except Exception as e:  # noqa: BLE001 - any network failure is a dead-link signal
+        result = (False, type(e).__name__)
+    cache[url] = result
+    return result
+
+
+def check_urls(d: dict, strict: bool = False) -> tuple[int, int]:
+    """GET-check every source URL. Returns (errors, warnings).
+
+    A single dead link among several is a warning. A reference whose *only*
+    source(s) are all unreachable is the serious case: the card is currently
+    unverifiable. That escalates to an ERROR under --strict, else a loud warning.
+    """
+    errors = 0
     warnings = 0
-    seen: set[str] = set()
+    cache: dict[str, tuple[bool, str]] = {}
+
     for r in d.get("references", []):
-        for s in r.get("sources", []):
-            url = (s or {}).get("url", "")
-            if not url or url in seen:
-                continue
-            seen.add(url)
-            req = urllib.request.Request(
-                url, method="HEAD", headers={"User-Agent": "gov-ai-map-validator/1.0"}
-            )
-            try:
-                with urllib.request.urlopen(req, timeout=8) as resp:
-                    if resp.status >= 400:
-                        warn(f"URL {resp.status}: {url}")
-                        warnings += 1
-            except Exception as e:
-                warn(f"URL unreachable ({type(e).__name__}): {url}")
+        rid = r.get("id", "<unknown>")
+        urls = [(s or {}).get("url", "") for s in r.get("sources", []) if (s or {}).get("url", "")]
+        reachable = 0
+        for url in urls:
+            ok, detail = _probe(url, cache)
+            if ok and "bot-blocked" in detail:
+                # exists for humans; surface as an informational NOTE, not a warning
+                print(f"NOTE:  {detail}: {url}  [{rid}]")
+                reachable += 1
+            elif ok:
+                reachable += 1
+            else:
+                warn(f"URL unreachable ({detail}): {url}  [{rid}]")
                 warnings += 1
-    return warnings
+        if urls and reachable == 0:
+            msg = f"references[{rid}] has NO reachable source — card is currently unverifiable"
+            if strict:
+                fail(msg)
+                errors += 1
+            else:
+                warn(msg)
+                warnings += 1
+    return errors, warnings
 
 
 def main() -> int:
@@ -197,7 +271,9 @@ def main() -> int:
     errors, warnings = validate_schema(d)
 
     if "--check-urls" in sys.argv:
-        warnings += check_urls(d)
+        u_err, u_warn = check_urls(d, strict="--strict" in sys.argv)
+        errors += u_err
+        warnings += u_warn
 
     n_refs = len(d.get("references", []))
     n_cats = len(d.get("meta", {}).get("categories", []))
