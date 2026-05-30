@@ -25,8 +25,18 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate JSON schema (block on errors)
-        run: python3 scripts/validate.py
+      - name: Validate JSON schema (block on errors, allow warnings)
+        # exit 0 = clean, 1 = schema error (block), 2 = warnings (pass)
+        run: |
+          set +e
+          python3 scripts/validate.py
+          rc=$?
+          if [ $rc -eq 0 ] || [ $rc -eq 2 ]; then
+            echo "validator rc=$rc (acceptable)"
+            exit 0
+          fi
+          echo "validator rc=$rc (blocking)"
+          exit $rc
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
