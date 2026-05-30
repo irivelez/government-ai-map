@@ -43,4 +43,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: '4.95.0'
           command: pages deploy . --project-name=government-ai-map --branch=main --commit-dirty=true
