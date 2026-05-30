@@ -1,0 +1,1514 @@
+{
+  "meta": {
+    "title": "Government & Diplomatic AI Deployments — Global Map",
+    "subtitle": "Proven plays, leaders, and the consular opportunity",
+    "date": "2026-05-30",
+    "description": "An interactive map of how governments, embassies, institutions and development banks are deploying AI to deliver services to citizens. Combines a strategic landscape report with an independent fact-check of specific claims. Each reference is tagged by category (for color-grouping), strategic time-horizon (for filtering), and confidence level (verified vs. report-only).",
+    "schema_notes": {
+      "coordinates": "lat/lng of the relevant capital or headquarters, for map plotting. Where two markers share a city, small offsets are applied to avoid overlap.",
+      "confidence": "'verified' = independently fact-checked against primary or highly reputable sources in this project. 'report-only' = carried from the original strategic landscape report with its original sourcing; not independently re-verified.",
+      "key_metrics": "discrete label/value pairs intended to render as stat callouts in a marker popup.",
+      "is_projection": "true when the headline number is a target/projection rather than a realized, audited result."
+    },
+    "categories": [
+      {
+        "id": "consular-diplomatic",
+        "label": "Consular & Diplomatic",
+        "color": "#2563eb",
+        "description": "AI inside foreign ministries, embassies and consular posts — the layer closest to the San Francisco pilot."
+      },
+      {
+        "id": "internal-productivity",
+        "label": "Internal Productivity",
+        "color": "#0d9488",
+        "description": "Copilots and assistants for civil servants — drafting, summarizing, transcription. Highest, fastest ROI."
+      },
+      {
+        "id": "citizen-rag",
+        "label": "Citizen-Facing Assistant",
+        "color": "#7c3aed",
+        "description": "Retrieval-grounded chatbots and conversational service layers for the public."
+      },
+      {
+        "id": "fraud-tax-customs",
+        "label": "Fraud / Tax / Customs",
+        "color": "#dc2626",
+        "description": "ML and predictive models for revenue protection and anomaly detection — strong fiscal ROI, self-funding."
+      },
+      {
+        "id": "justice",
+        "label": "Justice & Legal Triage",
+        "color": "#ca8a04",
+        "description": "Case triage, classification and decision-drafting where caseloads are crushing."
+      },
+      {
+        "id": "sovereign-vision",
+        "label": "Sovereign / AI-Native Vision",
+        "color": "#db2777",
+        "description": "Long-horizon national bets: sovereign compute, national LLMs, agentic-government pledges."
+      },
+      {
+        "id": "institution",
+        "label": "Institution / Funder",
+        "color": "#475569",
+        "description": "Multilateral bodies and development banks that fund, benchmark and legitimize government AI."
+      }
+    ],
+    "horizons": {
+      "short": {
+        "label": "Short-term — efficiency now",
+        "description": "Off-the-shelf models, light integration, fast pilots. Buys deployment services."
+      },
+      "medium": {
+        "label": "Medium-term — capacity then automation",
+        "description": "Home-grown tools, governance, sandboxes. Buys capability-building."
+      },
+      "long": {
+        "label": "Long-term — sovereignty & AI-native state",
+        "description": "Sovereign compute, national LLMs, agentic government. Buys frontier infrastructure."
+      }
+    },
+    "confidence_levels": {
+      "verified": "Independently fact-checked in this project against primary or highly reputable sources.",
+      "report-only": "From the original strategic landscape report, with its original sourcing; not independently re-verified."
+    }
+  },
+  "references": [
+    {
+      "id": "usa-statechat",
+      "country": "United States",
+      "country_code": "US",
+      "flag": "🇺🇸",
+      "entity": "Department of State",
+      "program": "StateChat (with Northstar & FAM Search)",
+      "category": "consular-diplomatic",
+      "horizon": "short",
+      "date": "2024-08",
+      "coordinates": {
+        "lat": 38.8943,
+        "lng": -77.0488
+      },
+      "location_label": "Washington, D.C.",
+      "headline": "The host country of the SF consulate already runs AI at scale across its own diplomatic network.",
+      "summary": "The U.S. State Department's first enterprise generative-AI assistant (built on Palantir + Azure OpenAI) helps diplomats translate, draft cables and emails, and query the ~25,000-page Foreign Affairs Manual. Sister tools Northstar (media monitoring/synthesis) and FAM Search (policy Q&A) are also in production — all launched in 2024.",
+      "key_metrics": [
+        {
+          "label": "Users (written gov. strategy, Sep 2025)",
+          "value": "45,000+",
+          "note": "≈95% of posts — most defensible figure"
+        },
+        {
+          "label": "Users (official remarks, late 2025)",
+          "value": "≈58,000",
+          "note": "≈98% of 270 missions & posts, 'within 20 months'"
+        },
+        {
+          "label": "Northstar projected savings",
+          "value": "180,000 hrs/yr",
+          "is_projection": true,
+          "note": "public-diplomacy family only"
+        }
+      ],
+      "relevance_to_pilot": "Direct precedent in the very institution the SF consulate sits beside: a foreign service already operating gen-AI at near-universal post coverage. Frames Colombia's move as joining a proven diplomatic trend, not pioneering an untested one.",
+      "confidence": "verified",
+      "caveats": "User count conflicts between two official sources (45,000/95% written vs. ~58,000/98% spoken). Northstar figure is a projection. Default to 45,000/95% if challenged.",
+      "sources": [
+        {
+          "title": "From translation to email drafting, State Department turns to AI to assist workforce",
+          "publisher": "FedScoop",
+          "date": "2024-09",
+          "url": "https://fedscoop.com/state-department-ai-chatbot-email-drafting-northstar-famsearch/"
+        },
+        {
+          "title": "Enterprise Data & Artificial Intelligence Strategy",
+          "publisher": "U.S. Department of State",
+          "date": "2025-09",
+          "url": "https://www.state.gov/wp-content/uploads/2025/09/Department-of-State-Enterprise-Data-and-AI-Strategy.pdf"
+        },
+        {
+          "title": "State Department eyes agentic AI plans",
+          "publisher": "FedScoop",
+          "date": "2025",
+          "url": "https://fedscoop.com/state-department-agentic-ai-plans/"
+        }
+      ],
+      "bet": {
+        "keyword_es": "Escala silenciosa",
+        "statement_es": "Escala silenciosa dentro de sus instituciones.",
+        "keyword_en": "Quiet scale",
+        "statement_en": "Quiet scale inside its own institutions.",
+        "note": "Silenciosa en lo operativo; en lo político EE.UU. es ruidoso (órdenes ejecutivas, desregulación)."
+      }
+    },
+    {
+      "id": "india-passport-seva-v2",
+      "country": "India",
+      "country_code": "IN",
+      "flag": "🇮🇳",
+      "entity": "Ministry of External Affairs",
+      "program": "Global Passport Seva Programme V2.0 (GPSP)",
+      "category": "consular-diplomatic",
+      "horizon": "short",
+      "date": "2025-10-28",
+      "coordinates": {
+        "lat": 28.6143,
+        "lng": 77.1994
+      },
+      "location_label": "New Delhi",
+      "headline": "The closest operating consular template that exists worldwide — the exact playbook San Francisco could adapt.",
+      "summary": "AI voice and chat bots deployed across India's 190+ embassies and consulates to help citizens fill passport applications, upload documents and file grievances, on a single cloud platform with UPI/QR payments. The domestic PSP V2.0 went live May 2025; the overseas rollout (GPSP V2.0) followed on 28 October 2025.",
+      "key_metrics": [
+        {
+          "label": "Missions covered",
+          "value": "190+",
+          "note": "embassies & consulates worldwide"
+        },
+        {
+          "label": "Citizen tasks",
+          "value": "Forms · grievances · queries",
+          "note": "AI chat + voice bots"
+        },
+        {
+          "label": "Overseas launch",
+          "value": "Oct 28, 2025",
+          "note": "domestic launch May 2025"
+        }
+      ],
+      "relevance_to_pilot": "The single most transferable reference: a foreign ministry put AI assistants directly into consular passport workflows for its diaspora. This is the operational blueprint for the SF pilot, adaptable to Colombian processes.",
+      "confidence": "verified",
+      "caveats": "The 'October 2025' date is correct for the overseas/embassy rollout; the domestic launch was May 2025.",
+      "sources": [
+        {
+          "title": "MEA rolls out Passport Seva Programme 2 with new additions for citizens",
+          "publisher": "Business Today",
+          "date": "2025-11-13",
+          "url": "https://www.businesstoday.in/nri/visa/story/all-new-passports-mea-rolls-out-passport-seva-programme-2-with-new-additions-for-citizens-502016-2025-11-13"
+        },
+        {
+          "title": "India launches Passport Seva V2.0 and chip-enabled e-Passports nationwide",
+          "publisher": "VisaHQ",
+          "date": "2025-11-12",
+          "url": "https://www.visahq.com/news/2025-11-12/in/india-launches-passport-seva-v20-and-chip-enabled-e-passports-nationwide/"
+        },
+        {
+          "title": "India's Passport Services Go Digital With New AI Tools And e-Passports",
+          "publisher": "indica News",
+          "date": "2025",
+          "url": "https://indicanews.com/indias-passport-services-go-digital-with-new-ai-tools-and-e-passports/"
+        }
+      ]
+    },
+    {
+      "id": "albania-diella",
+      "country": "Albania",
+      "country_code": "AL",
+      "flag": "🇦🇱",
+      "entity": "Council of Ministers / AKSHI",
+      "program": "Diella — world's first AI 'minister'",
+      "category": "sovereign-vision",
+      "horizon": "short",
+      "date": "2025-09-11",
+      "coordinates": {
+        "lat": 41.3275,
+        "lng": 19.8189
+      },
+      "location_label": "Tirana",
+      "headline": "A small EU-aspirant captured global headlines with a symbolic AI gesture. A consulate can do the same at its own scale.",
+      "summary": "On 11 September 2025 PM Edi Rama named Diella — originally the e-Albania portal assistant (born Jan 2025, built by AKSHI with Microsoft/Azure OpenAI) — to a cabinet-level AI role over public procurement, with a mandate to make tenders '100% free of corruption.' Its planned role is advisory with human sign-off at four tender stages.",
+      "key_metrics": [
+        {
+          "label": "Citizen interactions",
+          "value": "≈972,000",
+          "note": "Albanian government / AKSHI figures"
+        },
+        {
+          "label": "Documents handled",
+          "value": "≈36,000",
+          "note": "corroborated via Reuters/Al Jazeera"
+        },
+        {
+          "label": "Mandate",
+          "value": "Corruption-free procurement",
+          "note": "advisory, human sign-off"
+        }
+      ],
+      "relevance_to_pilot": "Proof that a small state can win outsized global attention and signal reform ambition with a single, well-framed AI gesture. The narrative lever, not the technical one.",
+      "confidence": "verified",
+      "caveats": "As of late 2025 not yet operationally deployed in procurement ('more symbol than substance'). Title varies across sources (Minister of State for AI vs. Minister for Public Procurement). Faces legal/constitutional challenge. 972k figure is government-sourced.",
+      "sources": [
+        {
+          "title": "Albania's AI-Powered Minister Tests the Future of Government",
+          "publisher": "TIME",
+          "date": "2025",
+          "url": "https://time.com/7324934/albania-ai-minister-diella/"
+        },
+        {
+          "title": "Albania's Headline-Grabbing AI 'Minister' is a Risky Innovation",
+          "publisher": "Balkan Insight",
+          "date": "2025-09-16",
+          "url": "https://balkaninsight.com/2025/09/16/albanias-headline-grabbing-ai-minister-is-a-risky-innovation/"
+        },
+        {
+          "title": "Artificial intelligence, real politics: what Albania's AI minister means for the EU",
+          "publisher": "EU Institute for Security Studies (EUISS)",
+          "date": "2025",
+          "url": "https://www.iss.europa.eu/publications/commentary/artificial-intelligence-real-politics-what-albanias-ai-minister-means-eu"
+        }
+      ],
+      "bet": {
+        "keyword_es": "Símbolo",
+        "statement_es": "Una ministra de inteligencia artificial en el gabinete.",
+        "keyword_en": "Symbol",
+        "statement_en": "An AI minister in the cabinet.",
+        "note": "Aún 'más símbolo que sustancia' — no desplegada operativamente en compras públicas."
+      }
+    },
+    {
+      "id": "singapore-pair",
+      "country": "Singapore",
+      "country_code": "SG",
+      "flag": "🇸🇬",
+      "entity": "GovTech / Open Government Products",
+      "program": "Pair (+ national agentic-AI strategy)",
+      "category": "internal-productivity",
+      "horizon": "medium",
+      "date": "2023-mid",
+      "coordinates": {
+        "lat": 1.2999,
+        "lng": 103.7898
+      },
+      "location_label": "Singapore",
+      "headline": "The cleanest ROI metric that exists — time returned to civil servants.",
+      "summary": "A ChatGPT-like assistant for Singapore's public officers (cleared for Restricted/Sensitive-Normal data) for drafting, research and custom bots. Singapore is the disciplined sequencer: it published the world's first public-sector Agentic AI governance framework (IMDA, Jan 2026), deploys agents internally first, and committed S$1bn+ to public AI R&D (2025–2030) under a PM-chaired National AI Council.",
+      "key_metrics": [
+        {
+          "label": "Monthly active users",
+          "value": "78,517",
+          "note": "live OGP dashboard — point-in-time"
+        },
+        {
+          "label": "Hours saved / month",
+          "value": "832,280",
+          "note": "live OGP dashboard — point-in-time"
+        },
+        {
+          "label": "Custom bots created",
+          "value": "20,000+",
+          "note": "live OGP dashboard"
+        },
+        {
+          "label": "Public service size",
+          "value": "≈158,000",
+          "note": "officers (Civil Service ≈89,000)"
+        }
+      ],
+      "relevance_to_pilot": "The benchmark for 'augment, don't replace': measurable hours returned to existing staff. The model answer to 'are you firing workers?' Also the template for sequencing — internal capacity before citizen-facing autonomy.",
+      "confidence": "verified",
+      "caveats": "Pair metrics come from a continuously-updating live dashboard (cite with access date). '150,000 public servants' is a rounded reference to the ~158,000 Public Service. 'Mandatory AI literacy course since Oct 2024' could NOT be verified — drop or re-source. Agentic-strategy details (S$1bn, Jan 2026 framework, National AI Council) are report-only.",
+      "sources": [
+        {
+          "title": "Pair — public metrics dashboard",
+          "publisher": "Open Government Products",
+          "date": "live",
+          "url": "https://reports.open.gov.sg/pair"
+        },
+        {
+          "title": "Government's role important to ensure use of AI for public good, says GovTech CTO",
+          "publisher": "GovInsider",
+          "date": "2025",
+          "url": "https://govinsider.asia/intl-en/article/governments-role-important-to-ensure-use-of-ai-for-public-good-says-govtech-cto"
+        },
+        {
+          "title": "Pairing with AI for Public Sector Impact in Singapore",
+          "publisher": "UNDP",
+          "date": "2025",
+          "url": "https://www.undp.org/policy-centre/singapore/blog/pairing-ai-public-sector-impact-singapore"
+        }
+      ],
+      "bet": {
+        "keyword_es": "Disciplina",
+        "statement_es": "Capacidad interna primero, ciudadanos después.",
+        "keyword_en": "Discipline",
+        "statement_en": "Internal capacity first, citizens second."
+      }
+    },
+    {
+      "id": "uk-humphrey-consult",
+      "country": "United Kingdom",
+      "country_code": "GB",
+      "flag": "🇬🇧",
+      "entity": "Government Digital Service / i.AI",
+      "program": "Humphrey (Consult, Redbox, Minute, Parlex, Lex)",
+      "category": "internal-productivity",
+      "horizon": "short",
+      "date": "2025",
+      "coordinates": {
+        "lat": 51.5045,
+        "lng": -0.1267
+      },
+      "location_label": "London",
+      "headline": "Hard proof that AI does the tedious work and the official keeps the judgment.",
+      "summary": "The UK's flagship internal-AI suite. Consult analyzed 50,000+ consultation responses in ~2 hours for £240 (vs. 22 expert-hours), agreeing with human analysts 83% of the time — while two human teams agreed with each other only 55%. Other tools: Minute (secure transcription, used in a PM-chaired meeting), Lex (legal search), Parlex, and Redbox (drafting).",
+      "key_metrics": [
+        {
+          "label": "Responses analyzed",
+          "value": "50,000+",
+          "note": "in ~2 hours"
+        },
+        {
+          "label": "Compute cost",
+          "value": "£240",
+          "note": "vs. 22 expert-hours of validation"
+        },
+        {
+          "label": "AI–human agreement",
+          "value": "83%",
+          "note": "vs. 55% human-to-human"
+        },
+        {
+          "label": "Projected gov-wide savings",
+          "value": "£20m/yr · 75,000 days",
+          "is_projection": true,
+          "note": "across ~500 annual consultations"
+        }
+      ],
+      "relevance_to_pilot": "The standout 'lowest-hanging fruit' ROI story worldwide. Demonstrates the safe division of labor — AI drafts/clusters, humans decide — that the SF pilot's design rests on.",
+      "confidence": "verified",
+      "caveats": "£20m/75,000-days are government projections, not realized savings. Redbox user count: GOV.UK transparency record says 2,000 (Feb 2025); press cited ~5,300 — a discrepancy that does not affect the Consult figures.",
+      "sources": [
+        {
+          "title": "Government-built 'Humphrey' AI tool reviews responses to consultation for first time",
+          "publisher": "GOV.UK / DSIT",
+          "date": "2025-05-14",
+          "url": "https://www.gov.uk/government/news/government-built-humphrey-ai-tool-reviews-responses-to-consultation-for-first-time-in-bid-to-save-millions"
+        },
+        {
+          "title": "Government-built AI 'Consult' Saves Thousands of Staff Days",
+          "publisher": "Think Digital Partners",
+          "date": "2025-10-16",
+          "url": "https://www.thinkdigitalpartners.com/news/2025/10/16/government-built-ai-consult-saves-thousands-of-staff-days/"
+        },
+        {
+          "title": "Yes, civil servant: Meet Humphrey, the government's AI package for officials",
+          "publisher": "Global Government Forum",
+          "date": "2025",
+          "url": "https://www.globalgovernmentforum.com/yes-civil-servant-meet-humphrey-the-governments-ai-package-for-officials/"
+        }
+      ]
+    },
+    {
+      "id": "pennsylvania-chatgpt",
+      "country": "United States",
+      "country_code": "US",
+      "flag": "🇺🇸",
+      "entity": "Commonwealth of Pennsylvania",
+      "program": "ChatGPT Enterprise pilot",
+      "category": "internal-productivity",
+      "horizon": "short",
+      "date": "2024-01",
+      "coordinates": {
+        "lat": 40.2645,
+        "lng": -76.8839
+      },
+      "location_label": "Harrisburg, PA",
+      "headline": "The closest analogue to a consular operation: small team, modest budget, clear metric.",
+      "summary": "A year-long state pilot put ChatGPT Enterprise in the hands of 175 employees across 14 agencies. Nearly half had never used ChatGPT before; over 85% reported a positive experience and saved an average of ~95 minutes per day. A year later the Commonwealth expanded gen-AI to 3,000+ employees across 35 agencies.",
+      "key_metrics": [
+        {
+          "label": "Employees",
+          "value": "175",
+          "note": "across 14 agencies"
+        },
+        {
+          "label": "Time saved",
+          "value": "≈95 min/day",
+          "note": "≈8 hrs/week"
+        },
+        {
+          "label": "License cost",
+          "value": "$108,000",
+          "note": "licenses, training & support"
+        },
+        {
+          "label": "Positive experience",
+          "value": "85%+",
+          "note": "48% were new to ChatGPT"
+        }
+      ],
+      "relevance_to_pilot": "Scale-matched to the SF consulate: ~dozens-to-low-hundreds of users, a five-figure budget, and a single clean before/after metric. The most credible 'this is affordable and it works' reference for a small post.",
+      "confidence": "verified",
+      "caveats": "None material — figures confirmed against the Commonwealth's own pilot report and press releases.",
+      "sources": [
+        {
+          "title": "Lessons from Pennsylvania's Generative AI Pilot with ChatGPT (report PDF)",
+          "publisher": "Commonwealth of Pennsylvania",
+          "date": "2025-03",
+          "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/oa/documents/programs/information-technology/documents/openai-pilot-report-2025.pdf"
+        },
+        {
+          "title": "Shapiro Administration Leads the Way in Ethical Use of AI",
+          "publisher": "Commonwealth of Pennsylvania",
+          "date": "2025",
+          "url": "https://www.pa.gov/governor/newsroom/2025-press-releases/-shapiro-administration-leads-the-way-in-ethical-use-of-ai"
+        },
+        {
+          "title": "Pennsylvania government agencies aim to expand employees' use of AI",
+          "publisher": "PublicSource",
+          "date": "2025",
+          "url": "https://www.publicsource.org/pennsylvania-government-expand-artificial-intelligence-ai/"
+        }
+      ]
+    },
+    {
+      "id": "estonia-burokratt",
+      "country": "Estonia",
+      "country_code": "EE",
+      "flag": "🇪🇪",
+      "entity": "RIA (State Information System Authority)",
+      "program": "Bürokratt",
+      "category": "citizen-rag",
+      "horizon": "long",
+      "date": "2025",
+      "coordinates": {
+        "lat": 59.437,
+        "lng": 24.7536
+      },
+      "location_label": "Tallinn",
+      "headline": "The most structurally novel model: government as one conversational interface.",
+      "summary": "Not a single chatbot but an interoperable network of AI assistants across public agencies (tax, health, police, statistics, justice), integrated with national digital-ID. Through 2025 it added an LLM/RAG layer and a 'global classifier' so agency bots can talk to each other; from 2026 each institution runs its own agent within a cooperative network. Hosting is strikingly cheap (~€150/month per institution).",
+      "key_metrics": [
+        {
+          "label": "Architecture",
+          "value": "Interoperable agent network",
+          "note": "≈3,000 e-services, one channel"
+        },
+        {
+          "label": "Hosting cost",
+          "value": "≈€150/mo per institution",
+          "note": "plus LLM usage"
+        },
+        {
+          "label": "Recognition",
+          "value": "UNESCO/IRCAI Top-100",
+          "note": "repeat honoree"
+        }
+      ],
+      "relevance_to_pilot": "The long-horizon destination the SF pilot points toward: many services behind one conversational layer. The 'where this goes after the consulate' vision anchor.",
+      "confidence": "verified",
+      "caveats": "Forward-looking 2026 plans (per-institution agents, Estonian-language LLM) are roadmap, not all in production.",
+      "sources": [
+        {
+          "title": "Government Virtual Assistant Bürokratt",
+          "publisher": "Interoperable Europe Portal (European Commission)",
+          "date": "2025",
+          "url": "https://interoperable-europe.ec.europa.eu/collection/open-source-observatory-osor/government-virtual-assistant-burokratt"
+        },
+        {
+          "title": "Bürokratt",
+          "publisher": "Kratid (Estonian Government AI programme)",
+          "date": "2025",
+          "url": "https://www.kratid.ee/en/burokratt"
+        },
+        {
+          "title": "Estonia eyes cross-border interoperability for Bürokratt, its 'Siri of public services'",
+          "publisher": "GovInsider",
+          "date": "2025",
+          "url": "https://govinsider.asia/intl-en/article/estonia-eyes-cross-border-interoperability-for-burokratt-its-siri-of-public-services"
+        }
+      ],
+      "bet": {
+        "keyword_es": "Reinvención",
+        "statement_es": "Gobierno como una sola conversación.",
+        "keyword_en": "Reinvention",
+        "statement_en": "Government as a single conversation."
+      }
+    },
+    {
+      "id": "bogota-chatico",
+      "country": "Colombia",
+      "country_code": "CO",
+      "flag": "🇨🇴",
+      "entity": "Alcaldía Mayor de Bogotá",
+      "program": "Chatico",
+      "category": "citizen-rag",
+      "horizon": "short",
+      "date": "2021",
+      "coordinates": {
+        "lat": 4.711,
+        "lng": -74.0721
+      },
+      "location_label": "Bogotá",
+      "headline": "Proof that an AI citizen-service layer already works — in Colombia, at scale.",
+      "summary": "A WhatsApp-based virtual assistant offering 40+ city services, used as a participatory-budget voting channel. Bogotá's own data reports 7.3 million conversations and 3+ million users; the digital channel cut operating costs ~70% and raised participation 22.12% vs. 2023.",
+      "key_metrics": [
+        {
+          "label": "Conversations",
+          "value": "7.3 million",
+          "note": "official current figure (report cited 6.7m)"
+        },
+        {
+          "label": "Users",
+          "value": "3 million+",
+          "note": ""
+        },
+        {
+          "label": "Operating-cost cut",
+          "value": "≈70%",
+          "note": "digital channel"
+        },
+        {
+          "label": "Participation rise",
+          "value": "+22.12%",
+          "note": "vs. 2023"
+        }
+      ],
+      "relevance_to_pilot": "The 'we've already started, and it works here' proof point — a homegrown Colombian citizen-AI service. Destroys the 'unproven foreign experiment' objection.",
+      "confidence": "verified",
+      "caveats": "CORRECTION: the 'handled 89% of digital votes' claim could NOT be verified as stated — the city's 2022 channel data shows Chatico was a minority of total votes (dominant only within the digital channel). Use the 70% cost-cut / +22.12% participation framing instead.",
+      "sources": [
+        {
+          "title": "Chatico Bogotá — aporta a integración de víctimas del conflicto armado",
+          "publisher": "Alcaldía de Bogotá",
+          "date": "2025",
+          "url": "https://bogota.gov.co/mi-ciudad/gestion-publica/aporta-integracion-de-victimas-del-conflicto-armado-chatico-bogota"
+        },
+        {
+          "title": "Bogotá líder en Suramérica en participación ciudadana para inversión",
+          "publisher": "Alcaldía de Bogotá",
+          "date": "2024",
+          "url": "https://bogota.gov.co/mi-ciudad/gobierno/bogota-lider-en-suramerica-en-participacion-ciudadana-para-inversion"
+        }
+      ]
+    },
+    {
+      "id": "colombia-dian",
+      "country": "Colombia",
+      "country_code": "CO",
+      "flag": "🇨🇴",
+      "entity": "DIAN (tax & customs authority)",
+      "program": "AI-driven debt recovery ('Al día con la DIAN')",
+      "category": "fraud-tax-customs",
+      "horizon": "short",
+      "date": "2025-08",
+      "coordinates": {
+        "lat": 4.6097,
+        "lng": -74.0817
+      },
+      "location_label": "Bogotá",
+      "headline": "Colombia's own tax authority is already on the AI curve — fiscal, and self-funding.",
+      "summary": "In August 2025, using machine learning, statistical methods and predictive models, DIAN identified 8,440 delinquent taxpayers with capacity to pay, tied to more than COP $2.2 trillion in prioritized overdue portfolio.",
+      "key_metrics": [
+        {
+          "label": "Taxpayers identified",
+          "value": "8,440",
+          "note": "with capacity to pay"
+        },
+        {
+          "label": "Portfolio prioritized",
+          "value": "COP $2.2 trillion",
+          "is_projection": true,
+          "note": "RECOVERY TARGET — not recovered"
+        },
+        {
+          "label": "Method",
+          "value": "ML + predictive models",
+          "note": ""
+        }
+      ],
+      "relevance_to_pilot": "Shows the 'Honest State' pillar is already live in Colombia: AI recovering public money. The fiscal argument that can fund a broader program.",
+      "confidence": "verified",
+      "caveats": "The COP $2.2tn is explicitly a recovery TARGET ('busca recuperar'), not funds already recovered. Frame accordingly.",
+      "sources": [
+        {
+          "title": "La Dian le apuesta a la inteligencia artificial para recuperar más de $2,2 billones",
+          "publisher": "Infobae",
+          "date": "2025-08-19",
+          "url": "https://www.infobae.com/colombia/2025/08/19/la-dian-le-apuesta-a-la-inteligencia-artificial-para-recuperar-mas-de-22-billones-que-le-deben-mas-8000-morosos-como-funciona/"
+        },
+        {
+          "title": "DIAN identificó contribuyentes que le adeudan más de $2,2 billones a la nación",
+          "publisher": "El Espectador",
+          "date": "2025",
+          "url": "https://www.elespectador.com/economia/dian-identifico-contribuyentes-que-le-adeudan-mas-de-22-billones-a-la-nacion/"
+        },
+        {
+          "title": "DIAN busca recuperar más de $2,2 billones de su cartera vencida",
+          "publisher": "INCP",
+          "date": "2025-08",
+          "url": "https://incp.org.co/publicaciones/infoincp-publicaciones/impuestos/2025/08/dian-busca-recuperar-mas-de-22-billones-de-su-cartera-vencida/"
+        }
+      ]
+    },
+    {
+      "id": "brazil-receita-sisam",
+      "country": "Brazil",
+      "country_code": "BR",
+      "flag": "🇧🇷",
+      "entity": "Receita Federal",
+      "program": "SISAM (ML customs selection)",
+      "category": "fraud-tax-customs",
+      "horizon": "short",
+      "date": "2014",
+      "coordinates": {
+        "lat": -15.7986,
+        "lng": -47.8645
+      },
+      "location_label": "Brasília",
+      "headline": "A decade-old ML customs system that targets the riskiest declarations — proven fiscal ROI.",
+      "summary": "SISAM is a machine-learning customs-selection system (running since 2014) that estimates the probability of ~30 error types per import declaration, especially fiscal misclassification. By targeting the riskiest 10% of declarations it reportedly captures 66% of misclassification errors. Jan–Oct 2024 saw 3,200+ customs infraction notices worth >R$5.3bn in assessed credits.",
+      "key_metrics": [
+        {
+          "label": "Error capture",
+          "value": "66% from riskiest 10%",
+          "note": "34% from top 2%"
+        },
+        {
+          "label": "Infraction notices",
+          "value": "3,200+",
+          "note": "Jan–Oct 2024"
+        },
+        {
+          "label": "Assessed credits",
+          "value": ">R$5.3 billion",
+          "note": "see attribution caveat"
+        },
+        {
+          "label": "Effectiveness",
+          "value": "20× vs. random",
+          "note": "developer's published metric"
+        }
+      ],
+      "relevance_to_pilot": "A mature, audited-at-scale example of revenue protection via ML — the 'Honest State' pillar in its most proven form regionally.",
+      "confidence": "verified",
+      "caveats": "ATTRIBUTION: the press source ties the R$5.3bn to 'AI / data-crossing' generally (Siscomex, e-invoices, price databases), NOT to SISAM by name — the SISAM↔R$5.3bn linkage is inferential. The 66%/10% metric traces to the developer and customs-law commentary, not an accessible government page.",
+      "sources": [
+        {
+          "title": "Receita usa inteligência artificial e amplia autuações por fraudes em importações",
+          "publisher": "CartaCapital",
+          "date": "2025-07-21",
+          "url": "https://www.cartacapital.com.br/do-micro-ao-macro/receita-usa-inteligencia-artificial-e-amplia-autuacoes-por-fraudes-em-importacoes/"
+        },
+        {
+          "title": "Inteligência Artificial no Sistema de Seleção Aduaneira por Aprendizado de Máquina (14º Prêmio RFB)",
+          "publisher": "ENAP",
+          "date": "2019",
+          "url": "https://repositorio.enap.gov.br/jspui/bitstream/1/4622/1/1%C2%BA%20lugar%20do%2014%C2%BA%20Premio%20RFB.pdf"
+        },
+        {
+          "title": "Receita Federal já utiliza IA para identificar fraudes aduaneiras",
+          "publisher": "RSH Advogados",
+          "date": "2025",
+          "url": "https://rsh.adv.br/receita-federal-ja-utiliza-ia-para-identificar-fraudes-aduaneiras-veja-aqui-quais-os-produtos-mais-visados-neste-rastreio/"
+        }
+      ]
+    },
+    {
+      "id": "brazil-stf-stj-justice",
+      "country": "Brazil",
+      "country_code": "BR",
+      "flag": "🇧🇷",
+      "entity": "STF & STJ (high courts)",
+      "program": "VitórIA (STF) & Logos (STJ)",
+      "category": "justice",
+      "horizon": "medium",
+      "date": "2025-02-11",
+      "coordinates": {
+        "lat": -15.802,
+        "lng": -47.8645
+      },
+      "location_label": "Brasília",
+      "headline": "Justice-sector AI where caseloads are crushing.",
+      "summary": "VitórIA is the Supreme Federal Court's (non-generative) AI that groups similar cases by textual similarity (launched 2023; credited with flagging 9 new 'general repercussion' themes in 12 months). Logos is the Superior Court of Justice's generative-AI engine (launched 11 Feb 2025), built in-house to draft decision reports and assess admissibility of special-appeal grievances (~1,200 users).",
+      "key_metrics": [
+        {
+          "label": "STF VitórIA",
+          "value": "Case clustering",
+          "note": "9 new themes flagged in 12 months"
+        },
+        {
+          "label": "STJ Logos launch",
+          "value": "Feb 11, 2025",
+          "note": "generative, in-house"
+        },
+        {
+          "label": "Logos users",
+          "value": "≈1,200",
+          "note": ""
+        }
+      ],
+      "relevance_to_pilot": "Demonstrates AI triage at the top of a justice system — relevant for any LATAM government weighing high-volume case processing.",
+      "confidence": "verified",
+      "caveats": "Note: 'Logos' belongs to the STJ, not the STF (a common conflation). VICTOR (2018) accuracy is reported 80%–95% depending on source/year.",
+      "sources": [
+        {
+          "title": "STJ lança novo motor de inteligência artificial generativa para aumentar eficiência na produção de decisões",
+          "publisher": "STJ",
+          "date": "2025-02-11",
+          "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/11022025-STJ-lanca-novo-motor-de-inteligencia-artificial-generativa-para-aumentar-eficiencia-na-producao-de-decisoes.aspx"
+        },
+        {
+          "title": "STF amplia uso de inteligência artificial em apoio à atividade jurisdicional",
+          "publisher": "STF",
+          "date": "2025",
+          "url": "https://noticias.stf.jus.br/postsnoticias/stf-amplia-uso-de-inteligencia-artificial-em-apoio-a-atividade-jurisdicional/"
+        },
+        {
+          "title": "STJ e STF apresentam sistemas de IA que organizam e aceleram julgamentos",
+          "publisher": "Notisul",
+          "date": "2025",
+          "url": "https://www.notisul.com.br/stj-e-stf-apresentam-sistemas-de-ia-que-organizam-e-aceleram-julgamentos/"
+        }
+      ]
+    },
+    {
+      "id": "argentina-mpf-caba",
+      "country": "Argentina",
+      "country_code": "AR",
+      "flag": "🇦🇷",
+      "entity": "Public Prosecution Service of the City of Buenos Aires (CABA)",
+      "program": "ChatGPT for ruling drafts (formerly Prometea)",
+      "category": "justice",
+      "horizon": "short",
+      "date": "2024-05",
+      "coordinates": {
+        "lat": -34.6037,
+        "lng": -58.3816
+      },
+      "location_label": "Buenos Aires",
+      "headline": "The cautionary tale: trading a transparent local tool for a commercial black box.",
+      "summary": "Since May 2024 the City prosecutor's office has used generative AI (ChatGPT) to draft preliminary rulings in certain public-employment salary cases — used in ~20 rulings, cutting drafting time from ~1 hour to ~10 minutes. Its earlier transparent, locally-controlled system PROMETEA (2017, ~90% accuracy) is being phased out for sensitive matters.",
+      "key_metrics": [
+        {
+          "label": "Rulings drafted",
+          "value": "≈20",
+          "note": "public-employment cases"
+        },
+        {
+          "label": "Drafting time",
+          "value": "1 hr → ≈10 min",
+          "note": ""
+        },
+        {
+          "label": "In use since",
+          "value": "May 2024",
+          "note": ""
+        }
+      ],
+      "relevance_to_pilot": "The anti-pattern that sharpens Deltanova's wedge: auditable, locally-controlled, context-aware systems beat black boxes that store data abroad. Pair with the 10–30× cost argument for small specialized models.",
+      "confidence": "verified",
+      "caveats": "PRECISION: this is the CITY of Buenos Aires (CABA) prosecutor (mpfciudad.gob.ar), NOT the federal Ministerio Público Fiscal de la Nación. Do not conflate.",
+      "sources": [
+        {
+          "title": "AI in justice administration and access to justice (Box 5.62: Prometea and ChatGPT)",
+          "publisher": "OECD — Governing with Artificial Intelligence",
+          "date": "2025",
+          "url": "https://www.oecd.org/en/publications/2025/06/governing-with-artificial-intelligence_398fa287/full-report/ai-in-justice-administration-and-access-to-justice_f0cbe651.html"
+        },
+        {
+          "title": "Courts in Buenos Aires are using ChatGPT to draft rulings",
+          "publisher": "Rest of World",
+          "date": "2024",
+          "url": "https://restofworld.org/2024/buenos-aires-courts-adopt-chatgpt-draft-rulings/"
+        },
+        {
+          "title": "ChatGPT enters Buenos Aires courts in legal tech push",
+          "publisher": "bne IntelliNews",
+          "date": "2024",
+          "url": "https://www.intellinews.com/chatgpt-enters-buenos-aires-courts-in-legal-tech-push-355142/"
+        }
+      ]
+    },
+    {
+      "id": "oecd-4pct",
+      "country": "France (OECD HQ)",
+      "country_code": "FR",
+      "flag": "🇫🇷",
+      "entity": "OECD",
+      "program": "Governing with AI (200 use cases)",
+      "category": "institution",
+      "horizon": "medium",
+      "date": "2025-06",
+      "coordinates": {
+        "lat": 48.8607,
+        "lng": 2.27
+      },
+      "location_label": "Paris",
+      "headline": "The window is open: only 4% of government AI today reaches external citizens or businesses.",
+      "summary": "The OECD's 2025 report analyzed 200 use cases across 11 government functions. 57% automate/tailor services, 45% enhance decision-making, 30% improve accountability/anomaly detection — and only 4% let external actors (citizens/businesses) use government AI for their own goals. The consular/citizen-facing layer is the open frontier.",
+      "key_metrics": [
+        {
+          "label": "External-facing use cases",
+          "value": "4%",
+          "note": "the open opportunity"
+        },
+        {
+          "label": "Service automation",
+          "value": "57%",
+          "note": "most common function"
+        },
+        {
+          "label": "Use cases analyzed",
+          "value": "200",
+          "note": "across 11 functions"
+        }
+      ],
+      "relevance_to_pilot": "The single statistic that frames the whole pitch: almost nobody has built the citizen/diaspora-facing layer yet. Colombia in SF can be early, not late.",
+      "confidence": "verified",
+      "caveats": "Stat verified verbatim. DOI: 10.1787/795de142-en.",
+      "sources": [
+        {
+          "title": "Governing with Artificial Intelligence",
+          "publisher": "OECD",
+          "date": "2025-06",
+          "url": "https://www.oecd.org/en/publications/2025/06/governing-with-artificial-intelligence_398fa287.html"
+        },
+        {
+          "title": "Trends and early lessons from the use of AI across functions of government",
+          "publisher": "OECD",
+          "date": "2025",
+          "url": "https://www.oecd.org/en/publications/governing-with-artificial-intelligence_795de142-en/full-report/trends-and-early-lessons-from-the-use-of-ai-across-functions-of-government_c4968cb1.html"
+        }
+      ]
+    },
+    {
+      "id": "uae-agentic-gov",
+      "country": "United Arab Emirates",
+      "country_code": "AE",
+      "flag": "🇦🇪",
+      "entity": "UAE Cabinet",
+      "program": "U-Ask + 'agentic government' pledge",
+      "category": "sovereign-vision",
+      "horizon": "long",
+      "date": "2026-04",
+      "coordinates": {
+        "lat": 25.2048,
+        "lng": 55.2708
+      },
+      "location_label": "Dubai / Abu Dhabi",
+      "headline": "The most aggressive AI-native government vision on Earth.",
+      "summary": "The UAE (which appointed the world's first AI minister in 2017) runs U-Ask, a unified generative-AI chatbot for federal services. In April 2026 the Cabinet pledged that half of government services would be delivered via AI agents within two years, redesigning policies around autonomous systems, backed by a US-UAE Abu Dhabi AI campus with 5GW of data-center capacity. Also building 'Rules as Code' for AI-drafted legislation.",
+      "key_metrics": [
+        {
+          "label": "Pledge",
+          "value": "50% of services via AI agents",
+          "is_projection": true,
+          "note": "within two years (Apr 2026)"
+        },
+        {
+          "label": "Compute",
+          "value": "5GW data-center campus",
+          "note": "US-UAE Abu Dhabi"
+        },
+        {
+          "label": "Flagship",
+          "value": "U-Ask",
+          "note": "Gartner award winner"
+        }
+      ],
+      "relevance_to_pilot": "The far end of the horizon spectrum — the 'AI-native state' vision. High-variance, unproven, but the directional anchor for what 'delivery state' could ultimately mean.",
+      "confidence": "report-only",
+      "caveats": "The 50%-of-services pledge is a projection/commitment, not a realized result.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — UAE section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ],
+      "bet": {
+        "keyword_es": "Velocidad",
+        "statement_es": "La mitad de los servicios vía agentes en dos años.",
+        "keyword_en": "Speed",
+        "statement_en": "Half of services via AI agents in two years.",
+        "note": "Es una promesa/compromiso (abril 2026), no un resultado consumado."
+      }
+    },
+    {
+      "id": "india-dpi-ai",
+      "country": "India",
+      "country_code": "IN",
+      "flag": "🇮🇳",
+      "entity": "Government of India / IndiaAI Mission",
+      "program": "BHASHINI + AI-on-DPI (Aadhaar, UPI, DigiLocker)",
+      "category": "sovereign-vision",
+      "horizon": "long",
+      "date": "2025",
+      "coordinates": {
+        "lat": 28.6139,
+        "lng": 77.209
+      },
+      "location_label": "New Delhi",
+      "headline": "AI layered on world-class population-scale Digital Public Infrastructure.",
+      "summary": "India's distinctive play: layering AI onto existing DPI (Aadhaar identity, UPI payments, DigiLocker with 539m users). BHASHINI supports 35+ languages with 1,600+ models (deployed at Maha Kumbh 2025 for translation/lost-and-found at massive scale). The IndiaAI Mission (₹10,300+ crore) runs a public compute portal with 38,000+ subsidized GPUs.",
+      "key_metrics": [
+        {
+          "label": "BHASHINI languages",
+          "value": "35+",
+          "note": "1,600+ AI models"
+        },
+        {
+          "label": "DigiLocker users",
+          "value": "539 million",
+          "note": ""
+        },
+        {
+          "label": "Subsidized GPUs",
+          "value": "38,000+",
+          "note": "≈₹65/hour"
+        }
+      ],
+      "relevance_to_pilot": "The model no rich country can easily copy — AI riding identity/payments/document rails. Relevant as the 'build on your own infrastructure' direction.",
+      "confidence": "report-only",
+      "caveats": "Carried from the original landscape report with its original sourcing.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — India section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "south-korea-sovereign",
+      "country": "South Korea",
+      "country_code": "KR",
+      "flag": "🇰🇷",
+      "entity": "Office of the President / consortia",
+      "program": "Sovereign-AI national mobilization",
+      "category": "sovereign-vision",
+      "horizon": "long",
+      "date": "2025",
+      "coordinates": {
+        "lat": 37.5665,
+        "lng": 126.978
+      },
+      "location_label": "Seoul",
+      "headline": "One of the largest state-led AI programs anywhere.",
+      "summary": "Under President Lee Jae-myung, Korea launched a ₩100 trillion (~$75bn) National Growth Fund push, an 'AI Basic Act' (effective Jan 2026), the first senior presidential AI secretary (June 2025), and five competing consortia (Naver, SKT, LG, NCSoft, Upstage) building sovereign Korean-language foundation models, with ~50,000 GPUs for a public-sector National AI Computing Center.",
+      "key_metrics": [
+        {
+          "label": "National fund",
+          "value": "₩100tn (~$75bn)",
+          "is_projection": true,
+          "note": "National Growth Fund"
+        },
+        {
+          "label": "Public GPUs",
+          "value": "≈50,000",
+          "note": "National AI Computing Center"
+        },
+        {
+          "label": "Law",
+          "value": "AI Basic Act",
+          "note": "effective Jan 2026"
+        }
+      ],
+      "relevance_to_pilot": "The sovereignty end of the spectrum — explicitly long-term, accelerated by the 'DeepSeek moment'. Illustrates how vision dictates resource scale.",
+      "confidence": "report-only",
+      "caveats": "Spending figures are commitments, not realized outcomes.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — South Korea section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "saudi-humain",
+      "country": "Saudi Arabia",
+      "country_code": "SA",
+      "flag": "🇸🇦",
+      "entity": "SDAIA / HUMAIN (PIF)",
+      "program": "HUMAIN + Seha Virtual Hospital",
+      "category": "sovereign-vision",
+      "horizon": "long",
+      "date": "2025-05",
+      "coordinates": {
+        "lat": 24.7136,
+        "lng": 46.6753
+      },
+      "location_label": "Riyadh",
+      "headline": "Petro-funded full-stack AI sovereignty.",
+      "summary": "SDAIA runs the national strategy; PIF-owned HUMAIN (launched May 2025) is building on-shore compute (pilot ~18,000 NVIDIA GPUs) and Arabic LLMs. The Seha Virtual Hospital links 224+ hospitals using AI diagnostics. Saudi Arabia ranked #1 in MENA on Oxford Insights' 2025 Government AI Readiness Index (7th globally for governance).",
+      "key_metrics": [
+        {
+          "label": "HUMAIN compute",
+          "value": "≈18,000 GPUs",
+          "note": "pilot, NVIDIA"
+        },
+        {
+          "label": "Seha hospitals linked",
+          "value": "224+",
+          "note": "AI diagnostics"
+        },
+        {
+          "label": "AI Readiness (MENA)",
+          "value": "#1",
+          "note": "Oxford Insights 2025"
+        }
+      ],
+      "relevance_to_pilot": "Another full-stack sovereignty bet — shows the resource signature of a long-horizon player.",
+      "confidence": "report-only",
+      "caveats": "Carried from the original landscape report with its original sourcing.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — Saudi Arabia section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "usa-federal-usai",
+      "country": "United States",
+      "country_code": "US",
+      "flag": "🇺🇸",
+      "entity": "GSA / OMB (federal)",
+      "program": "USAi shared platform",
+      "category": "internal-productivity",
+      "horizon": "short",
+      "date": "2025-08",
+      "coordinates": {
+        "lat": 38.8841,
+        "lng": -77.0214
+      },
+      "location_label": "Washington, D.C.",
+      "headline": "Scale via a shared, multi-model federal platform.",
+      "summary": "Federal AI use cases more than doubled to 3,611 across 56 agencies in 2025. GSA launched USAi (Aug 2025), a free FedRAMP-moderate platform giving agencies side-by-side access to models from OpenAI, Google, Anthropic, Meta, Microsoft and Amazon (20+ agencies). OpenAI is providing ChatGPT Enterprise to the federal workforce for $1 per agency. Guided by OMB memos M-25-21 and M-25-22.",
+      "key_metrics": [
+        {
+          "label": "Federal use cases",
+          "value": "3,611",
+          "note": "56 agencies (2025), up from ~2,133"
+        },
+        {
+          "label": "USAi access",
+          "value": "20+ agencies",
+          "note": "multi-model, FedRAMP-moderate"
+        },
+        {
+          "label": "OpenAI deal",
+          "value": "$1 per agency",
+          "note": "ChatGPT Enterprise"
+        }
+      ],
+      "relevance_to_pilot": "The 'shared platform, avoid vendor lock-in' model — relevant for how a ministry could procure across multiple model providers.",
+      "confidence": "report-only",
+      "caveats": "Carried from the original landscape report with its original sourcing.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — US federal section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "china-shenzhen-guangzhou",
+      "country": "China",
+      "country_code": "CN",
+      "flag": "🇨🇳",
+      "entity": "Shenzhen Futian District / Guangzhou",
+      "program": "DeepSeek 'digital employees' + hotline",
+      "category": "internal-productivity",
+      "horizon": "short",
+      "date": "2025",
+      "coordinates": {
+        "lat": 22.541,
+        "lng": 114.053
+      },
+      "location_label": "Shenzhen",
+      "headline": "Fastest at-scale internal automation post-DeepSeek.",
+      "summary": "After DeepSeek-R1, Chinese cities embedded open-source LLMs in administration. Shenzhen's Futian District deployed 70 AI 'digital employees' across 240+ scenarios: document processing hit 95% format accuracy, review time cut ~90%, drafting fell from five days to minutes, and request categorization rose from 70% to 95%. Guangzhou cut hotline wait times 43% with 97% routing accuracy.",
+      "key_metrics": [
+        {
+          "label": "Review time",
+          "value": "−90%",
+          "note": "Shenzhen Futian"
+        },
+        {
+          "label": "Categorization accuracy",
+          "value": "70% → 95%",
+          "note": ""
+        },
+        {
+          "label": "Hotline wait",
+          "value": "−43%",
+          "note": "Guangzhou; 97% routing accuracy"
+        }
+      ],
+      "relevance_to_pilot": "Shows the speed achievable with open-source models — but the metrics come largely from state media and warrant independent caution.",
+      "confidence": "report-only",
+      "caveats": "Metrics are largely from Chinese state media; treat with independent caution (flagged in the original report).",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — China section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "france-albert",
+      "country": "France",
+      "country_code": "FR",
+      "flag": "🇫🇷",
+      "entity": "DINUM",
+      "program": "Albert (sovereign GenAI for civil servants)",
+      "category": "internal-productivity",
+      "horizon": "medium",
+      "date": "2024",
+      "coordinates": {
+        "lat": 48.8566,
+        "lng": 2.3522
+      },
+      "location_label": "Paris",
+      "headline": "A sovereign civil-service assistant, French-built.",
+      "summary": "Albert is France's sovereign generative-AI assistant for civil servants, built by DINUM — part of Europe's 'home-grown, governed' medium-horizon posture.",
+      "key_metrics": [
+        {
+          "label": "Builder",
+          "value": "DINUM",
+          "note": "French gov digital agency"
+        },
+        {
+          "label": "Type",
+          "value": "Sovereign GenAI",
+          "note": "civil-service assistant"
+        }
+      ],
+      "relevance_to_pilot": "European example of building rather than buying — supports the locally-controlled, sovereign-tooling thesis.",
+      "confidence": "report-only",
+      "caveats": "Carried from the original landscape report with its original sourcing.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — France/Europe section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ],
+      "bet": {
+        "keyword_es": "Soberanía",
+        "statement_es": "Modelos y nube propios.",
+        "keyword_en": "Sovereignty",
+        "statement_en": "Its own models and cloud.",
+        "note": "Dirección estratégica más que sistema masivo en producción."
+      }
+    },
+    {
+      "id": "portugal-govpt",
+      "country": "Portugal",
+      "country_code": "PT",
+      "flag": "🇵🇹",
+      "entity": "Government of Portugal",
+      "program": "gov.pt ChatGPT-powered assistant",
+      "category": "citizen-rag",
+      "horizon": "short",
+      "date": "2024",
+      "coordinates": {
+        "lat": 38.7223,
+        "lng": -9.1393
+      },
+      "location_label": "Lisbon",
+      "headline": "A multilingual citizen assistant across thousands of services.",
+      "summary": "Portugal's gov.pt assistant is a ChatGPT-powered citizen-facing service covering 2,300+ services in 12 languages — a grounded-RAG-plus-human-oversight model.",
+      "key_metrics": [
+        {
+          "label": "Services",
+          "value": "2,300+",
+          "note": ""
+        },
+        {
+          "label": "Languages",
+          "value": "12",
+          "note": "multilingual access"
+        }
+      ],
+      "relevance_to_pilot": "Multilingual citizen-assistant pattern — relevant to serving a diverse diaspora.",
+      "confidence": "report-only",
+      "caveats": "Carried from the original landscape report with its original sourcing.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — Portugal section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "denmark-50m-hours",
+      "country": "Denmark",
+      "country_code": "DK",
+      "flag": "🇩🇰",
+      "entity": "Government of Denmark",
+      "program": "50-million-hours productivity target",
+      "category": "internal-productivity",
+      "horizon": "medium",
+      "date": "2025",
+      "coordinates": {
+        "lat": 55.6761,
+        "lng": 12.5683
+      },
+      "location_label": "Copenhagen",
+      "headline": "A hard public-sector productivity target — and a welfare-algorithm cautionary tale.",
+      "summary": "Denmark set a goal to free up at least 50 million public-sector hours (≈30,000 full-time equivalents) by 2035 via AI, and runs regulatory sandboxes. It is also the cautionary tale on welfare fraud-detection algorithms, which drew Amnesty International warnings of discrimination risk.",
+      "key_metrics": [
+        {
+          "label": "Target",
+          "value": "50m hours by 2035",
+          "is_projection": true,
+          "note": "≈30,000 FTEs"
+        },
+        {
+          "label": "Risk flag",
+          "value": "Welfare-algorithm backlash",
+          "note": "Amnesty International warning"
+        }
+      ],
+      "relevance_to_pilot": "Both a productivity-ambition benchmark and a reminder of the opaque-algorithm failure mode the pilot is designed against.",
+      "confidence": "report-only",
+      "caveats": "50m-hours is a target. Welfare-algorithm concerns are documented risk, not the productivity program itself.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — Denmark/Nordics section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "colombia-pretoria",
+      "country": "Colombia",
+      "country_code": "CO",
+      "flag": "🇨🇴",
+      "entity": "Constitutional Court",
+      "program": "PretorIA",
+      "category": "justice",
+      "horizon": "medium",
+      "date": "2020",
+      "coordinates": {
+        "lat": 4.5981,
+        "lng": -74.0758
+      },
+      "location_label": "Bogotá",
+      "headline": "AI helping manage Colombia's enormous tutela docket.",
+      "summary": "PretorIA helps the Constitutional Court manage its huge tutela caseload (~620,000 tutelas/year), acting as a search-and-flag engine while judges retain final discretion.",
+      "key_metrics": [
+        {
+          "label": "Tutelas received/yr",
+          "value": "≈620,000",
+          "note": "court-wide"
+        },
+        {
+          "label": "Role",
+          "value": "Search & flag",
+          "note": "judges retain discretion"
+        }
+      ],
+      "relevance_to_pilot": "Another live Colombian AI deployment — useful for the 'we've already started' narrative.",
+      "confidence": "report-only",
+      "caveats": "PretorIA's own measured throughput is not published; reported daily figures vary by year and it has been described as still in pilot/testing.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — Colombia/PretorIA section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "chile-latam-gpt",
+      "country": "Chile",
+      "country_code": "CL",
+      "flag": "🇨🇱",
+      "entity": "CENIA / regional consortium (CAF-funded)",
+      "program": "Latam-GPT",
+      "category": "sovereign-vision",
+      "horizon": "medium",
+      "date": "2026-early",
+      "coordinates": {
+        "lat": -33.4489,
+        "lng": -70.6693
+      },
+      "location_label": "Santiago",
+      "headline": "A regionally-controlled, open-source LLM for Latin America.",
+      "summary": "Chile-led Latam-GPT is an open-source model trained on 8TB of regional data, built for ~$550,000 with CAF/development-bank funding, launched early 2026 — a strategic answer to compute/data concentration and a vehicle for data sovereignty.",
+      "key_metrics": [
+        {
+          "label": "Training data",
+          "value": "8TB regional",
+          "note": "open-source"
+        },
+        {
+          "label": "Build cost",
+          "value": "≈$550,000",
+          "note": "CAF / dev-bank funded"
+        }
+      ],
+      "relevance_to_pilot": "The regional sovereign-model option Deltanova can integrate where data-sovereignty or cost rules out US frontier APIs.",
+      "confidence": "report-only",
+      "caveats": "Carried from the original landscape report with its original sourcing.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — Latam-GPT section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "worldbank-govtech",
+      "country": "United States (World Bank HQ)",
+      "country_code": "US",
+      "flag": "🏦",
+      "entity": "World Bank",
+      "program": "GovTech & Public Sector Innovation Global Program",
+      "category": "institution",
+      "horizon": "medium",
+      "date": "2024-2025",
+      "coordinates": {
+        "lat": 38.899,
+        "lng": -77.0426
+      },
+      "location_label": "Washington, D.C.",
+      "headline": "The central node that funds, benchmarks and de-risks government AI.",
+      "summary": "The World Bank's GovTech program has funded 30+ initiatives since 2019, launched a Working Group on AI in the Public Sector (Oct 2024), runs the GovTech Maturity Index, launched a global repository of public-sector AI deployments (2025), and runs the GovTech Innovation Challenge. Its Digital Progress and Trends Report 2025 maps the global AI divide.",
+      "key_metrics": [
+        {
+          "label": "Initiatives funded",
+          "value": "30+",
+          "note": "since 2019"
+        },
+        {
+          "label": "AI working group",
+          "value": "Oct 2024",
+          "note": "public-sector AI"
+        },
+        {
+          "label": "Engagement",
+          "value": "Ecuador Gob.ec scaling",
+          "note": "LATAM-relevant"
+        }
+      ],
+      "relevance_to_pilot": "A funding source and legitimacy channel — register interest with the GovTech Global Partnership; submit case studies to its AI repository.",
+      "confidence": "report-only",
+      "caveats": "Carried from the original landscape report with its original sourcing.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — World Bank section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "idb-bid",
+      "country": "United States (IDB HQ)",
+      "country_code": "US",
+      "flag": "🏦",
+      "entity": "Inter-American Development Bank (IDB/BID)",
+      "program": "fAIr LAC+ · Gobernarte · RG-T4439",
+      "category": "institution",
+      "horizon": "medium",
+      "date": "2025",
+      "coordinates": {
+        "lat": 38.8993,
+        "lng": -77.0444
+      },
+      "location_label": "Washington, D.C.",
+      "headline": "The most important institution for the LATAM market — funder and client pipeline.",
+      "summary": "The IDB promotes responsible regional AI (fAIr LAC+), rewards public-sector AI/digital-ID innovation (Gobernarte 2025), and funds AI pilots and official training across LAC (RG-T4439, RAI 4 Growth). Its '¡IA Presente!' call surfaced 193 AI initiatives across 22 countries; INTAL estimates AI could lift regional GDP growth by ~1 point (Colombia 3.7% → 4.5%).",
+      "key_metrics": [
+        {
+          "label": "Initiatives surfaced",
+          "value": "193",
+          "note": "across 22 countries"
+        },
+        {
+          "label": "GDP-growth estimate",
+          "value": "Colombia 3.7% → 4.5%",
+          "is_projection": true,
+          "note": "IDB/INTAL"
+        },
+        {
+          "label": "Funding vehicles",
+          "value": "TC projects + grants",
+          "note": "RG-T4439, RG-T4463"
+        }
+      ],
+      "relevance_to_pilot": "Both a funding source AND a client-acquisition pipeline for a LATAM consultancy — the most underused entry channel.",
+      "confidence": "report-only",
+      "caveats": "GDP-growth figure is an estimate. Carried from the original landscape report with its original sourcing.",
+      "sources": [
+        {
+          "title": "Strategic landscape report (original research) — IDB/BID section",
+          "publisher": "Deltanova internal research",
+          "date": "2026-05-30",
+          "url": ""
+        }
+      ]
+    }
+  ],
+  "anti_patterns": [
+    {
+      "id": "nyc-mycity",
+      "label": "NYC MyCity chatbot",
+      "country": "United States",
+      "flag": "🇺🇸",
+      "coordinates": {
+        "lat": 40.7128,
+        "lng": -74.006
+      },
+      "location_label": "New York City",
+      "lesson": "Ungrounded generative chatbot told business owners they could break the law (refuse Section 8 vouchers, take workers' tips). Exposed 2024, stayed online. The explicit anti-pattern: only retrieval-grounded, human-escalated designs are safe for citizen-facing use.",
+      "confidence": "report-only"
+    }
+  ],
+  "closing_narrative": {
+    "title": "And in our region, meanwhile — the consular layer is the open frontier",
+    "body": "Latin America's public sector is already on the curve — fiscal, customs, judicial. Colombia's DIAN used machine learning in August 2025 to identify 8,440 delinquent taxpayers tied to more than COP $2.2 trillion in prioritized debt. Brazil's Receita Federal, with SISAM, captures 66% of customs misclassification errors by targeting just the riskiest 10% of declarations. The City of Buenos Aires prosecutor has drafted preliminary rulings with AI since May 2024. What still does not exist is the consular layer. And the OECD is clear: only 4% of government AI use cases today reach external citizens or businesses. The window — for Colombia, in San Francisco, across its network of citizens abroad — is open, and it is measured in months, not years.",
+    "source_anchors": [
+      "colombia-dian",
+      "brazil-receita-sisam",
+      "argentina-mpf-caba",
+      "oecd-4pct",
+      "usa-statechat",
+      "india-passport-seva-v2"
+    ]
+  },
+  "bets_framing": {
+    "title": "Cada país apuesta distinto — y ninguna apuesta es la de Colombia",
+    "intro_es": "La visión determina cómo cada gobierno asigna recursos. Estas son las apuestas de los líderes mundiales, cada una defendible a su modo:",
+    "intro_en": "Vision dictates how each government allocates resources. These are the leading countries' bets, each defensible in its own way:",
+    "bets_order": [
+      "singapore-pair",
+      "estonia-burokratt",
+      "uae-agentic-gov",
+      "albania-diella",
+      "usa-statechat",
+      "france-albert"
+    ],
+    "pivot_es": "Cada una de esas apuestas es defendible — y ninguna de ellas es la de Colombia.",
+    "pivot_en": "Each of those bets is defensible — and none of them is Colombia's.",
+    "colombia_bet": {
+      "keyword_es": "Prosperidad",
+      "statement_es": "Un Estado que convierte promesas en prosperidad — entregando resultados tangibles a sus ciudadanos como Estado-que-entrega nativo en IA, probado primero en el Consulado de San Francisco.",
+      "keyword_en": "Prosperity",
+      "statement_en": "A state that turns promises into prosperity — delivering tangible results to its citizens as an AI-native delivery state, proven first at the San Francisco Consulate."
+    },
+    "usage_note": "Render as a sequence: the six leader bets, then the pivot line, then Colombia's bet. The pivot must resolve immediately into the Colombia bet so it reads as an opening, not a critique."
+  }
+}
