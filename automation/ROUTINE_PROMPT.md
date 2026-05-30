@@ -88,7 +88,33 @@ YOUR JOB this run:
      fetch-confirm the specifics this run (e.g. a persistent bot-block you could not
      read). Be honest; do not mark something "verified" you did not actually read.
 
-4. ADD new references for government AI deployments that launched or hit a material
+4. FRESHNESS POLICY (24-month rule — this map is "current state of AI adoption",
+   not a slowly-aging snapshot):
+   - A reference STAYS on the map only if at least one of its `sources[].date`
+     values falls within the last 24 months from today. Older sources may remain
+     as additional historical citations on a card, but the card itself needs >=1
+     source from the last 24 months to keep shipping.
+   - For each existing reference whose newest source is >24 months old:
+       a. Search for a more recent primary or top-tier source about the SAME
+          program — an updated user count, a renewed policy, an evaluation, a
+          recent press item, a continued-funding announcement. If found, ADD
+          it (do not drop the older one — it's historical context now).
+       b. If you cannot find anything fresh on the exact program, search whether
+          it was RENAMED, SUPERSEDED, or SHUT DOWN. If superseded by a successor
+          program, REPLACE the reference (new `id`, new content, new sources).
+          If shut down, DROP the reference (use the DROP POLICY in step 6 — also
+          clean its id out of `bets_framing.bets_order` and
+          `closing_narrative.source_anchors`).
+       c. If the program clearly still runs but truly nothing recent has been
+          published, downgrade `confidence` to "report-only" and add a `caveats`
+          note explaining the staleness. Then prioritize REPLACING this card
+          with a fresher entry from the same category/region before adding any
+          net-new entry under step 5.
+   - Order of operations this run: RE-GROUND first (step 2), then enforce
+     freshness (this step), then ADD net-new (step 5). The map should always
+     reflect what is current — not what was true two years ago.
+
+5. ADD new references for government AI deployments that launched or hit a material
    milestone since `meta.date`. Constraints on new entries:
    - At MOST 5 new references per monthly run. Quality > quantity.
    - Each new reference MUST ship with at least one fetched, reachable source whose
@@ -105,14 +131,15 @@ YOUR JOB this run:
      relevance_to_pilot, confidence, sources[] (each with title, publisher, date,
      url).
 
-5. DROP POLICY (this overrides any prior "do not delete" instruction):
+6. DROP POLICY (this overrides any prior "do not delete" instruction):
    If, after a real search, a reference's CORE program cannot be supported by any
-   defensible primary or top-tier source, REMOVE the entire reference object from
+   defensible primary or top-tier source, OR if step 4's freshness rule mandates
+   dropping a shut-down program, REMOVE the entire reference object from
    `references[]`. When you remove a reference, you MUST also remove its `id` from
    `bets_framing.bets_order` and `closing_narrative.source_anchors` if present, or
    validation will fail. Document every drop in the commit body with the reason.
 
-6. DO NOT touch the following without an explicit human instruction in the routine
+7. DO NOT touch the following without an explicit human instruction in the routine
    description:
    - `meta.categories` (ids, labels, colors — markers depend on them).
    - The `id` of any reference you are KEEPING (anchors depend on them).
@@ -120,30 +147,34 @@ YOUR JOB this run:
      except to remove an id that points to a reference you dropped.
    - `anti_patterns` (curated examples).
 
-7. Update `meta.date` to today's date in `YYYY-MM-DD`.
+8. Update `meta.date` to today's date in `YYYY-MM-DD`. This drives the
+   "Updated YYYY-MM-DD · Refreshed monthly" badge in the page footer.
 
-8. VERIFIABILITY GATE — run before committing, in this order:
+9. VERIFIABILITY GATE — run before committing, in this order:
    a. `python3 scripts/validate.py`  → must exit 0. Exit 1 means an ungrounded or
       malformed card; FIX it (source it or drop it). Do not proceed on exit 1.
    b. `python3 scripts/validate.py --check-urls` → resolve every WARN (genuine dead
       link). NOTE lines (bot-blocked 403/429) are acceptable. Re-run until the only
       remaining lines are NOTE.
    c. Final self-check, state it explicitly in your run log: "Every reference has
-      >=1 reachable source whose content I confirmed supports its claims." If you
-      cannot truthfully say this, you are not done.
+      >=1 reachable source whose content I confirmed supports its claims, and at
+      least one source dated within the last 24 months." If you cannot truthfully
+      say this, you are not done.
 
-9. Commit to `main` with a message of the form:
-       chore(data): monthly refresh YYYY-MM — N updated, M added, K dropped
-   In the commit body, include:
-       - Each new reference id + a one-line description and its source.
-       - Each updated reference id + what changed (and why, if a metric moved).
-       - Each DROPPED reference id + why it could not be sourced.
-       - Any claim you softened/removed for lack of support.
+10. Commit to `main` with a message of the form:
+        chore(data): monthly refresh YYYY-MM — N updated, M added, K dropped, S stale-replaced
+    In the commit body, include:
+        - Each new reference id + a one-line description and its source.
+        - Each updated reference id + what changed (and why, if a metric moved).
+        - Each DROPPED reference id + why it could not be sourced or why it was
+          shut down / no longer current.
+        - Each STALE-REPLACED reference (old id → new id) + one-line reason.
+        - Any claim you softened/removed for lack of support.
 
-10. Push `main`. This triggers the GitHub Actions workflow
+11. Push `main`. This triggers the GitHub Actions workflow
     (`.github/workflows/deploy.yml`), which re-runs `validate.py` and then deploys
     the static site to Cloudflare Pages via wrangler. The deploy is BLOCKED if
-    validation fails in CI — so step 8 must genuinely pass locally first.
+    validation fails in CI — so step 9 must genuinely pass locally first.
 
 OPERATING RULES:
 - Be conservative. This is a public, factual artifact. If a claim is not
@@ -185,6 +216,14 @@ backed by a validator that hard-blocks ungrounded cards, plus a content-groundin
 step (open the source, confirm it supports the *number*, not just that a page
 exists) and an explicit drop policy. The monthly re-grounding pass is what catches
 silent drift — e.g. a card claiming "1,600+ models" when the source now says ~350.
+
+The **24-month freshness rule** (step 4) was added next: the artifact's promise
+is "current state of government AI adoption worldwide", not a historical
+archive. References whose newest source dates from before the 24-month window
+get replaced (program renamed/superseded → swap), dropped (program shut down),
+or downgraded to `report-only` with a freshness caveat. The "Updated YYYY-MM-DD
+· Refreshed monthly" badge on the page footer makes the cadence visible to
+viewers.
 
 ## Daily-cap math
 

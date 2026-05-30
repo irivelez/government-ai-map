@@ -11,7 +11,7 @@
     en: {
       view_map: "Map", view_globe: "Globe", categories: "Categories", reset: "Reset",
       verified: "Verified", report_only: "Report-only", autorotate: "Auto-rotate",
-      references: "references", of: "of", updated: "Updated",
+      references: "references", of: "of", updated: "Updated", refresh_cadence: "Refreshed monthly",
       summary: "Summary", metrics: "Key metrics", relevance: "Strategic relevance",
       caveats: "Fact-check notes", sources: "Sources", the_bet: "The bet",
       projection: "target", horizon: "Horizon", kicker: "Global Intelligence Map",
@@ -27,7 +27,7 @@
     es: {
       view_map: "Mapa", view_globe: "Globo", categories: "Categorías", reset: "Restablecer",
       verified: "Verificado", report_only: "Solo informe", autorotate: "Auto-rotación",
-      references: "referencias", of: "de", updated: "Actualizado",
+      references: "referencias", of: "de", updated: "Actualizado", refresh_cadence: "Actualización mensual",
       summary: "Resumen", metrics: "Métricas clave", relevance: "Relevancia estratégica",
       caveats: "Notas de verificación", sources: "Fuentes", the_bet: "La apuesta",
       projection: "meta", horizon: "Horizonte", kicker: "Mapa de inteligencia global",
@@ -664,7 +664,12 @@
     // titles
     $("#title").textContent = L(S.data.meta, "title");
     $("#subtitle").textContent = L(S.data.meta, "subtitle");
-    document.getElementById("updated").textContent = t("updated") + " " + (S.data.meta.date || "");
+    const d = S.data.meta.date || "";
+    document.getElementById("updated").innerHTML =
+      `<span class="upd-live" aria-hidden="true"></span>` +
+      `<span class="upd-date">${t("updated")} ${d}</span>` +
+      `<span class="upd-sep" aria-hidden="true">·</span>` +
+      `<span class="upd-cadence">${t("refresh_cadence")}</span>`;
     buildLegend();
     updateCount();
     if (S.selected) { const r = S.data.references.find(x => x.id === S.selected); if (r) renderPanel(r); }

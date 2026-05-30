@@ -179,6 +179,17 @@ button{font-family:inherit;color:inherit;cursor:pointer;}
 .status-btn.on .rd{background:var(--signal);box-shadow:0 0 7px var(--signal);}
 .coord-readout{color:var(--text-faint);}
 
+#updated{display:inline-flex;align-items:center;gap:8px;}
+.upd-live{width:7px;height:7px;border-radius:50%;background:#3fb98a;
+  box-shadow:0 0 6px rgba(63,185,138,0.6);animation:upd-pulse 2.6s ease-in-out infinite;}
+@keyframes upd-pulse{
+  0%,100%{opacity:.55;box-shadow:0 0 4px rgba(63,185,138,.45);}
+  50%   {opacity:1;   box-shadow:0 0 9px rgba(63,185,138,.85);}
+}
+.upd-date{color:var(--text-dim);font-weight:500;}
+.upd-sep{color:var(--text-faint);opacity:.5;}
+.upd-cadence{color:var(--text-faint);}
+
 /* ============ DETAIL PANEL ============ */
 #panel{position:absolute;z-index:50;top:0;right:0;height:100%;width:min(440px,92vw);
   background:var(--panel-solid);border-left:1px solid var(--hair);
