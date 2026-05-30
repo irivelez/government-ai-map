@@ -336,7 +336,8 @@
         "statement_es": "Capacidad interna primero, ciudadanos después.",
         "keyword_en": "Discipline",
         "statement_en": "Internal capacity first, citizens second."
-      }
+      },
+      "last_updated_in": "2026-05"
     },
     {
       "id": "uk-humphrey-consult",
@@ -952,7 +953,8 @@
         "keyword_en": "Speed",
         "statement_en": "Half of services via AI agents in two years.",
         "note": "Es una promesa/compromiso (abril 2026), no un resultado consumado."
-      }
+      },
+      "last_updated_in": "2026-05"
     },
     {
       "id": "india-dpi-ai",
@@ -1145,7 +1147,8 @@
           "date": "2025",
           "url": "https://oxfordinsights.com/ai-readiness/government-ai-readiness-index-2025/"
         }
-      ]
+      ],
+      "last_updated_in": "2026-05"
     },
     {
       "id": "usa-federal-usai",
@@ -1689,7 +1692,8 @@
           "date": "2026-05-06",
           "url": "https://www.japantimes.co.jp/news/2026/05/06/japan/japan-government-agencies-ai/"
         }
-      ]
+      ],
+      "last_updated_in": "2026-05"
     },
     {
       "id": "uk-hmrc-quantexa",
@@ -1747,7 +1751,8 @@
           "date": "2026-05",
           "url": "https://www.globalgovernmentfinance.com/hmrc-quantexa-entity-resolution-service-data-analytics-ai/"
         }
-      ]
+      ],
+      "last_updated_in": "2026-05"
     },
     {
       "id": "netherlands-gpt-nl",
@@ -1805,7 +1810,8 @@
           "date": "2026",
           "url": "https://www.tno.nl/en/digital/data-sharing/generative-ai/gpt-nl-boosts-dutch-ai-autonomy/"
         }
-      ]
+      ],
+      "last_updated_in": "2026-05"
     },
     {
       "id": "australia-govai-chat",
@@ -1864,7 +1870,8 @@
           "date": "2025",
           "url": "https://www.digital.gov.au/policy/ai/australian-public-service-ai-plan-2025/what-we-plan-achieve"
         }
-      ]
+      ],
+      "last_updated_in": "2026-05"
     },
     {
       "id": "india-gujarat-sugam",
@@ -1922,7 +1929,8 @@
           "date": "2026-05-26",
           "url": "https://www.businesstoday.in/technology/news/story/gujarat-govt-taps-meta-for-ai-led-governance-push-digital-citizen-services-on-whatsapp-533293-2026-05-26"
         }
-      ]
+      ],
+      "last_updated_in": "2026-05"
     }
   ],
   "anti_patterns": [

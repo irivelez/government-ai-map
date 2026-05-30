@@ -140,6 +140,14 @@ def validate_schema(d: dict) -> tuple[int, int]:
             fail(f"references[{rid}].confidence must be one of {ALLOWED_CONFIDENCE}")
             errors += 1
 
+        if "last_updated_in" in r:
+            v = r["last_updated_in"]
+            if not (isinstance(v, str) and len(v) == 7 and v[4] == "-"
+                    and v[:4].isdigit() and v[5:].isdigit()
+                    and 1 <= int(v[5:]) <= 12):
+                fail(f"references[{rid}].last_updated_in must be 'YYYY-MM' (got: {v!r})")
+                errors += 1
+
         # --- GROUNDING INVARIANT (hard gate) ---
         # Every card must be verifiable: >=1 source, and every source has a real
         # http(s) URL. No unlinked sources — they render as dead text on the card.

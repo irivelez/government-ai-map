@@ -12,6 +12,7 @@
       view_map: "Map", view_globe: "Globe", categories: "Categories", reset: "Reset",
       verified: "Verified", report_only: "Report-only", autorotate: "Auto-rotate",
       references: "references", of: "of", updated: "Updated", refresh_cadence: "Refreshed monthly",
+      new_count: "new", new_this_month: "new this month", no_updates: "No updates this month",
       summary: "Summary", metrics: "Key metrics", relevance: "Strategic relevance",
       caveats: "Fact-check notes", sources: "Sources", the_bet: "The bet",
       projection: "target", horizon: "Horizon", kicker: "Global Intelligence Map",
@@ -28,6 +29,7 @@
       view_map: "Mapa", view_globe: "Globo", categories: "Categorías", reset: "Restablecer",
       verified: "Verificado", report_only: "Solo informe", autorotate: "Auto-rotación",
       references: "referencias", of: "de", updated: "Actualizado", refresh_cadence: "Actualización mensual",
+      new_count: "nuevas", new_this_month: "nuevas este mes", no_updates: "Sin novedades este mes",
       summary: "Resumen", metrics: "Métricas clave", relevance: "Relevancia estratégica",
       caveats: "Notas de verificación", sources: "Fuentes", the_bet: "La apuesta",
       projection: "meta", horizon: "Horizonte", kicker: "Mapa de inteligencia global",
@@ -178,13 +180,22 @@
     ctx.restore();
   }
 
+  /* ---------- "what's new this month" helpers ---------- */
+  function currentMonth() { return (S.data && S.data.meta && S.data.meta.date || "").slice(0, 7); }
+  function isNew(ref) { return ref && ref.last_updated_in === currentMonth(); }
+  function newRefs() {
+    return S.data.references
+      .filter(isNew)
+      .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  }
+
   /* ---------- markers ---------- */
   let markerEls = {};
   function buildMarkers() {
     mkLayer.innerHTML = ""; markerEls = {};
     S.data.references.forEach(ref => {
       const el = document.createElement("div");
-      el.className = "mk";
+      el.className = "mk" + (isNew(ref) ? " new" : "");
       el.style.setProperty("--mc", catColor(ref.category));
       el.innerHTML = '<span class="pulse"></span><span class="dot"></span>';
       mkLayer.appendChild(el);
@@ -376,7 +387,90 @@
     S.selected = null; panel.classList.remove("open"); positionMarkers();
   }
   document.getElementById("pnClose").addEventListener("click", deselect);
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") { if (S.narrative) exitNarrative(); else deselect(); } });
+
+  /* ---------- "what's new this month" chip + panel ---------- */
+  const newchip = document.getElementById("newchip");
+  const newpanel = document.getElementById("newpanel");
+  let newPanelOpen = false;
+
+  function syncNewChip() {
+    if (!S.data) return;
+    const n = newRefs().length;
+    newchip.querySelector(".nc-count").textContent = String(n);
+    newchip.querySelector(".nc-label").textContent = t("new_count");
+    newchip.classList.toggle("show", n > 0);
+    newchip.setAttribute("aria-expanded", String(newPanelOpen));
+    document.getElementById("np-count").textContent = String(n);
+    newpanel.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
+    if (n === 0 && newPanelOpen) closeNewPanel();
+  }
+
+  function renderNewPanel() {
+    const list = document.getElementById("np-list");
+    const refs = newRefs();
+    if (refs.length === 0) {
+      list.innerHTML = `<div class="np-empty">${t("no_updates")}</div>`;
+      return;
+    }
+    list.innerHTML = refs.map(r => {
+      const mc = catColor(r.category);
+      const cat = catLabel(r.category);
+      const dateStr = r.date || "";
+      return `<button class="np-row" data-id="${r.id}" style="--mc:${mc}">` +
+        `<span class="np-flag">${r.flag || "•"}</span>` +
+        `<span class="np-body">` +
+          `<div class="np-prog">${r.program}</div>` +
+          `<div class="np-meta">` +
+            `<span class="np-dot"></span>` +
+            `<span>${r.country}</span>` +
+            `<span style="opacity:.5">·</span>` +
+            `<span>${cat}</span>` +
+            (dateStr ? `<span style="opacity:.5">·</span><span>${dateStr}</span>` : "") +
+          `</div>` +
+        `</span>` +
+        `</button>`;
+    }).join("");
+    list.querySelectorAll(".np-row").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const id = btn.dataset.id;
+        closeNewPanel();
+        selectRef(id);
+      });
+    });
+  }
+
+  function openNewPanel() {
+    if (!S.data || newRefs().length === 0) return;
+    renderNewPanel();
+    newpanel.classList.add("open");
+    newchip.classList.add("open");
+    newchip.setAttribute("aria-expanded", "true");
+    newPanelOpen = true;
+  }
+  function closeNewPanel() {
+    newpanel.classList.remove("open");
+    newchip.classList.remove("open");
+    newchip.setAttribute("aria-expanded", "false");
+    newPanelOpen = false;
+  }
+
+  newchip.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (newPanelOpen) closeNewPanel(); else openNewPanel();
+  });
+  document.getElementById("npClose").addEventListener("click", closeNewPanel);
+  document.addEventListener("click", (e) => {
+    if (!newPanelOpen) return;
+    if (newpanel.contains(e.target) || newchip.contains(e.target)) return;
+    closeNewPanel();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    if (newPanelOpen) { closeNewPanel(); return; }
+    if (S.narrative) { exitNarrative(); return; }
+    deselect();
+  });
 
   function horizonBadge(hz) {
     const rank = HZ_RANK[hz] || 0;
@@ -672,6 +766,7 @@
       `<span class="upd-cadence">${t("refresh_cadence")}</span>`;
     buildLegend();
     updateCount();
+    syncNewChip();
     if (S.selected) { const r = S.data.references.find(x => x.id === S.selected); if (r) renderPanel(r); }
     if (S.narrative) { N.next.querySelector("span").textContent = S.narrStep === STEPS.length - 1 ? (S.lang === "es" ? "Cerrar" : "Done") : t("next"); goStep(S.narrStep); }
     persist();
