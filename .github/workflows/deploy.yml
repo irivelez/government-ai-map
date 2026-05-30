@@ -43,6 +43,14 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Sanity-check secret shape (length-only, no value leak)
+        env:
+          ACC: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          TOK: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          echo "CLOUDFLARE_ACCOUNT_ID length: ${#ACC} (expected 32)"
+          echo "CLOUDFLARE_API_TOKEN length:  ${#TOK} (expected 53)"
+
       - name: Deploy to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
