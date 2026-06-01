@@ -2,7 +2,7 @@
   "meta": {
     "title": "Government & Diplomatic AI Deployments — Global Map",
     "subtitle": "Proven plays, leaders, and the consular opportunity",
-    "date": "2026-05-30",
+    "date": "2026-06-01",
     "description": "An interactive map of how governments, embassies, institutions and development banks are deploying AI to deliver services to citizens. Combines a strategic landscape report with an independent fact-check of specific claims. Each reference is tagged by category (for color-grouping), strategic time-horizon (for filtering), and confidence level (verified vs. report-only).",
     "schema_notes": {
       "coordinates": "lat/lng of the relevant capital or headquarters, for map plotting. Where two markers share a city, small offsets are applied to avoid overlap.",
@@ -1451,8 +1451,8 @@
         }
       ],
       "relevance_to_pilot": "Another live Colombian AI deployment — useful for the 'we've already started' narrative.",
-      "confidence": "verified",
-      "caveats": "PretorIA's own measured throughput is not published; reported daily figures vary by year and it has been described as still in pilot/testing.",
+      "confidence": "report-only",
+      "caveats": "STALENESS: primary sources are from 2020 (>24 months). Program appears still operational — the Oxford Institute of Technology and Justice (2025) confirms the Court has deployed PretorIA sorting 2,700+ tutelas daily, and the Court's 2024 T-323 ruling on generative AI in judicial proceedings confirms continued AI engagement at the Constitutional Court. Downgraded to report-only: existing 2020 source pages are bot-blocked and no directly-fetched 2024+ primary source was confirmed this run.",
       "sources": [
         {
           "title": "Pretoria: nueva herramienta para mejorar selección de tutelas en Corte Constitucional",
@@ -1465,8 +1465,15 @@
           "publisher": "Dejusticia",
           "date": "2020",
           "url": "https://www.dejusticia.org/conoce-nuestra-investigacion-sobre-pretoria-la-tecnologia-que-incorpora-la-inteligencia-artificial-a-la-corte-constitucional/"
+        },
+        {
+          "title": "Colombia — increasing AI use in law enforcement, prosecution, and courts",
+          "publisher": "Oxford Institute of Technology and Justice (University of Oxford)",
+          "date": "2025",
+          "url": "https://www.techandjustice.bsg.ox.ac.uk/research/colombia"
         }
-      ]
+      ],
+      "last_updated_in": "2026-06"
     },
     {
       "id": "chile-latam-gpt",
@@ -1931,6 +1938,187 @@
         }
       ],
       "last_updated_in": "2026-05"
+    },
+    {
+      "id": "kazakhstan-alemgpt",
+      "country": "Kazakhstan",
+      "country_code": "KZ",
+      "flag": "🇰🇿",
+      "entity": "Ministry of Digital Development / Government of Kazakhstan",
+      "program": "AlemGPT — conversational AI for public services",
+      "category": "citizen-rag",
+      "horizon": "medium",
+      "date": "2026-01",
+      "coordinates": {
+        "lat": 51.1801,
+        "lng": 71.446
+      },
+      "location_label": "Astana",
+      "headline": "A ChatGPT-style interface replacing complex government forms — Central Asia's boldest citizen-AI rollout.",
+      "summary": "Kazakhstan is deploying AlemGPT, a multi-agent AI platform that lets citizens describe their situation in a simple text prompt and have the system automatically identify relevant services, pull personal data from connected government databases, and complete applications end-to-end. Testing was announced in January 2026, covering key 'life events' (childbirth, family-status changes, social benefits) with announced plans to move all public services to the platform. The system is also expanding to integrate businesses and second-tier banks. Kazakhstan's existing eGov Mobile app already processed 54 million service requests in 2025, establishing the baseline.",
+      "key_metrics": [
+        {
+          "label": "eGov Mobile requests (2025)",
+          "value": "54 million",
+          "note": "established baseline before AlemGPT"
+        },
+        {
+          "label": "Coverage target",
+          "value": "All public services",
+          "is_projection": true,
+          "note": "announced goal; testing phase from Jan 2026"
+        }
+      ],
+      "relevance_to_pilot": "The ChatGPT-for-government-services model at national scale: citizens describe needs in natural language, the system completes the service. Directly analogous to a consular chatbot handling visa, document and appointment requests.",
+      "confidence": "report-only",
+      "caveats": "AlemGPT is in a testing and rollout phase as of early 2026; full coverage of all public services is an announced target, not a realized outcome. Sources confirmed via search-result summaries; pages are bot-blocked to automated fetchers.",
+      "sources": [
+        {
+          "title": "How AI is reshaping government services",
+          "publisher": "Euronews",
+          "date": "2026-05-28",
+          "url": "https://www.euronews.com/business/2026/05/28/this-countrys-ai-driven-government-overhaul-is-starting-to-pay-off"
+        },
+        {
+          "title": "All public services to be moved to AlemGPT in Kazakhstan",
+          "publisher": "Tengrinews",
+          "date": "2026",
+          "url": "https://en.tengrinews.kz/kazakhstan_news/all-public-services-to-be-moved-to-alemgpt-in-kazakhstan-270629/"
+        },
+        {
+          "title": "Kazakhstan tests AlemGPT AI platform for public services",
+          "publisher": "Kazakhstan Today",
+          "date": "2026",
+          "url": "https://www.kt.kz/eng/government/kazakhstan_tests_alemgpt_ai_platform_for_public_services_1377986157.html"
+        },
+        {
+          "title": "Year of Digitalization and Artificial Intelligence in Kazakhstan",
+          "publisher": "Prime Minister of the Republic of Kazakhstan",
+          "date": "2026",
+          "url": "https://primeminister.kz/en/news/year-of-digitalization-and-artificial-intelligence-in-kazakhstan-the-government-has-identified-a-key-priority-the-introduction-of-technologies-across-all-sectors-of-the-economy-30934"
+        }
+      ],
+      "last_updated_in": "2026-06"
+    },
+    {
+      "id": "morocco-ai2030",
+      "country": "Morocco",
+      "country_code": "MA",
+      "flag": "🇲🇦",
+      "entity": "Government of Morocco / Ministry of Digital Transition",
+      "program": "AI Made in Morocco + Digital Morocco 2030",
+      "category": "sovereign-vision",
+      "horizon": "medium",
+      "date": "2025-01-12",
+      "coordinates": {
+        "lat": 33.9716,
+        "lng": -6.8498
+      },
+      "location_label": "Rabat",
+      "headline": "Africa's most ambitious sovereign AI roadmap — national portal with 660 services, Mistral partnership for Darija and Amazigh, and a National AI Hub.",
+      "summary": "On 12 January 2025 Morocco launched 'AI Made in Morocco', a structured 2025–2030 roadmap for moving AI from intention into administration. Morocco has put 660 government services onto a single national portal and is rolling out chatbots so citizens without screen literacy can access services via voice. A partnership with France's Mistral AI is developing large language models in Arabic, Darija and Amazigh — Morocco's widely spoken but digitally neglected languages. In January 2026 Morocco created a National AI Hub (the Al Jazari Institutes network). The country climbed 14 places in the Oxford Insights Government AI Readiness Index 2025, making it Africa's leading AI nation.",
+      "key_metrics": [
+        {
+          "label": "Government services (national portal)",
+          "value": "660",
+          "note": "single portal with voice chatbots rolling out"
+        },
+        {
+          "label": "AI Readiness rank (Africa)",
+          "value": "Top-ranked",
+          "note": "Oxford Insights 2025; +14 places vs. prior year"
+        },
+        {
+          "label": "Language models",
+          "value": "Arabic + Darija + Amazigh",
+          "note": "Mistral AI partnership; alpha version in development"
+        }
+      ],
+      "relevance_to_pilot": "The first African country mounting a comprehensive sovereign AI programme spanning citizen portal, voice chatbots and local-language models. Its multilingual voice-access rollout for underserved citizens is directly applicable to diaspora-facing consular services.",
+      "confidence": "report-only",
+      "caveats": "Full chatbot rollout and Mistral language model are roadmap commitments under the 2025–2026 phase; not yet fully deployed as of mid-2026. The 660-services national portal is live; the chatbot layer is described as 'rolling out'. Sources confirmed via search-result summaries; pages are bot-blocked to automated fetchers.",
+      "sources": [
+        {
+          "title": "Morocco wants to build AI that speaks for Africa",
+          "publisher": "Rest of World",
+          "date": "2026",
+          "url": "https://restofworld.org/2026/morocco-ai-minister/"
+        },
+        {
+          "title": "Morocco Creates National AI Hub as Part of Digital Morocco 2030 Strategy",
+          "publisher": "TechAfrica News",
+          "date": "2026-01-14",
+          "url": "https://techafricanews.com/2026/01/14/morocco-creates-national-ai-hub-as-part-of-digital-morocco-2030-strategy/"
+        },
+        {
+          "title": "Morocco Climbs 14 Places in Government AI Readiness Index 2025",
+          "publisher": "Morocco World News",
+          "date": "2026-02",
+          "url": "https://www.moroccoworldnews.com/2026/02/277581/morocco-climbs-14-places-in-government-ai-readiness-index-2025/"
+        },
+        {
+          "title": "Artificial Intelligence: How Morocco wants to regulate and accelerate the transformation by 2030",
+          "publisher": "Industries du Maroc",
+          "date": "2025",
+          "url": "https://en.industries.ma/artificial-intelligence-how-morocco-wants-to-regulate-and-accelerate-the-transformation-by-2030/"
+        }
+      ],
+      "last_updated_in": "2026-06"
+    },
+    {
+      "id": "afdb-ai10bn",
+      "country": "Côte d'Ivoire (AfDB HQ)",
+      "country_code": "CI",
+      "flag": "🏦",
+      "entity": "African Development Bank (AfDB) / UNDP",
+      "program": "AI 10 Billion Initiative — Africa",
+      "category": "institution",
+      "horizon": "medium",
+      "date": "2026-02-09",
+      "coordinates": {
+        "lat": 5.3364,
+        "lng": -4.0267
+      },
+      "location_label": "Abidjan (AfDB HQ)",
+      "headline": "The multilateral body that funds and benchmarks AI adoption across Africa's 54 countries.",
+      "summary": "Launched at the 2026 Nairobi AI Forum (February 9–10, 2026, Kenya), the AI 10 Billion Initiative — co-led by the African Development Bank and UNDP with the AI Hub for Sustainable Development — aims to mobilize up to $10 billion by 2035 to unlock 40 million new jobs across Africa. The initiative invests in AI foundations, entrepreneurship, regional data infrastructure, policy frameworks and skills development via a three-phase roadmap: ignition (2025–27), consolidation (2028–31) and scale (2032–35).",
+      "key_metrics": [
+        {
+          "label": "Funding target",
+          "value": "$10 billion by 2035",
+          "is_projection": true,
+          "note": "mobilization goal"
+        },
+        {
+          "label": "Jobs target",
+          "value": "40 million",
+          "is_projection": true,
+          "note": "across Africa"
+        },
+        {
+          "label": "Launch",
+          "value": "Feb 9–10, 2026",
+          "note": "2026 Nairobi AI Forum, Kenya"
+        }
+      ],
+      "relevance_to_pilot": "Africa's central multilateral AI funding vehicle — directly analogous to the IDB and World Bank entries for LATAM and global contexts. The funding pipeline for government AI deployments across 54 countries.",
+      "confidence": "report-only",
+      "caveats": "Funding and jobs figures are long-range targets (to 2035). Initiative launched Feb 2026; operational deployment of funded programs is in its ignition phase. Sources are primary AfDB press releases.",
+      "sources": [
+        {
+          "title": "African Development Bank, UNDP and partners launch the AI 10 Billion Initiative during 2026 Nairobi AI Forum",
+          "publisher": "African Development Bank",
+          "date": "2026-02",
+          "url": "https://www.afdb.org/en/news-and-events/press-releases/african-development-bank-undp-and-partners-launch-ai-10-billion-initiative-during-2026-nairobi-ai-forum-91104"
+        },
+        {
+          "title": "African Development Bank, UNDP, AI Hub for Sustainable Development and partners launch the AI 10 Billion Initiative",
+          "publisher": "African Development Bank",
+          "date": "2026-02",
+          "url": "https://www.afdb.org/en/news-and-events/press-releases/african-development-bank-undp-ai-hub-sustainable-development-and-partners-launch-ai-10-billion-initiative-during-2026-nairobi-ai-forum-91104"
+        }
+      ],
+      "last_updated_in": "2026-06"
     }
   ],
   "anti_patterns": [
