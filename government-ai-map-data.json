@@ -2,7 +2,7 @@
   "meta": {
     "title": "Government & Diplomatic AI Deployments — Global Map",
     "subtitle": "Proven plays, leaders, and the consular opportunity",
-    "date": "2026-05-30",
+    "date": "2026-07-01",
     "description": "An interactive map of how governments, embassies, institutions and development banks are deploying AI to deliver services to citizens. Combines a strategic landscape report with an independent fact-check of specific claims. Each reference is tagged by category (for color-grouping), strategic time-horizon (for filtering), and confidence level (verified vs. report-only).",
     "schema_notes": {
       "coordinates": "lat/lng of the relevant capital or headquarters, for map plotting. Where two markers share a city, small offsets are applied to avoid overlap.",
@@ -1437,12 +1437,12 @@
       },
       "location_label": "Bogotá",
       "headline": "AI helping manage Colombia's enormous tutela docket.",
-      "summary": "PretorIA helps the Constitutional Court manage its huge tutela caseload (~620,000 tutelas/year), acting as a search-and-flag engine while judges retain final discretion.",
+      "summary": "PretorIA helps the Constitutional Court manage its huge tutela caseload (~620,000 tutelas/year), acting as a search-and-flag engine while judges retain final discretion. The tool's continued use was reaffirmed in the context of the Court's landmark Ruling T-323/2024, which established Colombia's first framework for responsible AI use in judicial tutela proceedings, and the December 2024 AI guidelines issued by the Superior Council of the Judiciary.",
       "key_metrics": [
         {
           "label": "Tutelas received/yr",
           "value": "≈620,000",
-          "note": "court-wide"
+          "note": "court-wide (2020 baseline; program ongoing)"
         },
         {
           "label": "Role",
@@ -1451,8 +1451,8 @@
         }
       ],
       "relevance_to_pilot": "Another live Colombian AI deployment — useful for the 'we've already started' narrative.",
-      "confidence": "verified",
-      "caveats": "PretorIA's own measured throughput is not published; reported daily figures vary by year and it has been described as still in pilot/testing.",
+      "confidence": "report-only",
+      "caveats": "PretorIA's own measured throughput is not published; the 620,000/yr figure is a 2020 baseline. Operational status confirmed indirectly through the T-323/2024 ruling and the December 2024 AI judiciary guidelines, both of which reference PretorIA as the court's existing AI tool. Recent sources are bot-blocked (403) but confirmed real via search.",
       "sources": [
         {
           "title": "Pretoria: nueva herramienta para mejorar selección de tutelas en Corte Constitucional",
@@ -1465,8 +1465,21 @@
           "publisher": "Dejusticia",
           "date": "2020",
           "url": "https://www.dejusticia.org/conoce-nuestra-investigacion-sobre-pretoria-la-tecnologia-que-incorpora-la-inteligencia-artificial-a-la-corte-constitucional/"
+        },
+        {
+          "title": "The Constitutional Court of Colombia pronounces on the use of generative AI tools in judicial tutela proceedings (Ruling T-323/2024)",
+          "publisher": "CMS Law",
+          "date": "2024",
+          "url": "https://cms.law/en/col/publication/the-constitutional-court-of-colombia-pronounces-on-the-use-of-generative-artificial-intelligence-tools-in-judicial-tutela-proceedings"
+        },
+        {
+          "title": "Justice meets innovation: Colombia's groundbreaking AI guidelines for courts",
+          "publisher": "UNESCO",
+          "date": "2025",
+          "url": "https://www.unesco.org/en/articles/justice-meets-innovation-colombias-groundbreaking-ai-guidelines-courts"
         }
-      ]
+      ],
+      "last_updated_in": "2026-07"
     },
     {
       "id": "chile-latam-gpt",
@@ -1931,6 +1944,65 @@
         }
       ],
       "last_updated_in": "2026-05"
+    },
+    {
+      "id": "egypt-karnak",
+      "country": "Egypt",
+      "country_code": "EG",
+      "flag": "🇪🇬",
+      "entity": "Ministry of Communications & IT (MCIT) / ITIDA",
+      "program": "Karnak — Egypt's national Arabic LLM + citizen AI suite",
+      "category": "sovereign-vision",
+      "horizon": "long",
+      "date": "2026-02-11",
+      "coordinates": {
+        "lat": 30.0444,
+        "lng": 31.2357
+      },
+      "location_label": "Cairo",
+      "headline": "Africa's first nationally built Arabic LLM — anchoring a citizen legal-guidance assistant and a national AI education tool.",
+      "summary": "On 11 February 2026, Egypt's Ministry of Communications & IT (MCIT) and ITIDA unveiled Karnak — Africa's first nationally developed large language model — at the inaugural Ai Everything MEA summit in Cairo, held under the patronage of President el-Sisi. Karnak is the highest-ranking Arabic LLM in the 30–40 billion parameter category and is designed as sovereign infrastructure for startups, government agencies and public institutions to build locally grounded AI applications. Flagship services announced at launch include a legal and regulatory assistant to help Egyptian citizens and small businesses navigate the regulatory landscape, SIA (an AI-powered tutor for Arabic language and Egyptian history in high schools), and AcQua (an NLP system auditing citizen calls to the Digital Egypt call centre). The Center for Responsible AI was established in late 2025 to oversee safe deployment within government institutions.",
+      "key_metrics": [
+        {
+          "label": "Arabic LLM benchmark",
+          "value": "Top-ranked 30–40B parameters",
+          "note": "highest in category at launch (Feb 2026)"
+        },
+        {
+          "label": "Citizen application",
+          "value": "Legal/regulatory AI assistant",
+          "note": "for citizens and SMEs navigating regulations"
+        },
+        {
+          "label": "Governance body",
+          "value": "Center for Responsible AI",
+          "note": "established late 2025"
+        }
+      ],
+      "relevance_to_pilot": "Egypt's Karnak launch demonstrates that a mid-sized economy can build a nationally controlled Arabic-language foundation model and connect it directly to citizen-facing legal-guidance and education services — the sovereign-build path for government AI in non-English contexts.",
+      "confidence": "report-only",
+      "caveats": "All primary and secondary sources are bot-blocked (403) from automated fetching but confirmed real and content-verified via search engine indexing. Operational deployment timeline for Karnak-powered citizen applications beyond the launch announcement has not been independently verified. Legal assistant and SIA tutor were announced at launch; rollout schedule not publicly specified.",
+      "sources": [
+        {
+          "title": "Egypt Launches Karnak: National AI Language Model at Ai Everything MEA 2026",
+          "publisher": "ITIDA (Information Technology Industry Development Agency, Egypt)",
+          "date": "2026-02-11",
+          "url": "https://itida.gov.eg/English/PressReleases/Pages/egypt-national-ai-karnak-llm-launch-Ai-Everything-MEA-2026.aspx"
+        },
+        {
+          "title": "Infrastructure, sovereignty, and energy: Inside Egypt's first AI Everything summit",
+          "publisher": "Fast Company Middle East",
+          "date": "2026-02",
+          "url": "https://fastcompanyme.com/technology/infrastructure-sovereignty-and-energy-inside-egypts-first-ai-everything-summit/"
+        },
+        {
+          "title": "MCIT: AI Security Emerges as Pillar of Egypt's Digital Sovereignty Strategy",
+          "publisher": "The Middle East Observer",
+          "date": "2026-06-10",
+          "url": "https://meobserver.org/technology/2026/06/10/mcit-ai-security-emerges-as-pillar-of-egypts-digital-sovereignty-strategy/"
+        }
+      ],
+      "last_updated_in": "2026-07"
     }
   ],
   "anti_patterns": [
