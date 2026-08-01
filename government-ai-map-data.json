@@ -2,7 +2,7 @@
   "meta": {
     "title": "Government & Diplomatic AI Deployments — Global Map",
     "subtitle": "Proven plays, leaders, and the consular opportunity",
-    "date": "2026-05-30",
+    "date": "2026-08-01",
     "description": "An interactive map of how governments, embassies, institutions and development banks are deploying AI to deliver services to citizens. Combines a strategic landscape report with an independent fact-check of specific claims. Each reference is tagged by category (for color-grouping), strategic time-horizon (for filtering), and confidence level (verified vs. report-only).",
     "schema_notes": {
       "coordinates": "lat/lng of the relevant capital or headquarters, for map plotting. Where two markers share a city, small offsets are applied to avoid overlap.",
@@ -1451,8 +1451,9 @@
         }
       ],
       "relevance_to_pilot": "Another live Colombian AI deployment — useful for the 'we've already started' narrative.",
-      "confidence": "verified",
-      "caveats": "PretorIA's own measured throughput is not published; reported daily figures vary by year and it has been described as still in pilot/testing.",
+      "confidence": "report-only",
+      "caveats": "FRESHNESS FLAG (2026-08 run): both sources date from 2020, which is outside the 24-month freshness window as of August 2026. Could not search for a more recent source this run due to egress proxy restriction. PretorIA was operational as of mid-2025 per background research but no primary source from within the last 24 months was located. Downgraded to report-only. Next interactive session should either add a recent primary source (court annual report, OECD case study, or news coverage post-August 2024) or replace this card with a fresher Colombian justice-AI reference. PretorIA's own measured throughput is not published; reported daily figures vary by year.",
+      "last_updated_in": "2026-08",
       "sources": [
         {
           "title": "Pretoria: nueva herramienta para mejorar selección de tutelas en Corte Constitucional",
