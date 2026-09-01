@@ -2,7 +2,7 @@
   "meta": {
     "title": "Government & Diplomatic AI Deployments — Global Map",
     "subtitle": "Proven plays, leaders, and the consular opportunity",
-    "date": "2026-05-30",
+    "date": "2026-09-01",
     "description": "An interactive map of how governments, embassies, institutions and development banks are deploying AI to deliver services to citizens. Combines a strategic landscape report with an independent fact-check of specific claims. Each reference is tagged by category (for color-grouping), strategic time-horizon (for filtering), and confidence level (verified vs. report-only).",
     "schema_notes": {
       "coordinates": "lat/lng of the relevant capital or headquarters, for map plotting. Where two markers share a city, small offsets are applied to avoid overlap.",
@@ -1342,7 +1342,7 @@
       },
       "location_label": "Lisbon",
       "headline": "A multilingual citizen assistant across thousands of services.",
-      "summary": "Portugal's gov.pt assistant is a ChatGPT-powered citizen-facing service covering 2,300+ services in 12 languages — grounded in an official public-services knowledge base.",
+      "summary": "Portugal's gov.pt assistant is a ChatGPT-powered citizen-facing service covering 2,300+ services in 12 languages — grounded in an official public-services knowledge base. In July 2026 Portugal also launched AMALIA (Automatic Multimodal Language Assistant with Artificial Intelligence), its first sovereign LLM trained specifically for Portuguese, funded by the Recovery and Resilience Plan with an initial €5.5m investment — marking Portugal's move toward sovereign AI alongside its ChatGPT-based citizen assistant.",
       "key_metrics": [
         {
           "label": "Services",
@@ -1358,6 +1358,7 @@
       "relevance_to_pilot": "Multilingual citizen-assistant pattern — relevant to serving a diverse diaspora.",
       "confidence": "verified",
       "caveats": "Carried from the original landscape report with its original sourcing.",
+      "last_updated_in": "2026-09",
       "sources": [
         {
           "title": "You can now talk to the gov.pt portal's new virtual assistant",
@@ -1370,6 +1371,12 @@
           "publisher": "Government of Portugal (gov.pt / AMA)",
           "date": "2023-05-26",
           "url": "https://www2.gov.pt/en/noticias/assistente-virtual-com-inteligencia-artificial-vai-apoiar-os-cidadaos-no-eportugal"
+        },
+        {
+          "title": "LLM AMALIA shows Portugal's potential",
+          "publisher": "XXV Constitutional Government of Portugal (portugal.gov.pt)",
+          "date": "2026-07",
+          "url": "https://portugal.gov.pt/en/gc25/communication/news/llm-amalia-shows-portugals-potential"
         }
       ]
     },
@@ -1451,8 +1458,9 @@
         }
       ],
       "relevance_to_pilot": "Another live Colombian AI deployment — useful for the 'we've already started' narrative.",
-      "confidence": "verified",
-      "caveats": "PretorIA's own measured throughput is not published; reported daily figures vary by year and it has been described as still in pilot/testing.",
+      "confidence": "report-only",
+      "caveats": "PretorIA's own measured throughput is not published; reported daily figures vary by year and it has been described as still in pilot/testing. Both sources are from 2020 (>24 months old as of September 2026). PretorIA appears to still operate based on contextual evidence (described in present tense in academic sources) but no primary source dated September 2024 or later was found that specifically documents PretorIA's current operational status. Colombia's Constitutional Court Ruling T-323 of 2024 confirms the Court's continued engagement with AI in tutela proceedings but concerns a different judge's use of ChatGPT for drafting, not PretorIA specifically. Confidence downgraded to report-only per 24-month freshness policy.",
+      "last_updated_in": "2026-09",
       "sources": [
         {
           "title": "Pretoria: nueva herramienta para mejorar selección de tutelas en Corte Constitucional",
@@ -1931,6 +1939,238 @@
         }
       ],
       "last_updated_in": "2026-05"
+    },
+    {
+      "id": "nigeria-govguidenigeria",
+      "country": "Nigeria",
+      "country_code": "NG",
+      "flag": "🇳🇬",
+      "entity": "Federal Ministry of Communications, Innovation and Digital Economy",
+      "program": "GovGuideNigeria — AI-powered WhatsApp & web citizen services",
+      "category": "citizen-rag",
+      "horizon": "short",
+      "date": "2026-05-21",
+      "coordinates": {
+        "lat": 9.0765,
+        "lng": 7.3986
+      },
+      "location_label": "Abuja",
+      "headline": "Africa's first federal AI platform for citizen services — 35+ ministries, WhatsApp-native, four languages.",
+      "summary": "On 21 May 2026 Nigeria's Federal Government (Minister Bosun Tijani) launched GovGuideNigeria, an AI-powered platform giving Nigerians access to government information from 35+ ministries and 60+ agencies via WhatsApp and the web. Built on Meta's open-source Llama models through a partnership between the National Centre for AI and Robotics (NCAIR), Meta and Publica, it supports English, Hausa, Igbo and Yoruba — covering Nigeria's three major language groups. With 51 million WhatsApp users, the platform requires no new app installation.",
+      "key_metrics": [
+        { "label": "Coverage", "value": "35+ ministries, 60+ agencies" },
+        { "label": "Languages", "value": "English, Hausa, Igbo, Yoruba" },
+        { "label": "WhatsApp users", "value": "51 million" },
+        { "label": "Launch", "value": "May 21, 2026" }
+      ],
+      "relevance_to_pilot": "The first federal African AI citizen-service layer, using the WhatsApp-channel model also seen in Bogotá (Chatico) and India's Gujarat — but at national scale, zero new app required. Demonstrates viability of Llama-based multilingual citizen AI without US frontier API dependencies.",
+      "confidence": "report-only",
+      "last_updated_in": "2026-09",
+      "sources": [
+        {
+          "title": "Nigeria launches GovGuide, an AI chatbot for public service access",
+          "publisher": "TechCabal",
+          "date": "2026-05-22",
+          "url": "https://techcabal.com/2026/05/22/nigeria-taps-meta-ai-to-help-citizens-access-government-services/"
+        },
+        {
+          "title": "FG launches AI platform to simplify access to government services",
+          "publisher": "Nairametrics",
+          "date": "2026-05-21",
+          "url": "https://nairametrics.com/2026/05/21/fg-launches-ai-platform-to-simplify-access-to-government-services/"
+        }
+      ]
+    },
+    {
+      "id": "canada-gctranslate",
+      "country": "Canada",
+      "country_code": "CA",
+      "flag": "🇨🇦",
+      "entity": "Translation Bureau / Shared Services Canada",
+      "program": "GCtranslate — government-wide AI translation tool",
+      "category": "internal-productivity",
+      "horizon": "short",
+      "date": "2026-06-18",
+      "coordinates": {
+        "lat": 45.4215,
+        "lng": -75.6972
+      },
+      "location_label": "Ottawa",
+      "headline": "Canada's sovereign AI translation tool deployed across the entire federal public service — 300 million words translated, first lighthouse under the GC AI Strategy.",
+      "summary": "Following a successful pilot across seven federal departments, the Government of Canada's AI-powered translation tool GCtranslate began government-wide rollout on 30 April 2026 — with Minister Joël Lightbound announcing full federal deployment on 18 June 2026. The tool provides fast, self-service translations adapted to Canadian government terminology and bilingual realities; since launch it has translated over 300 million words (equivalent to 800,000+ pages). GCtranslate is the first lighthouse project under Canada's AI Strategy for the Federal Public Service 2025–2027. The broader GC AI Platform (including CANChat in phased rollout from July 2026) and a national AI register (400+ AI systems, 42 institutions) are scaling in parallel.",
+      "key_metrics": [
+        { "label": "Words translated", "value": "300 million+", "note": "≈800,000 pages" },
+        { "label": "Rollout", "value": "April 30, 2026 → March 2027" },
+        { "label": "Pilot scope", "value": "7 departments" },
+        { "label": "AI register", "value": "400+ systems, 42 institutions" }
+      ],
+      "relevance_to_pilot": "Demonstrates that a bilingual government can deploy sovereign AI translation across an entire public service — the linguistic-access model directly applicable to a consulate serving diaspora in a non-native language.",
+      "confidence": "report-only",
+      "last_updated_in": "2026-09",
+      "sources": [
+        {
+          "title": "GCtranslate deployed government-wide to support official languages in the federal public service",
+          "publisher": "Government of Canada / Translation Bureau (canada.ca)",
+          "date": "2026-06-18",
+          "url": "https://www.canada.ca/en/translation-bureau/news/2026/06/gctranslate-deployed-government-wide-to-support-official-languages-in-the-federal-public-service.html"
+        },
+        {
+          "title": "GCtranslate deployed government-wide to support official languages in the federal public service",
+          "publisher": "Newswire Canada",
+          "date": "2026-06-18",
+          "url": "https://www.newswire.ca/news-releases/gctranslate-deployed-government-wide-to-support-official-languages-in-the-federal-public-service-862236208.html"
+        },
+        {
+          "title": "Canada Rolls Out AI Translation Tool Across Federal Government",
+          "publisher": "Slator",
+          "date": "2026-06",
+          "url": "https://slator.com/canada-ai-translation-tool-federal-government/"
+        }
+      ]
+    },
+    {
+      "id": "thailand-ai-passport",
+      "country": "Thailand",
+      "country_code": "TH",
+      "flag": "🇹🇭",
+      "entity": "Ministry of Digital Economy and Society (MDES)",
+      "program": "TH-AI Passport (AiPASS) — free national AI access programme",
+      "category": "sovereign-vision",
+      "horizon": "medium",
+      "date": "2026-08-31",
+      "coordinates": {
+        "lat": 13.7563,
+        "lng": 100.5018
+      },
+      "location_label": "Bangkok",
+      "headline": "Thailand becomes the first government to offer citizens free access to 33 premium AI tools as a public utility — 1.3 million pre-registrations, strict data sovereignty.",
+      "summary": "Thailand's Ministry of Digital Economy and Society launched the TH-AI Passport programme (AiPASS platform) on 31 August 2026, providing 5 million Thais aged 15+ with free, one-year access to 33 AI models from 14+ providers — including ChatGPT, Claude, Gemini, Grok, and Thai-language models Pathumma and Typhoon. Over 1.3 million citizens pre-registered in under two weeks. Strict contractual restrictions prohibit AI providers from retaining Thai citizens' data or using it to train models. The government is subsidizing costs and introduced a pay-per-active-user procurement model — a novel approach that may reshape how governments purchase AI services globally.",
+      "key_metrics": [
+        { "label": "Models available", "value": "33", "note": "14+ providers" },
+        { "label": "Target coverage", "value": "5 million citizens (aged 15+)" },
+        { "label": "Pre-registrations", "value": "1.3 million+", "note": "under 2 weeks" },
+        { "label": "Data protection", "value": "No data retention by AI providers" }
+      ],
+      "relevance_to_pilot": "Pioneering model of government-funded AI access as public utility — extending frontier AI to citizens regardless of income or digital literacy. Novel procurement model (pay-per-active-user) with strict data-sovereignty contractual terms.",
+      "confidence": "report-only",
+      "caveats": "National launch targeted end of 2026; public beta for general-purpose chatbot planned late September 2026. Scale (5M target) is a goal; actual reach will be reported after launch.",
+      "last_updated_in": "2026-09",
+      "sources": [
+        {
+          "title": "TH-AI Passport tops 1m sign-ups as minister defends data safeguards",
+          "publisher": "The Nation Thailand",
+          "date": "2026",
+          "url": "https://www.nationthailand.com/business/tech/40070079"
+        },
+        {
+          "title": "Thailand launches state-backed AI access scheme after 1.3 mln sign-ups",
+          "publisher": "Xinhua (English)",
+          "date": "2026-08-28",
+          "url": "https://english.news.cn/asiapacific/20260828/aa40d3d180c94930ae73f5b90b778e18/c.html"
+        },
+        {
+          "title": "Thailand Launches TH-AI Passport, Offering Free Access To 33 Premium AI Models",
+          "publisher": "Thailand News",
+          "date": "2026-08",
+          "url": "https://www.thailandnews.co/2026/08/thailand-launches-th-ai-passport-offering-free-access-to-33-premium-ai-models/"
+        }
+      ]
+    },
+    {
+      "id": "usa-pentagon-genai-mil",
+      "country": "United States",
+      "country_code": "US",
+      "flag": "🇺🇸",
+      "entity": "U.S. Department of Defense",
+      "program": "GenAI.mil — multi-model enterprise AI portal (Gemini, ChatGPT Mil, Grok for Government)",
+      "category": "internal-productivity",
+      "horizon": "short",
+      "date": "2026-08-31",
+      "coordinates": {
+        "lat": 38.8719,
+        "lng": -77.0563
+      },
+      "location_label": "Pentagon, Arlington, VA",
+      "headline": "The world's largest internal AI deployment: 1.7 million DoD users with three frontier models — ChatGPT, Grok, and Gemini — in a single certified portal.",
+      "summary": "GenAI.mil, the Department of Defense's enterprise generative-AI portal, reached its full multi-model form on 31 August 2026 when ChatGPT Mil (OpenAI) and Grok for Government (xAI) joined Google Gemini on the platform — serving 3 million military and civilian personnel, with 1.7 million unique users already onboarded. ChatGPT Mil holds accreditation for Controlled Unclassified Information (CUI) at Impact Level 5. GenAI.mil launched in December 2025 with Gemini at 80,000 initial users; by August 2026 it became the most user-dense internal AI deployment in any government in the world. Use cases span drafting, summarization, procurement review, logistics, policy analysis, and compliance.",
+      "key_metrics": [
+        { "label": "Active users", "value": "1.7 million+", "note": "of 3M DoD personnel" },
+        { "label": "AI models", "value": "3", "note": "Gemini, ChatGPT Mil, Grok for Government" },
+        { "label": "CUI certification", "value": "Impact Level 5" },
+        { "label": "Platform launch", "value": "December 2025" }
+      ],
+      "relevance_to_pilot": "The scale benchmark for internal-productivity AI: 1.7M+ government users on a multi-model platform in under a year. Demonstrates that zero-lock-in multi-model access is achievable and operationally viable in sensitive environments.",
+      "confidence": "report-only",
+      "caveats": "Distinct from the civilian GSA/OMB USAi platform (which covers non-defense agencies). Defense-specific use cases and data-handling requirements differ from civilian service delivery.",
+      "last_updated_in": "2026-09",
+      "sources": [
+        {
+          "title": "Grok and ChatGPT join Gemini in Pentagon's enterprise genAI portal",
+          "publisher": "DefenseScoop",
+          "date": "2026-08-31",
+          "url": "https://defensescoop.com/2026/08/31/grok-chatgpt-added-to-genai-mil/"
+        },
+        {
+          "title": "The Pentagon now has its own version of ChatGPT and Grok",
+          "publisher": "TechCrunch",
+          "date": "2026-08-31",
+          "url": "https://techcrunch.com/2026/08/31/the-pentagon-now-has-its-own-version-of-chatgpt-and-grok/"
+        },
+        {
+          "title": "Pentagon adds Grok for Government and ChatGPT for military use",
+          "publisher": "The Hill",
+          "date": "2026-08-31",
+          "url": "https://thehill.com/policy/defense/6061714-pentagon-adds-grok-chatgpt-ai/"
+        }
+      ]
+    },
+    {
+      "id": "south-korea-ai-public",
+      "country": "South Korea",
+      "country_code": "KR",
+      "flag": "🇰🇷",
+      "entity": "Ministry of Science and ICT / SK Telecom, Kakao, KT consortiums",
+      "program": "AI for All — free national AI public utility",
+      "category": "sovereign-vision",
+      "horizon": "medium",
+      "date": "2026-08-28",
+      "coordinates": {
+        "lat": 37.575,
+        "lng": 126.984
+      },
+      "location_label": "Seoul",
+      "headline": "South Korea makes AI a public utility: free, unlimited access for all 52 million citizens — the first government anywhere to do so at national scale.",
+      "summary": "In July 2026 South Korea's Ministry of Science and ICT issued a call for proposals to build government-backed AI chatbots and public-service agents that every citizen could use for free. On 28 August 2026, SK Telecom, Kakao and KT were selected — three separate consortiums each building AI services available free and unlimited to all 52 million South Korean residents. The government is providing the three groups 512 NVIDIA B200 GPUs and will subsidize nationwide service costs from 2027. A public beta targets late September 2026 with a full national launch before year-end. The goal is an 'AI basic society' accessible regardless of income, age or digital literacy.",
+      "key_metrics": [
+        { "label": "Target users", "value": "52 million citizens" },
+        { "label": "Selected consortiums", "value": "3", "note": "SK Telecom, Kakao, KT" },
+        { "label": "Government compute", "value": "512 NVIDIA B200 GPUs" },
+        { "label": "Target launch", "value": "Late 2026" }
+      ],
+      "relevance_to_pilot": "Establishes the 'AI as public infrastructure' policy model — a government committing to pay for universal AI access as it once paid for roads and electricity. Directly comparable to Thailand's TH-AI Passport but as a domestically-built (not licensed) service.",
+      "confidence": "report-only",
+      "caveats": "Full national launch targeted for late 2026; public beta first. Subsidized compute arrangement and 2027 cost structure are commitments, not realized outcomes.",
+      "last_updated_in": "2026-09",
+      "sources": [
+        {
+          "title": "South Korea launches free AI agent project for all citizens",
+          "publisher": "UPI",
+          "date": "2026-07-13",
+          "url": "https://www.upi.com/Top_News/World-News/2026/07/13/ai-for-everyone-public-services/9121783997023/"
+        },
+        {
+          "title": "Korea picks SK Telecom, Kakao, KT to build free nationwide AI services",
+          "publisher": "The Korea Herald",
+          "date": "2026-08-28",
+          "url": "https://www.koreaherald.com/article/10855962"
+        },
+        {
+          "title": "SK Telecom, Kakao and KT chosen for South Korea's public AI service project",
+          "publisher": "Korea JoongAng Daily",
+          "date": "2026-08-28",
+          "url": "https://www.koreajoongangdaily.com/business/sk-telecom-kakao-and-kt-chosen-for-public-ai-service-project/12849094"
+        }
+      ]
     }
   ],
   "anti_patterns": [
