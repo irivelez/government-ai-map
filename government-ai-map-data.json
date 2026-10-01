@@ -2,7 +2,7 @@
   "meta": {
     "title": "Government & Diplomatic AI Deployments — Global Map",
     "subtitle": "Proven plays, leaders, and the consular opportunity",
-    "date": "2026-05-30",
+    "date": "2026-10-01",
     "description": "An interactive map of how governments, embassies, institutions and development banks are deploying AI to deliver services to citizens. Combines a strategic landscape report with an independent fact-check of specific claims. Each reference is tagged by category (for color-grouping), strategic time-horizon (for filtering), and confidence level (verified vs. report-only).",
     "schema_notes": {
       "coordinates": "lat/lng of the relevant capital or headquarters, for map plotting. Where two markers share a city, small offsets are applied to avoid overlap.",
@@ -1465,8 +1465,15 @@
           "publisher": "Dejusticia",
           "date": "2020",
           "url": "https://www.dejusticia.org/conoce-nuestra-investigacion-sobre-pretoria-la-tecnologia-que-incorpora-la-inteligencia-artificial-a-la-corte-constitucional/"
+        },
+        {
+          "title": "AI in justice administration and access to justice (Box 5.62: Prometea / PretorIA)",
+          "publisher": "OECD — Governing with Artificial Intelligence",
+          "date": "2025",
+          "url": "https://www.oecd.org/en/publications/2025/06/governing-with-artificial-intelligence_398fa287/full-report/ai-in-justice-administration-and-access-to-justice_f0cbe651.html"
         }
-      ]
+      ],
+      "last_updated_in": "2026-10"
     },
     {
       "id": "chile-latam-gpt",
@@ -1931,6 +1938,243 @@
         }
       ],
       "last_updated_in": "2026-05"
+    },
+    {
+      "id": "nigeria-govguide",
+      "country": "Nigeria",
+      "country_code": "NG",
+      "flag": "🇳🇬",
+      "entity": "Federal Ministry of Communications, Innovation & Digital Economy (FMCIDE)",
+      "program": "GovGuide Nigeria",
+      "category": "citizen-rag",
+      "horizon": "short",
+      "date": "2026-05-21",
+      "coordinates": {
+        "lat": 9.0765,
+        "lng": 7.3986
+      },
+      "location_label": "Abuja",
+      "headline": "Africa's first nationally scaled, multilingual government AI assistant — on WhatsApp, in four local languages, covering 35+ ministries.",
+      "summary": "Launched 21 May 2026 by Nigeria's Federal Ministry of Communications in partnership with Meta and local developer Publica AI, GovGuide Nigeria is a multilingual AI chatbot giving citizens seamless access to information from more than 35 federal ministries and over 60 government agencies. Built on Meta's Llama models, it is accessible via WhatsApp and a web portal in English, Hausa, Igbo and Yoruba — with voice support. It covers step-by-step guidance on passport applications, corporate registrations, tax identification and civic benefits.",
+      "key_metrics": [
+        {
+          "label": "Ministries covered",
+          "value": "35+",
+          "note": "plus 60+ agencies"
+        },
+        {
+          "label": "Languages",
+          "value": "4",
+          "note": "English, Hausa, Igbo, Yoruba (voice + text)"
+        },
+        {
+          "label": "Channel",
+          "value": "WhatsApp + web",
+          "note": "zero app download required"
+        }
+      ],
+      "relevance_to_pilot": "Demonstrates the WhatsApp-first citizen-AI pattern applied to a national population of 220 million — a government that meets citizens on messaging infrastructure they already use, in the languages they already speak.",
+      "confidence": "report-only",
+      "caveats": "Sources confirmed via web search summaries; proxy restrictions prevented direct URL verification this run.",
+      "sources": [
+        {
+          "title": "FMCIDE and Meta Launch GovGuide Nigeria, an AI-Powered Government Services Chatbot",
+          "publisher": "Federal Ministry of Communications, Innovation & Digital Economy",
+          "date": "2026-05-21",
+          "url": "https://fmcide.gov.ng/fmcide-and-meta-launch-govguide-nigeria-an-ai-powered-government-services-chatbot/"
+        },
+        {
+          "title": "Nigeria launches GovGuide, an AI chatbot for public service access",
+          "publisher": "TechCabal",
+          "date": "2026-05-22",
+          "url": "https://techcabal.com/2026/05/22/nigeria-taps-meta-ai-to-help-citizens-access-government-services/"
+        },
+        {
+          "title": "FG, firm launch GovGuideNigeria AI platform to boost governance",
+          "publisher": "The Guardian Nigeria",
+          "date": "2026-05",
+          "url": "https://guardian.ng/news/fg-firm-launch-govguidenigeria-ai-platform-to-boost-governance/"
+        }
+      ],
+      "last_updated_in": "2026-10"
+    },
+    {
+      "id": "south-africa-batho-pele",
+      "country": "South Africa",
+      "country_code": "ZA",
+      "flag": "🇿🇦",
+      "entity": "Department of Public Service and Administration (DPSA)",
+      "program": "Batho Pele AI Chatbot",
+      "category": "internal-productivity",
+      "horizon": "short",
+      "date": "2026-07-31",
+      "coordinates": {
+        "lat": -25.7460,
+        "lng": 28.1881
+      },
+      "location_label": "Pretoria",
+      "headline": "Government AI in nine official languages — giving South African public servants instant access to policies and circulars, with a path to citizen-facing services.",
+      "summary": "Launched 31 July 2026 by South Africa's DPSA in partnership with Meta and Juicetel, the Batho Pele AI Chatbot gives public servants instant access to public service policies, circulars and legislation in nine South African official languages. Phase 1 targets corporate services and management roles; Minister Buthelezi described it as a foundation to be scaled to frontline services in Health, Home Affairs, SASSA, Education and Local Government.",
+      "key_metrics": [
+        {
+          "label": "Official languages",
+          "value": "9",
+          "note": "all South African official languages"
+        },
+        {
+          "label": "Phase 1 users",
+          "value": "Public servants",
+          "note": "corporate services and management roles"
+        },
+        {
+          "label": "Partnership",
+          "value": "DPSA + Meta + Juicetel",
+          "note": "public-private"
+        }
+      ],
+      "relevance_to_pilot": "Exemplifies the internal-productivity category in a major African economy — a public-private government AI partnership enabling multilingual policy access for civil servants, with an explicitly stated pathway to citizen-facing deployment.",
+      "confidence": "report-only",
+      "caveats": "Phase 1 is for public servants only — not yet citizen-facing. Sources confirmed via web search summaries; proxy restrictions prevented direct URL verification this run.",
+      "sources": [
+        {
+          "title": "Innovation meets impact as Minister Buthelezi launches Batho Pele AI chatbot",
+          "publisher": "Department of Public Service and Administration (DPSA)",
+          "date": "2026-08-01",
+          "url": "https://www.dpsa.gov.za/thepublicservant/2026/08/01/innovation-meets-impact-as-minister-buthelezi-launches-batho-pele-ai-chatbot/"
+        },
+        {
+          "title": "AI chatbot brings Batho Principles to the future",
+          "publisher": "South African Government News Agency (SAnews)",
+          "date": "2026-07",
+          "url": "https://www.sanews.gov.za/south-africa/ai-chatbot-brings-batho-principles-future"
+        },
+        {
+          "title": "Innovation meets impact as Minister Buthelezi launches Batho Pele AI chatbot",
+          "publisher": "Daily Maverick",
+          "date": "2026-08-03",
+          "url": "https://www.dailymaverick.co.za/article/2026-08-03-innovation-meets-impact-as-minister-buthelezi-launches-batho-pele-ai-chatbot/"
+        }
+      ],
+      "last_updated_in": "2026-10"
+    },
+    {
+      "id": "usa-america-gov",
+      "country": "United States",
+      "country_code": "US",
+      "flag": "🇺🇸",
+      "entity": "White House (Office of the Chief Design Officer)",
+      "program": "America.gov — federal AI citizen portal",
+      "category": "citizen-rag",
+      "horizon": "short",
+      "date": "2026-09-29",
+      "coordinates": {
+        "lat": 38.8977,
+        "lng": -77.0366
+      },
+      "location_label": "Washington, D.C.",
+      "headline": "The United States just gave every citizen a single AI front door to 29,000 government websites — no account required.",
+      "summary": "Launched 29 September 2026, America.gov is the White House's AI-powered citizen portal for federal services. The chatbot is grounded in official sources across ~29,000 federal websites and answers plain-language questions on Medicare, passport renewal, Social Security, jobs and national park bookings — powered by Google Gemini and xAI Grok. Executive Order 14355 mandates agencies serving over 100,000 users annually to integrate. Phase two (early 2027) will add online application and benefit-tracking.",
+      "key_metrics": [
+        {
+          "label": "Government websites indexed",
+          "value": "29,000",
+          "note": "official federal sources only"
+        },
+        {
+          "label": "Executive authority",
+          "value": "EO 14355",
+          "note": "agencies serving >100k users/yr must integrate"
+        },
+        {
+          "label": "AI models",
+          "value": "Google Gemini + xAI Grok",
+          "note": "grounded in federal sources only"
+        }
+      ],
+      "relevance_to_pilot": "The 'single front door' citizen RAG pattern at national scale — one AI interface spanning thousands of official sources with no account required. The clearest large-scale deployment of externally-facing government AI, the category OECD data shows is still rare globally.",
+      "confidence": "report-only",
+      "caveats": "Currently information and referral only; transactional capability planned for Phase 2 (early 2027). Sources confirmed via web search summaries; proxy restrictions prevented direct URL verification this run.",
+      "sources": [
+        {
+          "title": "Streamlining Access to Government Services Through America.gov (Executive Order 14355)",
+          "publisher": "White House",
+          "date": "2026-09-29",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/09/streamlining-access-to-government-services-through-america-gov/"
+        },
+        {
+          "title": "Fact Sheet: President Donald J. Trump Inaugurates The Era of Super Intelligence",
+          "publisher": "White House",
+          "date": "2026-09-29",
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-inaugurates-the-era-of-super-intelligence/"
+        },
+        {
+          "title": "Trump launches AI-fueled America.gov in bid to tie government services together",
+          "publisher": "FedScoop",
+          "date": "2026-09-29",
+          "url": "https://fedscoop.com/trump-launches-ai-site-america-gov/"
+        }
+      ],
+      "last_updated_in": "2026-10"
+    },
+    {
+      "id": "morocco-idarati-x0",
+      "country": "Morocco",
+      "country_code": "MA",
+      "flag": "🇲🇦",
+      "entity": "Ministry of Digital Transition and Administrative Reform",
+      "program": "Idarati X.0 — national e-government super-app with AI assistant",
+      "category": "citizen-rag",
+      "horizon": "medium",
+      "date": "2026-02-11",
+      "coordinates": {
+        "lat": 33.9716,
+        "lng": -6.8498
+      },
+      "location_label": "Rabat",
+      "headline": "Morocco bets on a single national super-app to unify government services — backed by AI guidance, a national digital wallet, and the Maroc IA 2030 roadmap.",
+      "summary": "On 11 February 2026, Morocco's Ministry of Digital Transition signed eight cooperation agreements launching Idarati X.0: a national super-app that unifies citizen access to public services through one digital interface, authenticated by the electronic national identity card. An integrated AI assistant (Idarati AI) guides users through administrative procedures. Initial participants include CNSS, ANCFCC, NARSA, and Transport and Culture ministries, alongside technology partners SHAREID, iDAKTO and La Marocaine Électronique des E-Services. The platform was targeted for operation by August 2026, underpinned by the Maroc IA 2030 roadmap (target: MAD 100bn GDP contribution).",
+      "key_metrics": [
+        {
+          "label": "Cooperation agreements signed",
+          "value": "8",
+          "note": "February 11, 2026 in Rabat"
+        },
+        {
+          "label": "AI component",
+          "value": "Idarati AI assistant",
+          "note": "administrative procedure guidance"
+        },
+        {
+          "label": "Target operational",
+          "value": "August 2026",
+          "is_projection": true,
+          "note": "6-month development and testing period"
+        }
+      ],
+      "relevance_to_pilot": "Demonstrates the national super-app model: a unified digital front door backed by an AI administrative guide and digital identity infrastructure, combining citizen-facing assistant and sovereign-identity layers into one platform.",
+      "confidence": "report-only",
+      "caveats": "August 2026 target operational date is a projection from February 2026; full operational status not independently confirmed this run. Sources confirmed via web search summaries; proxy restrictions prevented direct URL verification.",
+      "sources": [
+        {
+          "title": "Morocco Launches Idarati X.0 Digital Platform Unifying Public Service Access Through Single Interface",
+          "publisher": "North Africa Post",
+          "date": "2026-02-12",
+          "url": "https://northafricapost.com/94754-morocco-launches-idarati-x-0-digital-platform-unifying-public-service-access-through-single-interface.html"
+        },
+        {
+          "title": "Morocco Launches Next-Generation E-Government Platform Idarati X.0",
+          "publisher": "Ecofin Agency",
+          "date": "2026-02",
+          "url": "https://www.ecofinagency.com/news-digital/1302-52886-morocco-launches-next-generation-e-government-platform-idarati-x-0"
+        },
+        {
+          "title": "Morocco launches Idarati X.0 super-app project",
+          "publisher": "Middle East AI News",
+          "date": "2026-02",
+          "url": "https://www.middleeastainews.com/p/morocco-launches-idarati-x0-super"
+        }
+      ],
+      "last_updated_in": "2026-10"
     }
   ],
   "anti_patterns": [
