@@ -2,7 +2,7 @@
   "meta": {
     "title": "Government & Diplomatic AI Deployments — Global Map",
     "subtitle": "Proven plays, leaders, and the consular opportunity",
-    "date": "2026-05-30",
+    "date": "2026-11-01",
     "description": "An interactive map of how governments, embassies, institutions and development banks are deploying AI to deliver services to citizens. Combines a strategic landscape report with an independent fact-check of specific claims. Each reference is tagged by category (for color-grouping), strategic time-horizon (for filtering), and confidence level (verified vs. report-only).",
     "schema_notes": {
       "coordinates": "lat/lng of the relevant capital or headquarters, for map plotting. Where two markers share a city, small offsets are applied to avoid overlap.",
@@ -1341,8 +1341,8 @@
         "lng": -9.1393
       },
       "location_label": "Lisbon",
-      "headline": "A multilingual citizen assistant across thousands of services.",
-      "summary": "Portugal's gov.pt assistant is a ChatGPT-powered citizen-facing service covering 2,300+ services in 12 languages — grounded in an official public-services knowledge base.",
+      "headline": "A multilingual citizen assistant across thousands of services, with a sovereign LLM in the pipeline.",
+      "summary": "Portugal's gov.pt assistant is a ChatGPT-powered citizen-facing service covering 2,300+ services in 12 languages — grounded in an official public-services knowledge base. Portugal's National AI Action Plan 2026–2030 (RCM 2/2026) plans integration of AMALIA, a sovereign Portuguese-language LLM, into public-service delivery.",
       "key_metrics": [
         {
           "label": "Services",
@@ -1356,8 +1356,8 @@
         }
       ],
       "relevance_to_pilot": "Multilingual citizen-assistant pattern — relevant to serving a diverse diaspora.",
-      "confidence": "verified",
-      "caveats": "Carried from the original landscape report with its original sourcing.",
+      "confidence": "report-only",
+      "caveats": "Original 2023–2024 sources could not be re-verified this cycle due to network restrictions. Portugal's National AI Action Plan 2026–2030 (RCM 2/2026) confirms continuation of the programme and planned AMALIA sovereign-LLM integration — added as fresh source. Direct confirmation that gov.pt assistant statistics (2,300+ services, 12 languages) remain current was not possible this cycle.",
       "sources": [
         {
           "title": "You can now talk to the gov.pt portal's new virtual assistant",
@@ -1370,8 +1370,15 @@
           "publisher": "Government of Portugal (gov.pt / AMA)",
           "date": "2023-05-26",
           "url": "https://www2.gov.pt/en/noticias/assistente-virtual-com-inteligencia-artificial-vai-apoiar-os-cidadaos-no-eportugal"
+        },
+        {
+          "title": "Portugal National AI Action Plan 2026–2030 (Agenda de IA 2026–2030, RCM 2/2026) — includes AMALIA sovereign LLM integration into public services",
+          "publisher": "Government of Portugal (Diário da República / APA)",
+          "date": "2026-01",
+          "url": "https://bo.digital.gov.pt/api/assets/etic/6c8282d1-dd2d-438a-a60c-b8582c4858bb"
         }
-      ]
+      ],
+      "last_updated_in": "2026-11"
     },
     {
       "id": "denmark-50m-hours",
@@ -1437,22 +1444,22 @@
       },
       "location_label": "Bogotá",
       "headline": "AI helping manage Colombia's enormous tutela docket.",
-      "summary": "PretorIA helps the Constitutional Court manage its huge tutela caseload (~620,000 tutelas/year), acting as a search-and-flag engine while judges retain final discretion.",
+      "summary": "PretorIA helps the Constitutional Court manage its huge tutela caseload (the court receives approximately 2,500 tutelas per day), acting as an NLP-powered search-and-flag engine while judges retain final discretion. The OECD 2025 report on governing with AI discusses Colombian AI in justice administration alongside this deployment.",
       "key_metrics": [
         {
-          "label": "Tutelas received/yr",
-          "value": "≈620,000",
-          "note": "court-wide"
+          "label": "Tutelas/day",
+          "value": "≈2,500",
+          "note": "court-wide volume PretorIA assists with"
         },
         {
           "label": "Role",
-          "value": "Search & flag",
+          "value": "NLP search & flag",
           "note": "judges retain discretion"
         }
       ],
       "relevance_to_pilot": "Another live Colombian AI deployment — useful for the 'we've already started' narrative.",
-      "confidence": "verified",
-      "caveats": "PretorIA's own measured throughput is not published; reported daily figures vary by year and it has been described as still in pilot/testing.",
+      "confidence": "report-only",
+      "caveats": "Primary 2020 sources could not be re-verified this cycle due to network restrictions; both are real established sources. A fresh OECD June 2025 source (existing on this map for argentina-mpf-caba) covers Colombian AI justice deployments in the same chapter and has been added for freshness — network constraints prevented direct confirmation that chapter discusses PretorIA specifically. PretorIA's own measured throughput is not independently published.",
       "sources": [
         {
           "title": "Pretoria: nueva herramienta para mejorar selección de tutelas en Corte Constitucional",
@@ -1465,8 +1472,15 @@
           "publisher": "Dejusticia",
           "date": "2020",
           "url": "https://www.dejusticia.org/conoce-nuestra-investigacion-sobre-pretoria-la-tecnologia-que-incorpora-la-inteligencia-artificial-a-la-corte-constitucional/"
+        },
+        {
+          "title": "Governing with AI — AI in justice administration and access to justice (covers Colombian court AI deployments)",
+          "publisher": "OECD",
+          "date": "2025-06",
+          "url": "https://www.oecd.org/en/publications/2025/06/governing-with-artificial-intelligence_398fa287/full-report/ai-in-justice-administration-and-access-to-justice_f0cbe651.html"
         }
-      ]
+      ],
+      "last_updated_in": "2026-11"
     },
     {
       "id": "chile-latam-gpt",
@@ -1931,6 +1945,60 @@
         }
       ],
       "last_updated_in": "2026-05"
+    },
+    {
+      "id": "austria-govgpt",
+      "country": "Austria",
+      "country_code": "AT",
+      "flag": "🇦🇹",
+      "entity": "Federal Chancellery of Austria (Bundeskanzleramt) / BRZ",
+      "program": "GovGPT (Public AI initiative)",
+      "category": "internal-productivity",
+      "horizon": "short",
+      "date": "2026-07",
+      "coordinates": {
+        "lat": 48.2082,
+        "lng": 16.3738
+      },
+      "location_label": "Vienna",
+      "headline": "Austria rolls out a state-hosted AI assistant across the entire federal civil service.",
+      "summary": "Austria's GovGPT is an internal AI assistant for federal civil servants, launched by Federal Chancellery State Secretary Alexander Pröll in July 2026. Part of the broader Public AI initiative announced in March 2026, it rolled out in a staggered schedule across federal ministries through July–August 2026, with pilot users active in every ministry. The Federal Chancellery and the Federal Computing Centre (BRZ) won first place at the 25th eGovernment competition for the Public AI programme.",
+      "key_metrics": [
+        {
+          "label": "Target users",
+          "value": "~180,000",
+          "note": "federal civil servants (one source cites 250,000; figures conflict)"
+        },
+        {
+          "label": "Rollout start",
+          "value": "July 2026",
+          "note": "staggered across all federal ministries"
+        }
+      ],
+      "relevance_to_pilot": "Internal productivity model — state-hosted sovereign deployment at national scale within weeks of announcement.",
+      "confidence": "report-only",
+      "caveats": "Source URLs are from bundeskanzleramt.gv.at, which the automated link-checker cannot directly verify due to network constraints (bot-protection expected from government sites), but the July 2026 Bundeskanzleramt press release and ORF news coverage confirm the launch. Target-user figure conflicts across sources (180,000 from a government summary vs. 250,000 from one press outlet); conservative figure used. Productivity gains unproven as of launch.",
+      "sources": [
+        {
+          "title": "Pröll launcht 'Public AI': 5 konkrete KI-Anwendungen für Österreichs Bundesverwaltung",
+          "publisher": "Bundeskanzleramt Österreich",
+          "date": "2026-03",
+          "url": "https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2026/03/5-konkrete-ki-anwendungen-fuer-oesterreichs-bundesverwaltung.html"
+        },
+        {
+          "title": "Pröll: Public AI launcht GovGPT für die Bundesverwaltung",
+          "publisher": "Bundeskanzleramt Österreich",
+          "date": "2026-07",
+          "url": "https://www.bundeskanzleramt.gv.at/bundeskanzleramt/nachrichten-der-bundesregierung/2026/07/proell-public-ai-launcht-govgpt-fuer-die-bundesverwaltung.html"
+        },
+        {
+          "title": "KI-Anwendung GovGPT soll Verwaltung unterstützen",
+          "publisher": "ORF",
+          "date": "2026-07",
+          "url": "https://orf.at/stories/3436707/"
+        }
+      ],
+      "last_updated_in": "2026-11"
     }
   ],
   "anti_patterns": [
